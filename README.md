@@ -3,6 +3,25 @@
 
 Kiến thức, khái niệm cơ bản và cần thiết cho ngành Data Engineer (tự học)
 
+
+## Data Engineer vs Data Scientists
+
+### Data Engineer
+<center>
+    <img src="https://github.com/PhamThe-KHDL/Data-Engineer/blob/main/Images/DE.png" width="800" alt="DE" />
+</center>
+
+### Data Scientists
+<center>
+    <img src="https://github.com/PhamThe-KHDL/Data-Engineer/blob/main/Images/DS.png" width="800" alt="DE" />
+</center>
+
+
+
+
+
+
+
 ## Khái niệm cơ bản
 
 ### DATA SOURCES (NGUỒN DỮ LIỆU):
