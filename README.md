@@ -140,12 +140,12 @@ Còn được gọi là Nhà kho dữ liệu, sử dụng các công cụ trích
 
 
 
+### DataBase
 
 
 
 
-
-
+### Data Catalog
 
 
 
