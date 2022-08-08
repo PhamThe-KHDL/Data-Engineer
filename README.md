@@ -108,7 +108,7 @@ Còn được gọi là Nhà kho dữ liệu, sử dụng các công cụ trích
 
 
 
-## Các kho lưu trữ dữ liệu
+## Cách thu thập và lưu trữ dữ liệu
 
 ### Data Lake
 
