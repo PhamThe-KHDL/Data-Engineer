@@ -150,8 +150,8 @@ Còn được gọi là Nhà kho dữ liệu, sử dụng các công cụ trích
 
 
 
-
-
+## Roadmap DE
+[Awesome Data Engineering](https://awesomedataengineering.com/?fbclid=IwAR05js6TcYiDJQcPNbCgT2JykmR7YkYCc27cmqo4Svgd_pBQEp2fLylUIHU)
 
 
 
