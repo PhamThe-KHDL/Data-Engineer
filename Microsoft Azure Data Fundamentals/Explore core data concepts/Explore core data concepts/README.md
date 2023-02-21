@@ -30,3 +30,65 @@
 ### Dữ liệu không có cấu trúc (Unstructured data)
 
 
+
+
+
+
+
+
+
+
+## Explore file storage
+
+### Delimited text files
+
+
+
+
+
+
+### JavaScript Object Notation (JSON)
+
+
+
+
+### DExtensible Markup Language (XML)
+
+
+
+
+
+
+
+### Binary Large Object (BLOB)
+
+
+
+
+
+
+### Optimized file formats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
