@@ -1,7 +1,27 @@
+# Mục Lục
+
+* [**Explore core data concepts**](#M01)
+    - [Identify data formats](#M01.1)
+      + [Structured data](#M01.1.1)
+      + [Semi-structured data](#M01.1.1)
+      + [Unstructured data](#M01.1.3)
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01"></a>
 # [Explore core data concepts](https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/)
-
+<a name="M01.1"></a>
 ## Xác định định dạng dữ liệu (Identify data formats)
-
+<a name="M01.1.1"></a>
 ### Dữ liệu có cấu trúc (Structured data)
 
 Structured data là dữ liệu được tổ chức theo cấu trúc định sẵn và có thể được đọc và hiểu bởi máy tính và các chương trình phần mềm khác một cách dễ dàng. Các dữ liệu được sắp xếp theo các bảng, cột, hàng, trường, hoặc các đối tượng có liên quan khác, được xác định trước bởi một loại cấu trúc hoặc schema. Dữ liệu có cấu trúc này cho phép các ứng dụng phân tích, truy vấn, và xử lý dữ liệu một cách hiệu quả hơn.
@@ -15,7 +35,7 @@ Dữ liệu có cấu trúc thường được sử dụng trong các ứng dụ
 
 
 
-
+<a name="M01.1.2"></a>
 ### Dữ liệu bán cấu trúc (Semi-structured data)
 
 Semi-structured data (dữ liệu bán cấu trúc) là dữ liệu không có cấu trúc hoàn toàn, tuy nhiên chúng vẫn chứa một số thông tin về cấu trúc của dữ liệu. Semi-structured data có thể được định dạng bằng các định dạng như XML, JSON, hoặc YAML, v.v. và thường được sử dụng để mô tả dữ liệu liên quan đến nội dung văn bản, đồ họa hoặc dữ liệu đa phương tiện.
@@ -73,7 +93,7 @@ Vì semi-structured data không có một cấu trúc đơn giản, việc truy 
 
 
 
-
+<a name="M01.1.3"></a>
 ### Dữ liệu không có cấu trúc (Unstructured data)
 
 Unstructured data (dữ liệu không có cấu trúc) là loại dữ liệu không có bất kỳ cấu trúc hay định dạng cụ thể nào. Nó là một tập hợp các dữ liệu không đồng nhất, không theo quy tắc, không có định dạng chuẩn hoặc mô hình dữ liệu cụ thể. Unstructured data có thể bao gồm các tài liệu văn bản không định dạng, hình ảnh, video, âm thanh, email, tweet, blog, trang web, v.v.
