@@ -117,34 +117,33 @@ Do không có cấu trúc cụ thể, việc xử lý unstructured data trở n�
 
 <a name="M01.2"></a>
 ## Explore file storage
-<a name="M01.1.1"></a>
+<a name="M01.2.1"></a>
 ### Delimited text files
 
 
 
 
 
-<a name="M01.1.2"></a>
+<a name="M01.2.2"></a>
 ### JavaScript Object Notation (JSON)
 
 
 
-<a name="M01.1.3"></a>
+<a name="M01.2.3"></a>
 ### DExtensible Markup Language (XML)
 
 
 
 
 
-
-<a name="M01.1.4"></a>
+<a name="M01.2.4"></a>
 ### Binary Large Object (BLOB)
 
 
 
 
 
-<a name="M01.1.5"></a>
+<a name="M01.2.5"></a>
 ### Optimized file formats
 
 
