@@ -3,7 +3,7 @@
 * [**Explore core data concepts**](#M01)
     - [Identify data formats](#M01.1)
       + [Structured data](#M01.1.1)
-      + [Semi-structured data](#M01.1.1)
+      + [Semi-structured data](#M01.1.2)
       + [Unstructured data](#M01.1.3)
 
 
