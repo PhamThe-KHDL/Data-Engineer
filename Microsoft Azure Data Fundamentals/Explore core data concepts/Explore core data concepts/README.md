@@ -5,6 +5,12 @@
       + [Structured data](#M01.1.1)
       + [Semi-structured data](#M01.1.2)
       + [Unstructured data](#M01.1.3)
+    - [Identify data formats](#M01.2)
+      + [Delimited text files](#M01.2.1)
+      + [JavaScript Object Notation (JSON)](#M01.2.2)
+      + [Extensible Markup Language (XML)](#M01.2.3)
+      + [Binary Large Object (BLOB)](#M01.2.4)
+      + [Optimized file formats](#M01.2.5)
 
 
 
@@ -109,21 +115,21 @@ Do không có cấu trúc cụ thể, việc xử lý unstructured data trở n�
 
 
 
-
+<a name="M01.2"></a>
 ## Explore file storage
-
+<a name="M02.1.1"></a>
 ### Delimited text files
 
 
 
 
 
-
+<a name="M02.1.2"></a>
 ### JavaScript Object Notation (JSON)
 
 
 
-
+<a name="M02.1.3"></a>
 ### DExtensible Markup Language (XML)
 
 
@@ -131,14 +137,14 @@ Do không có cấu trúc cụ thể, việc xử lý unstructured data trở n�
 
 
 
-
+<a name="M02.1.4"></a>
 ### Binary Large Object (BLOB)
 
 
 
 
 
-
+<a name="M02.1.5"></a>
 ### Optimized file formats
 
 
