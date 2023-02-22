@@ -1,10 +1,10 @@
 # Mục Lục
 
-* [**Explore core data concepts**](#M01)
-    - [Identify data formats](#M01.1)
-      + [Structured data](#M01.1.1)
-      + [Semi-structured data](#M01.1.2)
-      + [Unstructured data](#M01.1.3)
+* [**Explore data roles and services**](#M01)
+    - [Explore job roles in the world of data](#M01.1)
+      + [Database Administrator](#M01.1.1)
+      + [Data Engineer](#M01.1.2)
+      + [Data Analyst](#M01.1.3)
     - [Identify data formats](#M01.2)
       + [Delimited text files](#M01.2.1)
       + [JavaScript Object Notation (JSON)](#M01.2.2)
@@ -28,11 +28,28 @@
 
 
 <a name="M01"></a>
-# [Explore core data concepts](https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/)
+# [Explore data roles and services](https://learn.microsoft.com/en-us/training/modules/explore-roles-responsibilities-world-of-data/)
 <a name="M01.1"></a>
-## Xác định định dạng dữ liệu (Identify data formats)
+## Explore job roles in the world of data
+
+Có rất nhiều vai trò liên quan đến quản lý, điều khiển và sử dụng dữ liệu. Một số vai trò tập trung vào kinh doanh, một số vai trò có liên quan đến kỹ thuật, một số tập trung vào nghiên cứu, và một số là các vai trò kết hợp giữa các khía cạnh khác nhau của quản lý dữ liệu. Tuy nhiên, tổ chức của bạn có thể định nghĩa các vai trò khác nhau hoặc đặt tên khác cho chúng, nhưng các vai trò được mô tả trong đơn vị này tóm tắt các phân chia công việc và trách nhiệm phổ biến nhất.
+
+Ba vai trò chính liên quan đến dữ liệu trong hầu hết các tổ chức bao gồm:
+
+- Quản trị cơ sở dữ liệu (Database administrators) quản lý cơ sở dữ liệu, gán quyền truy cập cho người dùng, lưu trữ các bản sao dự phòng của dữ liệu và khôi phục dữ liệu trong trường hợp xảy ra sự cố.
+- Kỹ sư dữ liệu (Data engineers) quản lý cơ sở hạ tầng và quy trình tích hợp dữ liệu trên toàn tổ chức, áp dụng các quy trình làm sạch dữ liệu, xác định các quy tắc quản lý dữ liệu và triển khai các đường ống (pipelines) để chuyển và biến đổi dữ liệu giữa các hệ thống.
+- Nhà phân tích dữ liệu (Data analysts) khám phá và phân tích dữ liệu để tạo ra các biểu đồ và biểu đồ trực quan giúp tổ chức đưa ra các quyết định có căn cứ.
+``` 
+!Note
+Các vai trò công việc xác định các nhiệm vụ và trách nhiệm khác nhau. Ở một số tổ chức, cùng một người có thể 
+thực hiện nhiều vai trò khác nhau; vì vậy, trong vai trò của họ như một quản trị cơ sở dữ liệu, họ có thể 
+cung cấp một cơ sở dữ liệu giao dịch và sau đó trong vai trò của một kỹ sư dữ liệu, họ có thể tạo 
+một đường ống để chuyển dữ liệu từ cơ sở dữ liệu đó đến một kho dữ liệu (data warehouse) để phân tích.
+```
+
+
 <a name="M01.1.1"></a>
-### Dữ liệu có cấu trúc (Structured data)
+### Database Administrator
 
 Structured data là dữ liệu được tổ chức theo cấu trúc định sẵn và có thể được đọc và hiểu bởi máy tính và các chương trình phần mềm khác một cách dễ dàng. Các dữ liệu được sắp xếp theo các bảng, cột, hàng, trường, hoặc các đối tượng có liên quan khác, được xác định trước bởi một loại cấu trúc hoặc schema. Dữ liệu có cấu trúc này cho phép các ứng dụng phân tích, truy vấn, và xử lý dữ liệu một cách hiệu quả hơn.
 
@@ -46,7 +63,7 @@ Dữ liệu có cấu trúc thường được sử dụng trong các ứng dụ
 
 
 <a name="M01.1.2"></a>
-### Dữ liệu bán cấu trúc (Semi-structured data)
+### Data Engineer
 
 Semi-structured data (dữ liệu bán cấu trúc) là dữ liệu không có cấu trúc hoàn toàn, tuy nhiên chúng vẫn chứa một số thông tin về cấu trúc của dữ liệu. Semi-structured data có thể được định dạng bằng các định dạng như XML, JSON, hoặc YAML, v.v. và thường được sử dụng để mô tả dữ liệu liên quan đến nội dung văn bản, đồ họa hoặc dữ liệu đa phương tiện.
 
@@ -104,7 +121,7 @@ Vì semi-structured data không có một cấu trúc đơn giản, việc truy 
 
 
 <a name="M01.1.3"></a>
-### Dữ liệu không có cấu trúc (Unstructured data)
+### Data Analyst
 
 Unstructured data (dữ liệu không có cấu trúc) là loại dữ liệu không có bất kỳ cấu trúc hay định dạng cụ thể nào. Nó là một tập hợp các dữ liệu không đồng nhất, không theo quy tắc, không có định dạng chuẩn hoặc mô hình dữ liệu cụ thể. Unstructured data có thể bao gồm các tài liệu văn bản không định dạng, hình ảnh, video, âm thanh, email, tweet, blog, trang web, v.v.
 
