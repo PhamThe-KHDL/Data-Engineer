@@ -15,7 +15,7 @@
       + [Relational databases](#M01.3.1)
       + [Non-relational databases](#M01.3.2)
     - [Explore transactional data processing](#M01.4)
-
+    - [Explore analytical data processing](#M01.5)
 
 
 
@@ -285,6 +285,40 @@ Các giải pháp OLTP phụ thuộc vào hệ thống cơ sở dữ liệu tron
 - Tính bền vững (Durability) - Khi một giao dịch đã được cam kết, nó sẽ luôn được cam kết. Sau khi giao dịch chuyển khoản đã hoàn tất, số dư tài khoản đã được cập nhật để bảo đảm rằng ngay cả khi hệ thống cơ sở dữ liệu bị tắt đi và được khởi động lại, giao dịch đã cam kết sẽ được phản ánh lại.
 
 OLTP systems thường được sử dụng để hỗ trợ các ứng dụng trực tiếp xử lý dữ liệu kinh doanh - thường được gọi là các ứng dụng Line of Business (LOB).
+
+
+
+
+
+
+<a name="M01.5"></a>
+## Explore analytical data processing
+
+
+Quá trình xử lý phân tích dữ liệu thường sử dụng hệ thống chỉ đọc (hoặc hầu như chỉ đọc) để lưu trữ các khối lượng dữ liệu lịch sử hoặc các chỉ số kinh doanh lớn. Phân tích có thể dựa trên một bản chụp dữ liệu tại một thời điểm cụ thể hoặc một loạt các bản chụp.
+
+
+Các chi tiết cụ thể cho một hệ thống xử lý phân tích có thể khác nhau giữa các giải pháp, nhưng kiến trúc phổ biến cho phân tích quy mô doanh nghiệp có dạng như sau:
+
+![image](https://user-images.githubusercontent.com/62134515/220525330-75adcbc2-9338-4efd-899e-1700c3913b26.png)
+
+1. Các tệp dữ liệu có thể được lưu trữ trong *hồ dữ liệu trung tâm (central data lake)* để phân tích.
+2. Quá trình extract, transform và load (ETL) sao chép dữ liệu từ tệp và cơ sở dữ liệu OLTP vào một *kho dữ liệu (data warehouse)* được tối ưu hóa cho hoạt động đọc. Thông thường, một lược đồ kho dữ liệu dựa trên bảng sự thật chứa các giá trị số học bạn muốn phân tích (ví dụ: số tiền bán hàng), với các bảng kích thước liên quan đến các thực thể bạn muốn đo lường chúng (ví dụ: khách hàng hoặc sản phẩm).
+3. Dữ liệu trong kho dữ liệu có thể được tổng hợp và load vào một mô hình *xử lý phân tích trực tuyến (Online Analytical Processing - OLAP)* hoặc khối. Giá trị số học được tổng hợp (đo lường) từ các bảng sự thật được tính toán cho giao điểm của các kích thước từ bảng kích thước. Ví dụ, doanh thu bán hàng có thể được tính tổng theo ngày, khách hàng và sản phẩm.
+4. Các dữ liệu trong hồ dữ liệu trung tâm, kho dữ liệu và mô hình phân tích có thể được truy vấn để tạo ra báo cáo, trực quan hóa và bảng điều khiển.
+
+Data lake là một phương pháp lưu trữ dữ liệu phổ biến trong các kịch bản xử lý phân tích dữ liệu quy mô lớn, nơi mà một lượng lớn dữ liệu dạng tệp phải được thu thập và phân tích.
+
+Data warehouse là một cách thiết lập để lưu trữ dữ liệu trong một lược đồ quan hệ được tối ưu hóa cho các hoạt động đọc - chủ yếu là các truy vấn để hỗ trợ báo cáo và trực quan hóa dữ liệu. Lược đồ data warehouse có thể yêu cầu một số việc phi chuẩn hóa dữ liệu trong nguồn dữ liệu OLTP (giới thiệu một số sự trùng lặp để các truy vấn chạy nhanh hơn).
+
+Một mô hình OLAP là một loại lưu trữ dữ liệu được tổng hợp, được tối ưu hóa cho các khối lượng công việc phân tích. Các tổng hợp dữ liệu được thực hiện qua các chiều ở các mức khác nhau, cho phép bạn phân tích tại nhiều phân cấp; ví dụ để tìm tổng doanh thu theo khu vực, theo thành phố hoặc cho một địa chỉ cụ thể. Vì dữ liệu OLAP đã được tổng hợp trước, các truy vấn để trả về các tóm tắt nó chứa có thể được thực hiện nhanh chóng.
+
+Các user khác nhau có thể thực hiện công việc phân tích dữ liệu ở các giai đoạn khác nhau trong kiến trúc tổng thể. Ví dụ:
+
+- Data scientists có thể làm việc trực tiếp với các tệp dữ liệu trong một hồ dữ liệu để khám phá và mô hình dữ liệu.
+- Data Analysts có thể truy vấn trực tiếp các bảng trong kho dữ liệu để tạo ra các báo cáo và trực quan hóa phức tạp.
+- Business users có thể tiêu thụ dữ liệu được tổng hợp sẵn trong một mô hình phân tích dưới dạng các báo cáo hoặc bảng điều khiển.
+
 
 
 
