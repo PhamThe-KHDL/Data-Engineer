@@ -296,7 +296,7 @@ OLTP systems thường được sử dụng để hỗ trợ các ứng dụng t
 ## Explore analytical data processing
 
 
-Quá trình xử lý phân tích dữ liệu thường sử dụng hệ thống chỉ đọc (hoặc hầu như chỉ đọc) để lưu trữ các khối lượng dữ liệu lịch sử hoặc các chỉ số kinh doanh lớn. Phân tích có thể dựa trên một bản chụp dữ liệu tại một thời điểm cụ thể hoặc một loạt các bản chụp.
+Quá trình xử lý dữ liệu phân tích thường sử dụng hệ thống chỉ đọc (hoặc hầu như chỉ đọc) để lưu trữ các khối lượng dữ liệu lịch sử hoặc các chỉ số kinh doanh lớn. Phân tích có thể dựa trên một bản chụp dữ liệu tại một thời điểm cụ thể hoặc một loạt các bản chụp.
 
 
 Các chi tiết cụ thể cho một hệ thống xử lý phân tích có thể khác nhau giữa các giải pháp, nhưng kiến trúc phổ biến cho phân tích quy mô doanh nghiệp có dạng như sau:
