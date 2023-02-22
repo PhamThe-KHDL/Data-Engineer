@@ -326,6 +326,7 @@ Các user khác nhau có thể thực hiện công việc phân tích dữ liệ
 
 
 <a name="M01.6"></a>
+## Knowledge check
 ![image](https://user-images.githubusercontent.com/62134515/220530981-9be56694-f628-4332-a4b9-e54bf6bd2f4b.png)
 
 
