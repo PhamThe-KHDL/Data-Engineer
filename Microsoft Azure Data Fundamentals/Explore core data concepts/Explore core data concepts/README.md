@@ -117,8 +117,21 @@ Do không có cấu trúc cụ thể, việc xử lý unstructured data trở n�
 
 <a name="M01.2"></a>
 ## Explore file storage
+
+
 <a name="M01.2.1"></a>
 ### Delimited text files
+
+Delimited text files là một loại tệp văn bản được sử dụng để lưu trữ và truyền dữ liệu. Tệp văn bản này chứa dữ liệu được phân tách bởi một ký tự đặc biệt, thường là dấu phẩy (,) hoặc tab (\t). Khi dữ liệu được phân tách bằng ký tự này, nó có thể được dễ dàng đọc bởi các chương trình hoặc công cụ phân tích dữ liệu, chẳng hạn như các chương trình xử lý văn bản hoặc các chương trình tính toán.
+
+Delimited text files thường được sử dụng để lưu trữ các bảng dữ liệu hoặc danh sách dữ liệu. Ví dụ, một danh sách khách hàng có thể được lưu trữ trong một tệp văn bản được phân tách bằng dấu phẩy, trong đó mỗi hàng đại diện cho một khách hàng và các cột chứa các thông tin khác nhau về khách hàng, chẳng hạn như tên, địa chỉ, số điện thoại, v.v.
+
+Ví dụ sau hiển thị dữ liệu khách hàng ở định dạng được phân cách bằng dấu phẩy:
+```
+FirstName,LastName,Email
+Joe,Jones,joe@litware.com
+Samir,Nadoy,samir@northwind.com
+```
 
 
 
@@ -127,29 +140,73 @@ Do không có cấu trúc cụ thể, việc xử lý unstructured data trở n�
 <a name="M01.2.2"></a>
 ### JavaScript Object Notation (JSON)
 
+JavaScript Object Notation (JSON) là một định dạng dữ liệu dựa trên văn bản, được sử dụng để truyền tải dữ liệu giữa các ứng dụng web và lưu trữ dữ liệu trong cơ sở dữ liệu. JSON sử dụng cú pháp đơn giản, dễ hiểu và có khả năng đọc và ghi trên nhiều ngôn ngữ lập trình khác nhau.
+
+JSON sử dụng các cặp key-value để đại diện cho dữ liệu. Một key trong JSON tương ứng với một tên trường hoặc thuộc tính, còn giá trị value tương ứng với giá trị của trường hoặc thuộc tính đó. Các cặp key-value trong JSON được phân tách bởi dấu phẩy và được bao quanh bởi cặp dấu ngoặc nhọn {}.
+
+Ví dụ, một đối tượng JSON đại diện cho thông tin một người có thể được biểu diễn như sau:
+
+```json
+{
+  "name": "John Smith",
+  "age": 30,
+  "city": "New York"
+}
+```
+Trong ví dụ này, "name", "age" và "city" là các key, tương ứng với tên, tuổi và thành phố của người, và giá trị tương ứng là "John Smith", 30 và "New York".
+
+
+
 
 
 <a name="M01.2.3"></a>
 ### DExtensible Markup Language (XML)
 
+Extensible Markup Language (XML) là một ngôn ngữ đánh dấu được sử dụng để lưu trữ và truyền tải dữ liệu giữa các ứng dụng web, đặc biệt là các ứng dụng web liên quan đến việc trao đổi dữ liệu. XML được sử dụng rộng rãi trong các ứng dụng web như các trang web, các dịch vụ web, và các cơ sở dữ liệu trên web.
 
+XML sử dụng cú pháp đánh dấu để biểu diễn dữ liệu. Mỗi phần tử (element) trong XML được bao quanh bởi cặp thẻ mở và thẻ đóng, và có thể chứa các thuộc tính (attributes) và giá trị (value) tương ứng. Các phần tử trong XML có thể được lồng nhau để biểu diễn cấu trúc phức tạp hơn.
 
+Ví dụ, một tài liệu XML đại diện cho thông tin một người có thể được biểu diễn như sau:
+
+```php
+<person>
+  <name>John Smith</name>
+  <age>30</age>
+  <city>New York</city>
+</person>
+```
+Trong ví dụ này, "person" là một phần tử chính, tương ứng với thông tin về một người. "name", "age" và "city" là các phần tử con của phần tử "person", tương ứng với tên, tuổi và thành phố của người, và giá trị tương ứng được chứa trong các thẻ tương ứng. Các phần tử trong XML có thể có các thuộc tính để cung cấp thêm thông tin về phần tử, chẳng hạn như sau:
+```php
+<person id="12345">
+  <name>John Smith</name>
+  <age>30</age>
+  <city>New York</city>
+</person>
+```
+Trong ví dụ này, thuộc tính "id" cung cấp thông tin về ID của người tương ứng.
 
 
 <a name="M01.2.4"></a>
 ### Binary Large Object (BLOB)
 
+Binary Large Object (BLOB) là một kiểu dữ liệu được sử dụng để lưu trữ các đối tượng nhị phân lớn trong cơ sở dữ liệu. BLOB thường được sử dụng để lưu trữ các tệp ảnh, âm thanh, video và các loại tệp khác trong cơ sở dữ liệu.
 
+Dữ liệu BLOB thường được lưu trữ dưới dạng một mảng nhị phân lớn, không được mã hóa hoặc chuyển đổi sang định dạng văn bản. Khi cần truy xuất dữ liệu BLOB, các ứng dụng sẽ yêu cầu cơ sở dữ liệu trả về các mảng nhị phân này và sau đó xử lý các dữ liệu nhị phân để hiển thị các tệp đính kèm.
+
+Ví dụ, nếu bạn lưu trữ một hình ảnh JPEG trong một cơ sở dữ liệu dưới dạng BLOB, thì dữ liệu của hình ảnh đó sẽ được lưu trữ dưới dạng một chuỗi các số nhị phân đại diện cho các byte trong tệp hình ảnh đó. Khi cần truy xuất hình ảnh, ứng dụng sẽ lấy các số nhị phân này và chuyển đổi chúng trở lại thành định dạng JPEG để hiển thị hình ảnh đó.
 
 
 
 <a name="M01.2.5"></a>
 ### Optimized file formats
 
+Các định dạng tệp đọc được bởi con người cho dữ liệu có cấu trúc và bán cấu trúc có thể hữu ích, tuy nhiên chúng thường không được tối ưu hóa cho không gian lưu trữ hoặc xử lý. Với thời gian, một số định dạng tệp chuyên dụng cho phép nén, chỉ mục và lưu trữ và xử lý hiệu quả đã được phát triển.
 
+Một số định dạng tệp tối ưu hóa phổ biến mà bạn có thể thấy bao gồm Avro, ORC và Parquet:
 
-
-
+- Avro là định dạng dữ liệu dựa trên hàng. Nó được tạo ra bởi Apache. Mỗi bản ghi chứa một tiêu đề mô tả cấu trúc dữ liệu trong bản ghi. Tiêu đề này được lưu trữ dưới dạng JSON. Dữ liệu được lưu trữ dưới dạng thông tin nhị phân. Một ứng dụng sử dụng thông tin trong tiêu đề để phân tích dữ liệu nhị phân và trích xuất các trường nó chứa. Avro là định dạng tốt để nén dữ liệu và giảm thiểu yêu cầu lưu trữ và băng thông mạng.
+- ORC (Optimized Row Columnar format) tổ chức dữ liệu thành các cột thay vì các hàng. Nó được phát triển bởi HortonWorks để tối ưu hóa hoạt động đọc và ghi trong Apache Hive (Hive là hệ thống kho dữ liệu hỗ trợ tóm tắt dữ liệu và truy vấn nhanh chóng trên các tập dữ liệu lớn). Một tệp ORC chứa các vạch dữ liệu. Mỗi vạch chứa dữ liệu cho một cột hoặc tập hợp các cột. Một vạch chứa một chỉ mục vào các hàng trong vạch, dữ liệu cho mỗi hàng và một chân trang chứa thông tin thống kê (số lượng, tổng, max, min, v.v.) cho mỗi cột.
+- Parquet là một định dạng dữ liệu theo cột khác. Nó được tạo bởi Cloudera và Twitter. Một tệp Parquet chứa các nhóm hàng. Dữ liệu cho mỗi cột được lưu trữ cùng nhau trong cùng một nhóm hàng. Mỗi nhóm hàng chứa một hoặc nhiều mảnh dữ liệu. Một tệp Parquet bao gồm siêu dữ liệu mô tả tập hợp các hàng được tìm thấy trong mỗi mảnh. Một ứng dụng có thể sử dụng siêu dữ liệu này để nhanh chóng xác định mảnh chính xác cho một tập hợp các hàng nhất định và lấy dữ liệu trong các cột được chỉ định cho các hàng này. Parquet chuyên về việc lưu trữ và xử lý các loại dữ liệu lồng nhau một cách hiệu quả. Nó hỗ trợ các kế hoạch nén và mã hóa rất hiệu quả.
 
 
 
