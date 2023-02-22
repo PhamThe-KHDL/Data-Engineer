@@ -16,6 +16,7 @@
       + [Non-relational databases](#M01.3.2)
     - [Explore transactional data processing](#M01.4)
     - [Explore analytical data processing](#M01.5)
+    - [Knowledge check](#M01.6)
 
 
 
@@ -319,6 +320,13 @@ Các user khác nhau có thể thực hiện công việc phân tích dữ liệ
 - Data Analysts có thể truy vấn trực tiếp các bảng trong kho dữ liệu để tạo ra các báo cáo và trực quan hóa phức tạp.
 - Business users có thể tiêu thụ dữ liệu được tổng hợp sẵn trong một mô hình phân tích dưới dạng các báo cáo hoặc bảng điều khiển.
 
+
+
+
+
+
+<a name="M01.6"></a>
+![image](https://user-images.githubusercontent.com/62134515/220530981-9be56694-f628-4332-a4b9-e54bf6bd2f4b.png)
 
 
 
