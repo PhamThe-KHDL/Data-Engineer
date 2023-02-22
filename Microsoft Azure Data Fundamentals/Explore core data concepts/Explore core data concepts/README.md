@@ -270,7 +270,7 @@ Có bốn loại hệ thống cơ sở dữ liệu phi quan hệ phổ biến th
 <a name="M01.4"></a>
 ## Explore transactional data processing
 
-Hệ thống xử lý dữ liệu giao dịch là điều mà phần lớn mọi người coi là chức năng chính của máy tính kinh doanh. Một hệ thống giao dịch ghi lại các giao dịch bao gồm các sự kiện cụ thể mà tổ chức muốn theo dõi. Một giao dịch có thể là tài chính, chẳng hạn như chuyển tiền giữa các tài khoản trong một hệ thống ngân hàng, hoặc có thể là một phần của hệ thống bán lẻ, theo dõi thanh toán cho hàng hóa và dịch vụ từ khách hàng. Hãy nghĩ về một giao dịch như là một đơn vị làm việc nhỏ, riêng biệt.
+Hệ thống xử lý dữ liệu giao dịch (transactional data processing system) là điều mà phần lớn mọi người coi là chức năng chính của máy tính kinh doanh. Một hệ thống giao dịch ghi lại các giao dịch bao gồm các sự kiện cụ thể mà tổ chức muốn theo dõi. Một giao dịch có thể là tài chính, chẳng hạn như chuyển tiền giữa các tài khoản trong một hệ thống ngân hàng, hoặc có thể là một phần của hệ thống bán lẻ, theo dõi thanh toán cho hàng hóa và dịch vụ từ khách hàng. Hãy nghĩ về một giao dịch như là một đơn vị làm việc nhỏ, riêng biệt.
 
 Hệ thống giao dịch thường có khối lượng cao, đôi khi xử lý hàng triệu giao dịch trong một ngày. Dữ liệu được xử lý phải được truy cập rất nhanh. Công việc được thực hiện bởi các hệ thống giao dịch thường được gọi là Xử lý Giao dịch Trực tuyến (Online Transactional Processing - OLTP).
 
