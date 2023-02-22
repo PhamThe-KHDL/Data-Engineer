@@ -284,7 +284,7 @@ Các giải pháp OLTP phụ thuộc vào hệ thống cơ sở dữ liệu tron
 - Tính độc lập (Isolation) - Các giao dịch đồng thời không thể can thiệp lẫn nhau và phải cho kết quả là trạng thái cơ sở dữ liệu nhất quán. Ví dụ, trong khi giao dịch chuyển tiền từ một tài khoản sang một tài khoản khác đang được xử lý, giao dịch kiểm tra số dư của các tài khoản đó phải trả về kết quả nhất quán - giao dịch kiểm tra số dư không thể lấy giá trị của một tài khoản phản ánh số dư trước khi chuyển tiền và một giá trị khác của tài khoản khác phản ánh số dư sau khi chuyển tiền.
 - Tính bền vững (Durability) - Khi một giao dịch đã được cam kết, nó sẽ luôn được cam kết. Sau khi giao dịch chuyển khoản đã hoàn tất, số dư tài khoản đã được cập nhật để bảo đảm rằng ngay cả khi hệ thống cơ sở dữ liệu bị tắt đi và được khởi động lại, giao dịch đã cam kết sẽ được phản ánh lại.
 
-
+OLTP systems thường được sử dụng để hỗ trợ các ứng dụng trực tiếp xử lý dữ liệu kinh doanh - thường được gọi là các ứng dụng Line of Business (LOB).
 
 
 
