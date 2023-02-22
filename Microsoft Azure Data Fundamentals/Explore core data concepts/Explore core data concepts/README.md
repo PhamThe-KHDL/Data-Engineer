@@ -11,6 +11,9 @@
       + [Extensible Markup Language (XML)](#M01.2.3)
       + [Binary Large Object (BLOB)](#M01.2.4)
       + [Optimized file formats](#M01.2.5)
+    - [Explore databases](#M01.3)
+      + [Relational databases](#M01.3.1)
+      + [Non-relational databases](#M01.3.2)
 
 
 
@@ -207,6 +210,63 @@ Một số định dạng tệp tối ưu hóa phổ biến mà bạn có thể 
 - Avro là định dạng dữ liệu dựa trên hàng. Nó được tạo ra bởi Apache. Mỗi bản ghi chứa một tiêu đề mô tả cấu trúc dữ liệu trong bản ghi. Tiêu đề này được lưu trữ dưới dạng JSON. Dữ liệu được lưu trữ dưới dạng thông tin nhị phân. Một ứng dụng sử dụng thông tin trong tiêu đề để phân tích dữ liệu nhị phân và trích xuất các trường nó chứa. Avro là định dạng tốt để nén dữ liệu và giảm thiểu yêu cầu lưu trữ và băng thông mạng.
 - ORC (Optimized Row Columnar format) tổ chức dữ liệu thành các cột thay vì các hàng. Nó được phát triển bởi HortonWorks để tối ưu hóa hoạt động đọc và ghi trong Apache Hive (Hive là hệ thống kho dữ liệu hỗ trợ tóm tắt dữ liệu và truy vấn nhanh chóng trên các tập dữ liệu lớn). Một tệp ORC chứa các vạch dữ liệu. Mỗi vạch chứa dữ liệu cho một cột hoặc tập hợp các cột. Một vạch chứa một chỉ mục vào các hàng trong vạch, dữ liệu cho mỗi hàng và một chân trang chứa thông tin thống kê (số lượng, tổng, max, min, v.v.) cho mỗi cột.
 - Parquet là một định dạng dữ liệu theo cột khác. Nó được tạo bởi Cloudera và Twitter. Một tệp Parquet chứa các nhóm hàng. Dữ liệu cho mỗi cột được lưu trữ cùng nhau trong cùng một nhóm hàng. Mỗi nhóm hàng chứa một hoặc nhiều mảnh dữ liệu. Một tệp Parquet bao gồm siêu dữ liệu mô tả tập hợp các hàng được tìm thấy trong mỗi mảnh. Một ứng dụng có thể sử dụng siêu dữ liệu này để nhanh chóng xác định mảnh chính xác cho một tập hợp các hàng nhất định và lấy dữ liệu trong các cột được chỉ định cho các hàng này. Parquet chuyên về việc lưu trữ và xử lý các loại dữ liệu lồng nhau một cách hiệu quả. Nó hỗ trợ các kế hoạch nén và mã hóa rất hiệu quả.
+
+
+
+
+
+
+
+<a name="M01.3"></a>
+## Explore databases
+Databases là các hệ thống được sử dụng để lưu trữ, quản lý và truy xuất dữ liệu. Chúng thường được sử dụng để lưu trữ thông tin liên quan đến một doanh nghiệp, tổ chức hoặc một hệ thống thông tin nào đó.
+
+Các hệ thống database thường được sử dụng để giúp cho người dùng có thể lưu trữ, tìm kiếm và truy xuất thông tin một cách dễ dàng và hiệu quả. Chúng có thể được sử dụng cho nhiều mục đích khác nhau, từ quản lý thông tin khách hàng và hàng hóa đến quản lý hệ thống tài khoản ngân hàng và dữ liệu y tế.
+
+Có nhiều loại database khác nhau, bao gồm các hệ thống quan hệ (relational databases), hệ thống đối tượng (object-oriented databases), hệ thống NoSQL, và nhiều hơn nữa. Các loại database khác nhau có ưu điểm và hạn chế khác nhau, và việc chọn loại database phù hợp là một phần quan trọng của việc thiết kế hệ thống thông tin.
+
+<a name="M01.3.1"></a>
+### Relational databases
+
+Hệ thống cơ sở dữ liệu quan hệ thường được sử dụng để lưu trữ và truy vấn dữ liệu có cấu trúc. Dữ liệu được lưu trữ trong các bảng đại diện cho các thực thể như khách hàng, sản phẩm hoặc đơn đặt hàng. Mỗi thực thể được gán một khóa chính để xác định duy nhất và các khóa này được sử dụng để tham chiếu đến thực thể trong các bảng khác. Ví dụ, khóa chính của một khách hàng có thể được tham chiếu trong bản ghi đơn đặt hàng để chỉ ra khách hàng nào đã đặt hàng. Việc sử dụng các khóa để tham chiếu đến các thực thể dữ liệu cho phép cơ sở dữ liệu quan hệ được chuẩn hóa; trong đó một phần có nghĩa là loại bỏ các giá trị dữ liệu trùng lặp, sao cho ví dụ như chi tiết của một khách hàng được lưu trữ chỉ một lần; không phải cho mỗi đơn đặt hàng mà khách hàng đặt. Các bảng được quản lý và truy vấn bằng cách sử dụng ngôn ngữ truy vấn cấu trúc (Structured Query Language - SQL), dựa trên một tiêu chuẩn ANSI, vì vậy nó tương tự trên nhiều hệ thống cơ sở dữ liệu khác nhau.
+
+![image](https://user-images.githubusercontent.com/62134515/220503391-c04d9e3c-27b7-4b56-a6bc-0332a09ca178.png)
+
+
+
+
+<a name="M01.3.2"></a>
+### Non-relational databases
+
+Các hệ thống cơ sở dữ liệu phi quan hệ là các hệ thống quản lý dữ liệu không áp dụng một cấu trúc quan hệ vào dữ liệu. Các hệ thống cơ sở dữ liệu phi quan hệ thường được gọi là cơ sở dữ liệu NoSQL, mặc dù một số hỗ trợ một biến thể của ngôn ngữ SQL.
+
+Có bốn loại hệ thống cơ sở dữ liệu phi quan hệ phổ biến thường được sử dụng:
+- **Key-value databases** trong đó mỗi bản ghi bao gồm một khóa duy nhất và một giá trị được liên kết, có thể ở bất kỳ định dạng nào.
+
+![image](https://user-images.githubusercontent.com/62134515/220503779-a4dd66a9-0399-4b7a-92f1-4206931f968d.png)
+
+- **Document databases** là một dạng cụ thể của Key-value databases trong đó giá trị là một tài liệu JSON (mà hệ thống được tối ưu hóa để phân tích cú pháp và truy vấn)
+
+![image](https://user-images.githubusercontent.com/62134515/220503983-7bf01d6f-803b-4934-a070-ebe55d13ff07.png)
+
+- **Column family databases** lưu trữ dữ liệu dạng bảng bao gồm các hàng và cột, nhưng bạn có thể chia các cột thành các nhóm được gọi là họ cột. Mỗi họ cột chứa một tập hợp các cột có quan hệ logic với nhau.
+
+![image](https://user-images.githubusercontent.com/62134515/220504329-0f4d0009-9009-4b71-a9f7-bdbe3e7b696f.png)
+
+
+- **Graph databases** lưu trữ các thực thể dưới dạng các nút có liên kết để xác định mối quan hệ giữa chúng.
+
+![image](https://user-images.githubusercontent.com/62134515/220504433-cf67b8d3-381c-401c-a43c-33669681b43a.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
