@@ -14,7 +14,7 @@
     - [Explore databases](#M01.3)
       + [Relational databases](#M01.3.1)
       + [Non-relational databases](#M01.3.2)
-
+    - [Explore transactional data processing](#M01.4)
 
 
 
@@ -267,14 +267,22 @@ Có bốn loại hệ thống cơ sở dữ liệu phi quan hệ phổ biến th
 
 
 
+<a name="M01.4"></a>
+## Explore transactional data processing
+
+Hệ thống xử lý dữ liệu giao dịch là điều mà phần lớn mọi người coi là chức năng chính của máy tính kinh doanh. Một hệ thống giao dịch ghi lại các giao dịch bao gồm các sự kiện cụ thể mà tổ chức muốn theo dõi. Một giao dịch có thể là tài chính, chẳng hạn như chuyển tiền giữa các tài khoản trong một hệ thống ngân hàng, hoặc có thể là một phần của hệ thống bán lẻ, theo dõi thanh toán cho hàng hóa và dịch vụ từ khách hàng. Hãy nghĩ về một giao dịch như là một đơn vị làm việc nhỏ, riêng biệt.
+
+Hệ thống giao dịch thường có khối lượng cao, đôi khi xử lý hàng triệu giao dịch trong một ngày. Dữ liệu được xử lý phải được truy cập rất nhanh. Công việc được thực hiện bởi các hệ thống giao dịch thường được gọi là Xử lý Giao dịch Trực tuyến (Online Transactional Processing - OLTP).
+
+![image](https://user-images.githubusercontent.com/62134515/220507715-512089af-e176-478a-8bbf-64ae173b5282.png)
 
 
+Các giải pháp OLTP phụ thuộc vào hệ thống cơ sở dữ liệu trong đó lưu trữ dữ liệu được tối ưu hóa cho cả thao tác đọc và ghi để hỗ trợ các khối lượng công việc giao dịch trong đó các bản ghi dữ liệu được tạo (created), truy xuất (retrieved), cập nhật (updated) và xóa (deleted) (thường được gọi là các thao tác CRUD). Những thao tác này được áp dụng theo cách thực hiện giao dịch để đảm bảo tính toàn vẹn của dữ liệu được lưu trữ trong cơ sở dữ liệu. Để làm được điều này, các hệ thống OLTP áp dụng các giao dịch hỗ trợ ngữ nghĩa ACID:
 
-
-
-
-
-
+- Tính nguyên tử (Atomicity) - Mỗi giao dịch được xử lý như một đơn vị duy nhất, hoàn toàn thành công hoặc hoàn toàn thất bại. Ví dụ, một giao dịch liên quan đến việc giảm số dư từ tài khoản này và tăng số dư tương ứng trong tài khoản khác phải thực hiện cả hai hành động. Nếu một trong hai hành động không thể hoàn tất, thì hành động còn lại phải bị hủy.
+- Tính nhất quán (Consistency) - Các giao dịch chỉ có thể lấy dữ liệu trong cơ sở dữ liệu từ một trạng thái hợp lệ sang một trạng thái khác hợp lệ. Để tiếp tục ví dụ về việc giảm và tăng số dư ở trên, trạng thái hoàn tất của giao dịch phải phản ánh việc chuyển khoản từ một tài khoản sang tài khoản khác.
+- Tính độc lập (Isolation) - Các giao dịch đồng thời không thể can thiệp lẫn nhau và phải cho kết quả là trạng thái cơ sở dữ liệu nhất quán. Ví dụ, trong khi giao dịch chuyển tiền từ một tài khoản sang một tài khoản khác đang được xử lý, giao dịch kiểm tra số dư của các tài khoản đó phải trả về kết quả nhất quán - giao dịch kiểm tra số dư không thể lấy giá trị của một tài khoản phản ánh số dư trước khi chuyển tiền và một giá trị khác của tài khoản khác phản ánh số dư sau khi chuyển tiền.
+- Tính bền vững (Durability) - Khi một giao dịch đã được cam kết, nó sẽ luôn được cam kết. Sau khi giao dịch chuyển khoản đã hoàn tất, số dư tài khoản đã được cập nhật để bảo đảm rằng ngay cả khi hệ thống cơ sở dữ liệu bị tắt đi và được khởi động lại, giao dịch đã cam kết sẽ được phản ánh lại.
 
 
 
