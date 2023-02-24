@@ -204,7 +204,9 @@ Các kỹ sư dữ liệu sử dụng Azure Storage để host data lakes - lưu
 
 ![image](https://user-images.githubusercontent.com/62134515/221138788-c2f37016-7295-46fa-a985-1e5ff4891b72.png)
 
+Azure Data Factory là một dịch vụ Azure cho phép bạn định nghĩa và lên lịch cho các data pipeline để  transfer và transform dữ liệu. Bạn có thể tích hợp các pipeline của mình với các dịch vụ Azure khác, cho phép bạn tiếp nhận dữ liệu từ các kho lưu trữ dữ liệu đám mây, xử lý dữ liệu bằng tính toán đám mây, và lưu kết quả vào một kho lưu trữ dữ liệu khác.
 
+Azure Data Factory được sử dụng bởi các kỹ sư dữ liệu để xây dựng các giải pháp extract, transform, và load (ETL) để lấp đầy kho dữ liệu phân tích với dữ liệu từ các hệ thống giao dịch trên toàn tổ chức.
 
 
 
