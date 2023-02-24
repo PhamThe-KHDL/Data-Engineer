@@ -148,9 +148,9 @@ Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở d�
 
 Để hỗ trợ các ứng dụng giao dịch và cung cấp nguồn dữ liệu cho các giải pháp phân tích, Azure cung cấp các dịch vụ quản lý cho các hệ thống cơ sở dữ liệu quan hệ mã nguồn mở phổ biến, bao gồm:
 
-- Azure Database for MySQL - một hệ thống quản lý cơ sở dữ liệu mã nguồn mở dễ sử dụng, thường được sử dụng trong các ứng dụng Linux, Apache, MySQL và PHP (LAMP).
-- Azure Database for MariaDB - một hệ thống quản lý cơ sở dữ liệu mới hơn, được tạo ra bởi các nhà phát triển ban đầu của MySQL. Động cơ cơ sở dữ liệu đã được viết lại và được tối ưu hóa để cải thiện hiệu suất. MariaDB cung cấp tính tương thích với Oracle Database (một hệ thống quản lý cơ sở dữ liệu thương mại phổ biến khác).
-- Azure Database for PostgreSQL - một hybrid relational-object database. Bạn có thể lưu trữ dữ liệu trong các bảng quan hệ, nhưng cơ sở dữ liệu PostgreSQL cũng cho phép bạn lưu trữ các loại dữ liệu tùy chỉnh, với các thuộc tính non-relational riêng của chúng.
+- **Azure Database for MySQL** - một hệ thống quản lý cơ sở dữ liệu mã nguồn mở dễ sử dụng, thường được sử dụng trong các ứng dụng Linux, Apache, MySQL và PHP (LAMP).
+- **Azure Database for MariaDB** - một hệ thống quản lý cơ sở dữ liệu mới hơn, được tạo ra bởi các nhà phát triển ban đầu của MySQL. Động cơ cơ sở dữ liệu đã được viết lại và được tối ưu hóa để cải thiện hiệu suất. MariaDB cung cấp tính tương thích với Oracle Database (một hệ thống quản lý cơ sở dữ liệu thương mại phổ biến khác).
+- **Azure Database for PostgreSQL** - một hybrid relational-object database. Bạn có thể lưu trữ dữ liệu trong các bảng quan hệ, nhưng cơ sở dữ liệu PostgreSQL cũng cho phép bạn lưu trữ các loại dữ liệu tùy chỉnh, với các thuộc tính non-relational riêng của chúng.
 
 Giống như các hệ thống cơ sở dữ liệu Azure SQL, các cơ sở dữ liệu quan hệ mã nguồn mở được quản lý bởi các quản trị cơ sở dữ liệu để hỗ trợ các ứng dụng giao dịch và cung cấp nguồn dữ liệu cho các kỹ sư dữ liệu xây dựng đường ống dữ liệu cho các giải pháp phân tích và các chuyên viên dữ liệu tạo báo cáo.
 
@@ -186,9 +186,9 @@ Azure Cosmos DB là hệ thống cơ sở dữ liệu phi quan hệ (NoSQL) quy 
 
 Azure Storage là một dịch vụ cốt lõi của Azure, cho phép lưu trữ dữ liệu trong:
 
-- Blob containers - lưu trữ mở rộng và tiết kiệm chi phí cho các tệp nhị phân.
-- File shares - chia sẻ tệp trên mạng như là các tệp truy cập thông thường trên các mạng doanh nghiệp.
-- Tables - lưu trữ key-value cho các ứng dụng cần đọc và ghi dữ liệu nhanh chóng.
+- **Blob containers** - lưu trữ mở rộng và tiết kiệm chi phí cho các tệp nhị phân.
+- **File shares** - chia sẻ tệp trên mạng như là các tệp truy cập thông thường trên các mạng doanh nghiệp.
+- **Tables** - lưu trữ key-value cho các ứng dụng cần đọc và ghi dữ liệu nhanh chóng.
 
 Các kỹ sư dữ liệu sử dụng Azure Storage để host data lakes - lưu trữ blob với không gian tên phân cấp cho phép các tệp được tổ chức trong các thư mục trong hệ thống tệp phân tán.
 
@@ -219,7 +219,16 @@ Azure Data Factory được sử dụng bởi các kỹ sư dữ liệu để x�
 
 ![image](https://user-images.githubusercontent.com/62134515/221139142-6eb0960f-3ae2-4310-82fd-2312b8345b1a.png)
 
+Azure Synapse Analytics là một giải pháp phân tích dữ liệu toàn diện và thống nhất cung cấp một giao diện dịch vụ duy nhất cho nhiều khả năng phân tích dữ liệu, bao gồm:
 
+- **Các đường ống dữ liệu (Pipelines)** - dựa trên cùng công nghệ như Azure Data Factory.
+- **SQL** - một hệ thống cơ sở dữ liệu SQL có khả năng mở rộng cao, được tối ưu hóa cho các tải trọng lưu trữ kho dữ liệu.
+- **Apache Spark** - một hệ thống xử lý dữ liệu phân tán mã nguồn mở hỗ trợ nhiều ngôn ngữ lập trình và API, bao gồm Java, Scala, Python và SQL.
+- **Azure Synapse Data Explorer** - một giải pháp phân tích dữ liệu hiệu suất cao được tối ưu hóa cho truy vấn thời gian thực dữ liệu log và telemetry sử dụng ngôn ngữ truy vấn Kusto (KQL).
+
+Các kỹ sư dữ liệu có thể sử dụng Azure Synapse Analytics để tạo ra một giải pháp phân tích dữ liệu thống nhất kết hợp việc nhập dữ liệu, lưu trữ data warehouse và data lake dữ liệu thông qua một dịch vụ duy nhất.
+
+Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhóm Spark thông qua các notebook tương tác để khám phá và phân tích dữ liệu, và tận dụng tích hợp với các dịch vụ như Azure Machine Learning và Microsoft Power BI để tạo mô hình dữ liệu và trích xuất thông tin từ dữ liệu.
 
 
 
