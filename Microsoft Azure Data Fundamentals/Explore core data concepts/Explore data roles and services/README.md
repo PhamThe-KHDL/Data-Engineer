@@ -124,7 +124,17 @@ và phân tích hiện đại. Ngoài ra còn có các dịch vụ khác cũng c
 
 ![image](https://user-images.githubusercontent.com/62134515/221138532-0394e85c-a3ca-4e78-8e62-17c3477d43dc.png)
 
+Azure SQL là tên chung cho một họ các giải pháp cơ sở dữ liệu quan hệ dựa trên cơ sở dữ liệu Microsoft SQL Server. Các dịch vụ Azure SQL cụ thể bao gồm:
 
+ - **Azure SQL Database** - cơ sở dữ liệu được quản lý hoàn toàn dưới dạng nền tảng dịch vụ (platform-as-a-service - PaaS) được lưu trữ trên Azure.
+ - **Azure SQL Managed Instance** - một phiên bản được lưu trữ của SQL Server với bảo trì tự động, cho phép cấu hình linh hoạt hơn Azure SQL DB nhưng có trách nhiệm quản trị nhiều hơn cho chủ sở hữu.
+ - **Azure SQL VM** - một máy ảo với cài đặt SQL Server, cho phép tối đa hóa khả năng cấu hình với trách nhiệm quản lý đầy đủ.
+
+Nhà quản trị cơ sở dữ liệu thông thường cung cấp và quản lý hệ thống cơ sở dữ liệu Azure SQL để hỗ trợ các ứng dụng line of business (LOB) cần lưu trữ dữ liệu giao dịch.
+
+Các kỹ sư dữ liệu có thể sử dụng các hệ thống cơ sở dữ liệu Azure SQL làm nguồn dữ liệu cho các đường ống dữ liệu thực hiện các hoạt động extract, transform, và load (ETL) để nhập dữ liệu giao dịch vào hệ thống phân tích.
+
+Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở dữ liệu Azure SQL để tạo báo cáo, tuy nhiên trong các tổ chức lớn, dữ liệu thường được kết hợp với dữ liệu từ các nguồn khác trong kho dữ liệu phân tích để hỗ trợ phân tích doanh nghiệp.
 
 
 
