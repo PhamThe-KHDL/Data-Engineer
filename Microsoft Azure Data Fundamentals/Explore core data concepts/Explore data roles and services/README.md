@@ -54,7 +54,7 @@ một đường ống để chuyển dữ liệu từ cơ sở dữ liệu đó 
 
 ![image](https://user-images.githubusercontent.com/62134515/221132737-17a896fb-8f09-4f63-800d-7e17e321787d.png)
 
-Một quản trị cơ sở dữ liệu có trách nhiệm thiết kế, triển khai, bảo trì và các khía cạnh hoạt động của các hệ thống cơ sở dữ liệu trên nền tảng trên nơi và đám mây. Họ chịu trách nhiệm cho sự khả dụng tổng thể và hiệu suất ổn định và tối ưu hóa của cơ sở dữ liệu. Họ làm việc với các bên liên quan để triển khai các chính sách, công cụ và quy trình cho các kế hoạch sao lưu và khôi phục để phục hồi sau một thảm họa tự nhiên hoặc lỗi do con người.
+Một người quản trị cơ sở dữ liệu có trách nhiệm thiết kế, triển khai, bảo trì và các khía cạnh hoạt động của các hệ thống cơ sở dữ liệu tại chỗ (on-premises) và trên đám mây (cloud-based). Họ chịu trách nhiệm cho sự khả dụng tổng thể và hiệu suất ổn định và tối ưu hóa của cơ sở dữ liệu. Họ làm việc với các bên liên quan để triển khai các chính sách, công cụ và quy trình cho các kế hoạch sao lưu và khôi phục để phục hồi sau một sự cố tự nhiên hoặc lỗi do con người.
 
 Quản trị cơ sở dữ liệu cũng chịu trách nhiệm quản lý bảo mật dữ liệu trong cơ sở dữ liệu, cấp đặc quyền truy cập vào dữ liệu, cho phép hoặc từ chối truy cập cho người dùng phù hợp.
 
@@ -69,7 +69,7 @@ Quản trị cơ sở dữ liệu cũng chịu trách nhiệm quản lý bảo m
 
 Một kỹ sư dữ liệu hợp tác với các bên liên quan để thiết kế và triển khai các khối lượng công việc liên quan đến dữ liệu, bao gồm đường ống nhập dữ liệu, các hoạt động làm sạch và chuyển đổi dữ liệu và các kho dữ liệu cho các khối lượng công việc phân tích. Họ sử dụng một loạt các công nghệ nền tảng dữ liệu, bao gồm các cơ sở dữ liệu quan hệ và phi quan hệ, các kho lưu trữ tệp và các luồng dữ liệu.
 
-Họ cũng chịu trách nhiệm đảm bảo rằng sự riêng tư của dữ liệu được duy trì trong đám mây và trải dài từ kho dữ liệu trên nền tảng trên nơi đến các kho dữ liệu đám mây. Họ quản lý và giám sát các đường ống dữ liệu để đảm bảo rằng các tải dữ liệu hoạt động như mong đợi.
+Họ cũng chịu trách nhiệm đảm bảo rằng sự riêng tư của dữ liệu được duy trì trong đám mây và trải dài từ kho dữ liệu tại chỗ đến các kho dữ liệu đám mây. Họ quản lý và giám sát các đường ống dữ liệu để đảm bảo rằng load dữ liệu hoạt động như mong đợi.
 
 
 
@@ -87,10 +87,10 @@ Một nhà phân tích dữ liệu xử lý dữ liệu thô thành các thông 
 
 ```
 !Note
-Các vai trò được mô tả ở đây đại diện cho các vai trò liên quan đến dữ liệu chính được tìm thấy trong hầu hết 
-các tổ chức trung bình đến lớn. Có các vai trò liên quan đến dữ liệu khác không được đề cập ở đây, 
-chẳng hạn như nhà khoa học dữ liệu và kiến trúc sư dữ liệu; và còn có các chuyên gia kỹ thuật khác làm việc 
-với dữ liệu, bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
+Các vai trò được mô tả ở đây đại diện cho các vai trò chính liên quan đến dữ liệu được tìm thấy trong hầu hết 
+các tổ chức vừa đến lớn. Có các vai trò liên quan đến dữ liệu khác không được đề cập ở đây, chẳng hạn như 
+nhà khoa học dữ liệu và kiến trúc sư dữ liệu; và còn có các chuyên gia kỹ thuật khác làm việc với dữ liệu, 
+bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
 ```
 
 
