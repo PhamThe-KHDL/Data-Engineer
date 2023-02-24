@@ -241,7 +241,11 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139200-21025737-ab63-4ee8-8899-baa2d212e540.png)
 
+Azure Databricks là một phiên bản tích hợp Azure của nền tảng phổ biến Databricks, kết hợp nền tảng xử lý dữ liệu Apache Spark với cú pháp cơ sở dữ liệu SQL và giao diện quản lý tích hợp để cho phép phân tích dữ liệu lớn.
 
+Các kỹ sư dữ liệu có thể sử dụng kỹ năng hiện có của Databricks và Spark để tạo các kho dữ liệu phân tích trong Azure Databricks.
+
+Các nhà phân tích dữ liệu có thể sử dụng hỗ trợ notebook native trong Azure Databricks để truy vấn và trực quan hóa dữ liệu trong một giao diện web dễ sử dụng.
 
 
 
@@ -257,7 +261,14 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139247-b95d7cf8-7eda-4d1a-8ada-7a32e5b583e8.png)
 
+Azure HDInsight là một dịch vụ Azure cung cấp các cụm máy chủ được lưu trữ trên Azure cho các công nghệ xử lý dữ liệu lớn mã nguồn mở phổ biến của Apache, bao gồm:
 
+- Apache Spark - một hệ thống xử lý dữ liệu phân tán hỗ trợ nhiều ngôn ngữ lập trình và API, bao gồm Java, Scala, Python và SQL.
+- Apache Hadoop - một hệ thống phân tán sử dụng các công việc MapReduce để xử lý các khối lượng dữ liệu lớn một cách hiệu quả trên nhiều nút cụm. Các công việc MapReduce có thể được viết bằng Java hoặc trừu tượng hóa bằng các giao diện như Apache Hive - một API dựa trên SQL chạy trên Hadoop.
+- Apache HBase - một hệ thống mã nguồn mở cho việc lưu trữ và truy vấn dữ liệu NoSQL quy mô lớn.
+- Apache Kafka - một trình điều phối tin nhắn cho xử lý dữ liệu luồng.
+
+Các kỹ sư dữ liệu có thể sử dụng Azure HDInsight để hỗ trợ các khối lượng công việc phân tích dữ liệu lớn phụ thuộc vào nhiều công nghệ mã nguồn mở.
 
 
 
@@ -271,7 +282,9 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139302-30dce632-c1aa-40f0-a617-446bd6e9f5d0.png)
 
+Azure Stream Analytics là một bộ công cụ xử lý thời gian thực (real-time stream processing engine) có khả năng chụp một luồng dữ liệu từ một đầu vào, áp dụng một truy vấn để trích xuất và xử lý dữ liệu từ luồng đầu vào, và ghi kết quả vào một đầu ra để phân tích hoặc xử lý tiếp theo.
 
+Các kỹ sư dữ liệu có thể tích hợp Azure Stream Analytics vào kiến trúc phân tích dữ liệu để chụp dữ liệu luồng (capture streaming data) để nhập vào kho dữ liệu phân tích hoặc cho phép trực quan hóa dữ liệu thời gian thực.
 
 
 
@@ -283,7 +296,9 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139379-62a6f6b9-072d-4d38-bf0f-21d41631bf23.png)
 
+Azure Data Explorer là một dịch vụ độc lập cung cấp khả năng truy vấn và phân tích dữ liệu log và dữ liệu đo lường (telemetry) tương tự như runtime của Azure Synapse Data Explorer trong Azure Synapse Analytics.
 
+Các nhà phân tích dữ liệu có thể sử dụng Azure Data Explorer để truy vấn và phân tích dữ liệu có chứa thuộc tính thời gian (timestamp), chẳng hạn như thông tin được tìm thấy trong các tệp log và dữ liệu đo lường (telemetry) từ các thiết bị Internet-of-Things (IoT).
 
 
 
@@ -296,7 +311,9 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139560-df406d12-f109-4318-b741-1047e4ccdfd4.png)
 
+Microsoft Purview cung cấp một giải pháp cho việc quản lý và phát hiện dữ liệu trên toàn doanh nghiệp. Bạn có thể sử dụng Microsoft Purview để tạo bản đồ dữ liệu của mình và theo dõi nguồn gốc dữ liệu trên nhiều nguồn và hệ thống khác nhau, giúp bạn tìm dữ liệu đáng tin cậy để phân tích và báo cáo.
 
+Các kỹ sư dữ liệu có thể sử dụng Microsoft Purview để thiết lập quản lý dữ liệu trên toàn doanh nghiệp và đảm bảo tính toàn vẹn của dữ liệu được sử dụng để hỗ trợ các khối lượng công việc phân tích.
 
 
 
@@ -308,7 +325,7 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 ![image](https://user-images.githubusercontent.com/62134515/221139617-fda8e42a-f908-48af-8952-cfc9c8fe7ac1.png)
 
-
+Microsoft Power BI là một nền tảng cho việc tạo mô hình dữ liệu phân tích và báo cáo, mà các nhà phân tích dữ liệu có thể sử dụng để tạo và chia sẻ các biểu đồ dữ liệu tương tác. Các báo cáo Power BI có thể được tạo bằng cách sử dụng ứng dụng Power BI Desktop, sau đó được xuất bản và giao qua các báo cáo và ứng dụng trên web trong dịch vụ Power BI, cũng như trong ứng dụng di động Power BI.
 
 
 
@@ -323,7 +340,7 @@ Các chuyên gia phân tích dữ liệu có thể sử dụng SQL và các nhó
 
 <a name="M01.3"></a>
 ## Knowledge check
-![image](https://user-images.githubusercontent.com/62134515/220530981-9be56694-f628-4332-a4b9-e54bf6bd2f4b.png)
+
 
 
 
