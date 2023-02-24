@@ -109,6 +109,15 @@ Microsoft Azure là một nền tảng đám mây cung cấp năng lượng cho 
 
 Dưới đây là một số dịch vụ đám mây thường được sử dụng nhất cho dữ liệu trên Microsoft Azure.
 
+```
+!Note
+Topic này chỉ đề cập đến một số dịch vụ dữ liệu được sử dụng phổ biến nhất cho các giải pháp giao dịch 
+và phân tích hiện đại. Ngoài ra còn có các dịch vụ khác cũng có sẵn trên nền tảng Microsoft Azure.
+```
+
+
+
+
 
 <a name="M01.2.1"></a>
 ### Azure SQL
