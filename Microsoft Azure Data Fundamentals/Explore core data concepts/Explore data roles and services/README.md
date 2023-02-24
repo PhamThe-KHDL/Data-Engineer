@@ -341,6 +341,7 @@ Microsoft Power BI là một nền tảng cho việc tạo mô hình dữ liệu
 <a name="M01.3"></a>
 ## Knowledge check
 
+![image](https://user-images.githubusercontent.com/62134515/221227167-6726831b-1070-4b1a-9906-1ff953ca9a01.png)
 
 
 
