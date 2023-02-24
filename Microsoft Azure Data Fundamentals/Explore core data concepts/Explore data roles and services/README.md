@@ -184,7 +184,13 @@ Azure Cosmos DB là hệ thống cơ sở dữ liệu phi quan hệ (NoSQL) quy 
 
 ![image](https://user-images.githubusercontent.com/62134515/221138740-bae04b8d-d2e6-44de-9432-781b8056f818.png)
 
+Azure Storage là một dịch vụ cốt lõi của Azure, cho phép lưu trữ dữ liệu trong:
 
+- Blob containers - lưu trữ mở rộng và tiết kiệm chi phí cho các tệp nhị phân.
+- File shares - chia sẻ tệp trên mạng như là các tệp truy cập thông thường trên các mạng doanh nghiệp.
+- Tables - lưu trữ key-value cho các ứng dụng cần đọc và ghi dữ liệu nhanh chóng.
+
+Các kỹ sư dữ liệu sử dụng Azure Storage để host data lakes - lưu trữ blob với không gian tên phân cấp cho phép các tệp được tổ chức trong các thư mục trong hệ thống tệp phân tán.
 
 
 
