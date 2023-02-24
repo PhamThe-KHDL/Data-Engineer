@@ -139,10 +139,20 @@ Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở d�
 
 
 
+
+
 <a name="M01.2.2"></a>
 ### Azure Database for open-source relational databases
 
 ![image](https://user-images.githubusercontent.com/62134515/221138595-81c28331-9d71-4007-a616-241560681fc0.png)
+
+Để hỗ trợ các ứng dụng giao dịch và cung cấp nguồn dữ liệu cho các giải pháp phân tích, Azure cung cấp các dịch vụ quản lý cho các hệ thống cơ sở dữ liệu quan hệ mã nguồn mở phổ biến, bao gồm:
+
+- Azure Database for MySQL - một hệ thống quản lý cơ sở dữ liệu mã nguồn mở dễ sử dụng, thường được sử dụng trong các ứng dụng Linux, Apache, MySQL và PHP (LAMP).
+- Azure Database for MariaDB - một hệ thống quản lý cơ sở dữ liệu mới hơn, được tạo ra bởi các nhà phát triển ban đầu của MySQL. Động cơ cơ sở dữ liệu đã được viết lại và được tối ưu hóa để cải thiện hiệu suất. MariaDB cung cấp tính tương thích với Oracle Database (một hệ thống quản lý cơ sở dữ liệu thương mại phổ biến khác).
+- Azure Database for PostgreSQL - một hybrid relational-object database. Bạn có thể lưu trữ dữ liệu trong các bảng quan hệ, nhưng cơ sở dữ liệu PostgreSQL cũng cho phép bạn lưu trữ các loại dữ liệu tùy chỉnh, với các thuộc tính non-relational riêng của chúng.
+
+Giống như các hệ thống cơ sở dữ liệu Azure SQL, các cơ sở dữ liệu quan hệ mã nguồn mở được quản lý bởi các quản trị cơ sở dữ liệu để hỗ trợ các ứng dụng giao dịch và cung cấp nguồn dữ liệu cho các kỹ sư dữ liệu xây dựng đường ống dữ liệu cho các giải pháp phân tích và các chuyên viên dữ liệu tạo báo cáo.
 
 
 
@@ -165,10 +175,14 @@ Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở d�
 
 
 
+
+
 <a name="M01.2.4"></a>
 ### Azure Storage
 
 ![image](https://user-images.githubusercontent.com/62134515/221138740-bae04b8d-d2e6-44de-9432-781b8056f818.png)
+
+
 
 
 
@@ -188,6 +202,8 @@ Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở d�
 
 
 
+
+
 <a name="M01.2.6"></a>
 ### Azure Synapse Analytics
 
@@ -199,10 +215,14 @@ Các nhà phân tích dữ liệu có thể truy vấn trực tiếp cơ sở d�
 
 
 
+
+
 <a name="M01.2.7"></a>
 ### Azure Databricks
 
 ![image](https://user-images.githubusercontent.com/62134515/221139200-21025737-ab63-4ee8-8899-baa2d212e540.png)
+
+
 
 
 
