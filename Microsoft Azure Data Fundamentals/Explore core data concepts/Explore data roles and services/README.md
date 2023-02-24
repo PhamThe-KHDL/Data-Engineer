@@ -105,6 +105,10 @@ bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
 <a name="M01.2"></a>
 ## Identify data services
 
+Microsoft Azure là một nền tảng đám mây cung cấp năng lượng cho các ứng dụng và cơ sở hạ tầng IT cho một số tổ chức lớn nhất thế giới. Nó bao gồm nhiều dịch vụ để hỗ trợ các giải pháp đám mây, bao gồm các công việc liên quan đến dữ liệu giao dịch và phân tích.
+
+Dưới đây là một số dịch vụ đám mây thường được sử dụng nhất cho dữ liệu trên Microsoft Azure.
+
 
 <a name="M01.2.1"></a>
 ### Azure SQL
