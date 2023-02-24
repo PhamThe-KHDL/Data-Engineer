@@ -39,6 +39,7 @@ Ba vai trò chính liên quan đến dữ liệu trong hầu hết các tổ ch�
 - **Quản trị cơ sở dữ liệu (Database administrators)** quản lý cơ sở dữ liệu, gán quyền truy cập cho người dùng, lưu trữ các bản sao dự phòng của dữ liệu và khôi phục dữ liệu trong trường hợp xảy ra sự cố.
 - **Kỹ sư dữ liệu (Data engineers)** quản lý cơ sở hạ tầng và quy trình tích hợp dữ liệu trên toàn tổ chức, áp dụng các quy trình làm sạch dữ liệu, xác định các quy tắc quản lý dữ liệu và triển khai các đường ống (pipelines) để chuyển và biến đổi dữ liệu giữa các hệ thống.
 - **Nhà phân tích dữ liệu (Data analysts)** khám phá và phân tích dữ liệu để tạo ra các biểu đồ và biểu đồ trực quan giúp tổ chức đưa ra các quyết định có căn cứ.
+
 ``` 
 !Note
 Các vai trò công việc xác định các nhiệm vụ và trách nhiệm khác nhau. Ở một số tổ chức, cùng một người có thể 
@@ -70,15 +71,6 @@ Một kỹ sư dữ liệu hợp tác với các bên liên quan để thiết k
 
 Họ cũng chịu trách nhiệm đảm bảo rằng sự riêng tư của dữ liệu được duy trì trong đám mây và trải dài từ kho dữ liệu trên nền tảng trên nơi đến các kho dữ liệu đám mây. Họ quản lý và giám sát các đường ống dữ liệu để đảm bảo rằng các tải dữ liệu hoạt động như mong đợi.
 
-!Note
-Các vai trò được mô tả ở đây đại diện cho các vai trò liên quan đến dữ liệu chính được tìm thấy trong hầu hết 
-các tổ chức trung bình đến lớn. Có các vai trò liên quan đến dữ liệu khác không được đề cập ở đây, 
-chẳng hạn như nhà khoa học dữ liệu và kiến trúc sư dữ liệu; và còn có các chuyên gia kỹ thuật khác làm việc 
-với dữ liệu, bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
-```
-
-
-
 
 
 
@@ -92,6 +84,17 @@ với dữ liệu, bao gồm các nhà phát triển ứng dụng và kỹ sư p
 Một nhà phân tích dữ liệu giúp các doanh nghiệp tối đa hóa giá trị của tài sản dữ liệu của họ. Họ chịu trách nhiệm khám phá dữ liệu để xác định xu hướng và mối quan hệ, thiết kế và xây dựng các mô hình phân tích, và kích hoạt khả năng phân tích tiên tiến thông qua các báo cáo và trực quan hóa.
 
 Một nhà phân tích dữ liệu xử lý dữ liệu thô thành các thông tin cần thiết dựa trên các yêu cầu kinh doanh đã xác định để cung cấp thông tin cần thiết.
+
+```
+!Note
+Các vai trò được mô tả ở đây đại diện cho các vai trò liên quan đến dữ liệu chính được tìm thấy trong hầu hết 
+các tổ chức trung bình đến lớn. Có các vai trò liên quan đến dữ liệu khác không được đề cập ở đây, 
+chẳng hạn như nhà khoa học dữ liệu và kiến trúc sư dữ liệu; và còn có các chuyên gia kỹ thuật khác làm việc 
+với dữ liệu, bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
+```
+
+
+
 
 
 
