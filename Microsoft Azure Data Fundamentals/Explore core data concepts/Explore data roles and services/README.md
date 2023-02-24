@@ -36,9 +36,9 @@ Có rất nhiều vai trò liên quan đến quản lý, điều khiển và s�
 
 Ba vai trò chính liên quan đến dữ liệu trong hầu hết các tổ chức bao gồm:
 
-- Quản trị cơ sở dữ liệu (Database administrators) quản lý cơ sở dữ liệu, gán quyền truy cập cho người dùng, lưu trữ các bản sao dự phòng của dữ liệu và khôi phục dữ liệu trong trường hợp xảy ra sự cố.
-- Kỹ sư dữ liệu (Data engineers) quản lý cơ sở hạ tầng và quy trình tích hợp dữ liệu trên toàn tổ chức, áp dụng các quy trình làm sạch dữ liệu, xác định các quy tắc quản lý dữ liệu và triển khai các đường ống (pipelines) để chuyển và biến đổi dữ liệu giữa các hệ thống.
-- Nhà phân tích dữ liệu (Data analysts) khám phá và phân tích dữ liệu để tạo ra các biểu đồ và biểu đồ trực quan giúp tổ chức đưa ra các quyết định có căn cứ.
+- **Quản trị cơ sở dữ liệu (Database administrators)** quản lý cơ sở dữ liệu, gán quyền truy cập cho người dùng, lưu trữ các bản sao dự phòng của dữ liệu và khôi phục dữ liệu trong trường hợp xảy ra sự cố.
+- **Kỹ sư dữ liệu (Data engineers)** quản lý cơ sở hạ tầng và quy trình tích hợp dữ liệu trên toàn tổ chức, áp dụng các quy trình làm sạch dữ liệu, xác định các quy tắc quản lý dữ liệu và triển khai các đường ống (pipelines) để chuyển và biến đổi dữ liệu giữa các hệ thống.
+- **Nhà phân tích dữ liệu (Data analysts)** khám phá và phân tích dữ liệu để tạo ra các biểu đồ và biểu đồ trực quan giúp tổ chức đưa ra các quyết định có căn cứ.
 ``` 
 !Note
 Các vai trò công việc xác định các nhiệm vụ và trách nhiệm khác nhau. Ở một số tổ chức, cùng một người có thể 
@@ -51,13 +51,12 @@ một đường ống để chuyển dữ liệu từ cơ sở dữ liệu đó 
 <a name="M01.1.1"></a>
 ### Database Administrator
 
-Structured data là dữ liệu được tổ chức theo cấu trúc định sẵn và có thể được đọc và hiểu bởi máy tính và các chương trình phần mềm khác một cách dễ dàng. Các dữ liệu được sắp xếp theo các bảng, cột, hàng, trường, hoặc các đối tượng có liên quan khác, được xác định trước bởi một loại cấu trúc hoặc schema. Dữ liệu có cấu trúc này cho phép các ứng dụng phân tích, truy vấn, và xử lý dữ liệu một cách hiệu quả hơn.
+![image](https://user-images.githubusercontent.com/62134515/221132737-17a896fb-8f09-4f63-800d-7e17e321787d.png)
 
-Các ví dụ phổ biến về dữ liệu có cấu trúc bao gồm các bảng dữ liệu, ví dụ như các bảng trong cơ sở dữ liệu quan hệ, các tập tin Excel hoặc các tập tin CSV. Các bảng này có các cột dữ liệu rõ ràng, mỗi cột đại diện cho một trường dữ liệu cụ thể và mỗi hàng đại diện cho một bản ghi dữ liệu.
+Một quản trị cơ sở dữ liệu có trách nhiệm thiết kế, triển khai, bảo trì và các khía cạnh hoạt động của các hệ thống cơ sở dữ liệu trên nền tảng trên nơi và đám mây. Họ chịu trách nhiệm cho sự khả dụng tổng thể và hiệu suất ổn định và tối ưu hóa của cơ sở dữ liệu. Họ làm việc với các bên liên quan để triển khai các chính sách, công cụ và quy trình cho các kế hoạch sao lưu và khôi phục để phục hồi sau một thảm họa tự nhiên hoặc lỗi do con người.
 
-Dữ liệu có cấu trúc thường được sử dụng trong các ứng dụng doanh nghiệp để lưu trữ và quản lý thông tin liên quan đến khách hàng, sản phẩm, đơn hàng, thanh toán và nhiều loại thông tin khác. Nó cũng là định dạng phổ biến để trao đổi dữ liệu giữa các ứng dụng, máy chủ và hệ thống khác nhau bởi vì các ứng dụng có thể dễ dàng trích xuất và sử dụng thông tin từ dữ liệu có cấu trúc.
+Quản trị cơ sở dữ liệu cũng chịu trách nhiệm quản lý bảo mật dữ liệu trong cơ sở dữ liệu, cấp đặc quyền truy cập vào dữ liệu, cho phép hoặc từ chối truy cập cho người dùng phù hợp.
 
-![image](https://user-images.githubusercontent.com/62134515/220317287-b613b3a4-d919-4b1c-8a6d-d45ce5c16b1b.png)
 
 
 
@@ -65,72 +64,34 @@ Dữ liệu có cấu trúc thường được sử dụng trong các ứng dụ
 <a name="M01.1.2"></a>
 ### Data Engineer
 
-Semi-structured data (dữ liệu bán cấu trúc) là dữ liệu không có cấu trúc hoàn toàn, tuy nhiên chúng vẫn chứa một số thông tin về cấu trúc của dữ liệu. Semi-structured data có thể được định dạng bằng các định dạng như XML, JSON, hoặc YAML, v.v. và thường được sử dụng để mô tả dữ liệu liên quan đến nội dung văn bản, đồ họa hoặc dữ liệu đa phương tiện.
+![image](https://user-images.githubusercontent.com/62134515/221133279-18cf490c-ca0a-4832-b31e-9b3ae6bf64f4.png)
 
-Các ví dụ về semi-structured data bao gồm các tập tin log, các tập tin cấu hình, dữ liệu HTML, hoặc các tài liệu tóm tắt. Các loại dữ liệu này không theo một cấu trúc rõ ràng như dữ liệu có cấu trúc, nhưng vẫn chứa các thông tin quan trọng được đánh dấu bằng các thẻ hay nhãn.
+Một kỹ sư dữ liệu hợp tác với các bên liên quan để thiết kế và triển khai các khối lượng công việc liên quan đến dữ liệu, bao gồm đường ống nhập dữ liệu, các hoạt động làm sạch và chuyển đổi dữ liệu và các kho dữ liệu cho các khối lượng công việc phân tích. Họ sử dụng một loạt các công nghệ nền tảng dữ liệu, bao gồm các cơ sở dữ liệu quan hệ và phi quan hệ, các kho lưu trữ tệp và các luồng dữ liệu.
 
-Vì semi-structured data không có một cấu trúc đơn giản, việc truy xuất và xử lý dữ liệu thường đòi hỏi sự kết hợp giữa các phương pháp xử lý dữ liệu có cấu trúc và không có cấu trúc. Nhiều công nghệ và phương pháp đã được phát triển để xử lý semi-structured data, bao gồm các công nghệ Big Data, các công cụ đọc hiểu ngôn ngữ tự nhiên và các công cụ xử lý dữ liệu văn bản tự động.
+Họ cũng chịu trách nhiệm đảm bảo rằng sự riêng tư của dữ liệu được duy trì trong đám mây và trải dài từ kho dữ liệu trên nền tảng trên nơi đến các kho dữ liệu đám mây. Họ quản lý và giám sát các đường ống dữ liệu để đảm bảo rằng các tải dữ liệu hoạt động như mong đợi.
 
-```JSON
-// Customer 1
-{
-  "firstName": "Joe",
-  "lastName": "Jones",
-  "address":
-  {
-    "streetAddress": "1 Main St.",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10099"
-  },
-  "contact":
-  [
-    {
-      "type": "home",
-      "number": "555 123-1234"
-    },
-    {
-      "type": "email",
-      "address": "joe@litware.com"
-    }
-  ]
-}
-
-// Customer 2
-{
-  "firstName": "Samir",
-  "lastName": "Nadoy",
-  "address":
-  {
-    "streetAddress": "123 Elm Pl.",
-    "unit": "500",
-    "city": "Seattle",
-    "state": "WA",
-    "postalCode": "98999"
-  },
-  "contact":
-  [
-    {
-      "type": "email",
-      "address": "samir@northwind.com"
-    }
-  ]
-}
+!Note
+Các vai trò được mô tả ở đây đại diện cho các vai trò liên quan đến dữ liệu chính được tìm thấy trong hầu hết 
+các tổ chức trung bình đến lớn. Có các vai trò liên quan đến dữ liệu khác không được đề cập ở đây, 
+chẳng hạn như nhà khoa học dữ liệu và kiến trúc sư dữ liệu; và còn có các chuyên gia kỹ thuật khác làm việc 
+với dữ liệu, bao gồm các nhà phát triển ứng dụng và kỹ sư phần mềm.
 ```
+
+
+
+
+
 
 
 
 <a name="M01.1.3"></a>
 ### Data Analyst
 
-Unstructured data (dữ liệu không có cấu trúc) là loại dữ liệu không có bất kỳ cấu trúc hay định dạng cụ thể nào. Nó là một tập hợp các dữ liệu không đồng nhất, không theo quy tắc, không có định dạng chuẩn hoặc mô hình dữ liệu cụ thể. Unstructured data có thể bao gồm các tài liệu văn bản không định dạng, hình ảnh, video, âm thanh, email, tweet, blog, trang web, v.v.
+![image](https://user-images.githubusercontent.com/62134515/221133350-ebddeecc-88ee-4e13-80af-05b95ff03c88.png)
 
-Các ví dụ phổ biến về unstructured data bao gồm các tài liệu văn bản như email, tài liệu Word, tài liệu PDF, các bài blog và trang web, các tệp hình ảnh như JPEG, PNG, các tệp video như MP4, AVI, các tệp âm thanh như MP3, WAV, v.v.
+Một nhà phân tích dữ liệu giúp các doanh nghiệp tối đa hóa giá trị của tài sản dữ liệu của họ. Họ chịu trách nhiệm khám phá dữ liệu để xác định xu hướng và mối quan hệ, thiết kế và xây dựng các mô hình phân tích, và kích hoạt khả năng phân tích tiên tiến thông qua các báo cáo và trực quan hóa.
 
-Do không có cấu trúc cụ thể, việc xử lý unstructured data trở nên khó khăn và phức tạp. Tuy nhiên, các công nghệ mới như Machine Learning, Natural Language Processing, Computer Vision và Big Data Analytics đang được phát triển để giúp trích xuất và phân tích thông tin từ các nguồn dữ liệu không có cấu trúc này. Các ứng dụng của unstructured data rất rộng và đa dạng, bao gồm phân tích dữ liệu khách hàng, phân tích cảm xúc, phát hiện lỗi và sự cố, và các nhiệm vụ tự động hóa nhiều khác.
-
-![image](https://user-images.githubusercontent.com/62134515/220317374-ab1f5b16-b47b-4ef0-bc53-6580bb1cbaca.png)
-
+Một nhà phân tích dữ liệu xử lý dữ liệu thô thành các thông tin cần thiết dựa trên các yêu cầu kinh doanh đã xác định để cung cấp thông tin cần thiết.
 
 
 
