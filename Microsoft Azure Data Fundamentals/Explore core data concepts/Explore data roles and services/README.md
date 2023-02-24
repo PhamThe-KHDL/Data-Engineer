@@ -167,7 +167,9 @@ Giống như các hệ thống cơ sở dữ liệu Azure SQL, các cơ sở d�
 
 ![image](https://user-images.githubusercontent.com/62134515/221138641-18351cac-d3c1-4fcd-a119-bf7b05c27d37.png)
 
+Azure Cosmos DB là hệ thống cơ sở dữ liệu phi quan hệ (NoSQL) quy mô toàn cầu hỗ trợ nhiều giao diện lập trình ứng dụng (API), cho phép bạn lưu trữ và quản lý dữ liệu dưới dạng tài liệu JSON, cặp key-value, column-families và graphs.
 
+Ở một số tổ chức, các trường hợp Cosmos DB có thể được cung cấp và quản lý bởi quản trị cơ sở dữ liệu; tuy nhiên thường thì các nhà phát triển phần mềm quản lý lưu trữ dữ liệu NoSQL như một phần của kiến trúc ứng dụng tổng thể. Các kỹ sư dữ liệu thường cần tích hợp nguồn dữ liệu Cosmos DB vào các giải pháp phân tích doanh nghiệp để hỗ trợ mô hình hóa và báo cáo bởi các nhà phân tích dữ liệu.
 
 
 
