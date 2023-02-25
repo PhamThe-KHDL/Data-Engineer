@@ -2,6 +2,7 @@
 
 * [**Explore fundamental relational data concepts**](#M01)
     - [Understand relational data](#M01.1)
+    - [Understand relational data](#M01.2)
       + [Delimited text files](#M01.2.1)
       + [JavaScript Object Notation (JSON)](#M01.2.2)
       + [Extensible Markup Language (XML)](#M01.2.3)
