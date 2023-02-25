@@ -28,7 +28,7 @@
 
 
 <a name="M01"></a>
-# [Explore core data concepts](https://learn.microsoft.com/en-us/training/modules/explore-core-data-concepts/)
+# [Explore fundamental relational data concepts](https://learn.microsoft.com/en-us/training/modules/explore-relational-data-offerings/)
 
 
 
