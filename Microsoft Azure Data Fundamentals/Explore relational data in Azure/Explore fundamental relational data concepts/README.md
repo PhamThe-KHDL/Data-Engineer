@@ -8,7 +8,6 @@
         * [DDL statements](#M01.3.1.1)
         * [DCL statements](#M01.3.1.2)
         * [DML statements](#M01.3.1.3)
-      + [Non-relational databases](#M01.3.2)
     - [Explore transactional data processing](#M01.4)
     - [Explore analytical data processing](#M01.5)
     - [Knowledge check](#M01.6)
