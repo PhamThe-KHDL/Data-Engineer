@@ -12,8 +12,7 @@
       + [What is a view?](#M01.4.1)
       + [What is a stored procedure?](#M01.4.2)
       + [What is an index?](#M01.4.3)
-    - [Explore analytical data processing](#M01.5)
-    - [Knowledge check](#M01.6)
+    - [Knowledge check](#M01.5)
 
 
 
@@ -368,9 +367,31 @@ WHERE City = 'Seattle';
 
 
 
+
+
+
 <a name="M01.4.2"></a>
 ### What is a stored procedure?
 
+Một stored procedure định nghĩa các câu lệnh SQL có thể được thực thi khi yêu cầu. Stored procedures được sử dụng để đóng gói logic lập trình trong cơ sở dữ liệu cho các hành động mà ứng dụng cần thực hiện khi làm việc với dữ liệu.
+
+Bạn có thể định nghĩa một stored procedure với các tham số để tạo ra một giải pháp linh hoạt cho các hành động thông thường mà có thể cần được áp dụng vào dữ liệu dựa trên một khóa hoặc tiêu chí cụ thể. Ví dụ, stored procedure sau đây có thể được định nghĩa để thay đổi tên của một sản phẩm dựa trên ID sản phẩm được chỉ định.
+
+```SQL
+CREATE PROCEDURE RenameProduct
+	@ProductID INT,
+	@NewName VARCHAR(20)
+AS
+UPDATE Product
+SET Name = @NewName
+WHERE ID = @ProductID;
+```
+
+Khi một sản phẩm cần được đổi tên, bạn có thể thực thi stored procedure bằng cách truyền ID của sản phẩm và tên mới cần được gán:
+
+```SQL
+EXEC RenameProduct 201, 'Spanner';
+```
 
 
 
@@ -384,6 +405,23 @@ WHERE City = 'Seattle';
 <a name="M01.4.3"></a>
 ### What is an index?
 
+Một index giúp bạn tìm kiếm dữ liệu trong một bảng. Hãy tưởng tượng một index trên một bảng giống như một index ở cuối cuốn sách. Một index sách chứa một tập hợp các tham chiếu được sắp xếp, với các trang mà mỗi tham chiếu xuất hiện. Khi bạn muốn tìm tham chiếu đến một mục trong cuốn sách, bạn tìm kiếm thông qua index. Bạn có thể sử dụng số trang trong index để đi trực tiếp đến các trang đúng trong sách. Nếu không có index, bạn có thể phải đọc toàn bộ cuốn sách để tìm các tham chiếu mà bạn đang tìm kiếm.
+
+Khi bạn tạo một index trong cơ sở dữ liệu, bạn chỉ định một cột từ bảng và index chứa một bản sao của dữ liệu này được sắp xếp theo thứ tự, với các con trỏ đến các hàng tương ứng trong bảng. Khi người dùng chạy một truy vấn chỉ định cột này trong mệnh đề WHERE, hệ thống quản lý cơ sở dữ liệu có thể sử dụng index này để truy xuất dữ liệu nhanh hơn so với việc phải quét toàn bộ bảng từng hàng.
+
+Ví dụ, bạn có thể sử dụng đoạn code sau để tạo một index trên cột **Name** của bảng **Product**:
+
+```SQL
+CREATE INDEX idx_ProductName
+ON Product(Name);
+```
+Index tạo ra một cấu trúc dựa trên cây mà trình tối ưu truy vấn của hệ thống cơ sở dữ liệu có thể sử dụng để nhanh chóng tìm các hàng trong bảng **Product** dựa trên một **Name** cụ thể.
+
+![image](https://user-images.githubusercontent.com/62134515/221414131-ac3cf302-2bab-4921-bab2-2a182eac73f3.png)
+
+Đối với một bảng chứa ít hàng, sử dụng index có lẽ không hiệu quả hơn là đọc toàn bộ bảng và tìm các hàng được yêu cầu bởi truy vấn (trong trường hợp này, trình tối ưu truy vấn sẽ bỏ qua index). Tuy nhiên, khi một bảng có nhiều hàng, index có thể cải thiện đáng kể hiệu suất của các truy vấn.
+
+Bạn có thể tạo nhiều index trên một bảng. Vì vậy, nếu bạn cũng muốn tìm sản phẩm dựa trên giá, việc tạo một index khác trên cột **Price** trong bảng **Product** có thể hữu ích. Tuy nhiên, index không miễn phí. Một index tiêu tốn không gian lưu trữ, và mỗi khi bạn chèn, cập nhật hoặc xóa dữ liệu trong một bảng, index cho bảng đó phải được bảo trì. Công việc bổ sung này có thể làm chậm các hoạt động chèn, cập nhật và xóa. Bạn phải cân bằng giữa việc có index để tăng tốc truy vấn và chi phí thực hiện các hoạt động khác.
 
 
 
@@ -393,21 +431,6 @@ WHERE City = 'Seattle';
 
 
 <a name="M01.5"></a>
-## Explore analytical data processing
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a name="M01.6"></a>
 ## Knowledge check
 
 
