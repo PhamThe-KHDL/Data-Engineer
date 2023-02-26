@@ -4,7 +4,10 @@
     - [Understand relational data](#M01.1)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
-      + [Relational databases](#M01.3.1)
+      + [SQL statement types](#M01.3.1)
+        * [DDL statements](#M01.3.1.1)
+        * [DCL statements](#M01.3.1.2)
+        * [DML statements](#M01.3.1.3)
       + [Non-relational databases](#M01.3.2)
     - [Explore transactional data processing](#M01.4)
     - [Explore analytical data processing](#M01.5)
@@ -106,25 +109,46 @@ các nhà cung cấp cơ sở dữ liệu đều bao gồm các phần mở rộ
 của tiêu chuẩn, điều này đã dẫn đến một loạt các phiên bản SQL.
 ```
 
-Bạn có thể sử dụng các câu lệnh SQL như SELECT, INSERT, UPDATE, DELETE, CREATE và DROP để thực hiện hầu hết mọi thứ bạn cần với cơ sở dữ liệu. Mặc dù các câu lệnh SQL này là một phần của tiêu chuẩn SQL, nhiều hệ thống quản lý cơ sở dữ liệu cũng có các phần mở rộng độc quyền của riêng họ để xử lý các chi tiết cụ thể của hệ thống quản lý cơ sở dữ liệu đó. Các phần mở rộng này cung cấp chức năng không được bao gồm trong tiêu chuẩn SQL, và bao gồm các lĩnh vực như quản lý bảo mật và lập trình. Ví dụ, Microsoft SQL Server và các dịch vụ cơ sở dữ liệu Azure dựa trên động cơ cơ sở dữ liệu SQL Server sử dụng Transact-SQL. Bản triển khai này bao gồm các phần mở rộng độc quyền để viết các thủ tục lưu trữ và kích hoạt (mã ứng dụng có thể được lưu trữ trong cơ sở dữ liệu) và quản lý tài khoản người dùng. PostgreSQL và MySQL cũng có các phiên bản riêng của các tính năng này.
+Bạn có thể sử dụng các câu lệnh SQL như SELECT, INSERT, UPDATE, DELETE, CREATE và DROP để thực hiện hầu hết mọi thứ bạn cần với cơ sở dữ liệu. Mặc dù các câu lệnh SQL này là một phần của tiêu chuẩn SQL, nhiều hệ thống quản lý cơ sở dữ liệu cũng có các phần mở rộng độc quyền của riêng họ để xử lý các chi tiết cụ thể của hệ thống quản lý cơ sở dữ liệu đó. Các phần mở rộng này cung cấp chức năng không được bao gồm trong tiêu chuẩn SQL, và bao gồm các lĩnh vực như quản lý bảo mật và lập trình. Ví dụ, Microsoft SQL Server và các dịch vụ cơ sở dữ liệu Azure dựa trên động cơ cơ sở dữ liệu SQL Server sử dụng Transact-SQL. Bản triển khai này bao gồm các phần mở rộng độc quyền để viết các procedures và triggers (mã ứng dụng có thể được lưu trữ trong cơ sở dữ liệu) và quản lý tài khoản người dùng. PostgreSQL và MySQL cũng có các phiên bản riêng của các tính năng này.
 
 Một số phiên bản SQL phổ biến bao gồm:
 
-- Transact-SQL (T-SQL). Phiên bản SQL này được sử dụng bởi Microsoft SQL Server và các dịch vụ Azure SQL.
-- pgSQL. Đây là phiên bản có các phần mở rộng được thực hiện trong PostgreSQL.
-- PL/SQL. Đây là phiên bản được sử dụng bởi Oracle. PL/SQL viết tắt của Procedural Language/SQL.
+- *Transact-SQL (T-SQL)*. Phiên bản SQL này được sử dụng bởi Microsoft SQL Server và các dịch vụ Azure SQL.
+- *pgSQL*. Đây là phiên bản có các phần mở rộng được thực hiện trong PostgreSQL.
+- *PL/SQL*. Đây là phiên bản được sử dụng bởi Oracle. PL/SQL viết tắt của Procedural Language/SQL.
 
 Người dùng có kế hoạch làm việc với một hệ thống cơ sở dữ liệu cụ thể nên học các chi tiết về phiên bản SQL và nền tảng SQL ưa thích của họ.
 
 ```
 !Note
-Các ví dụ mã SQL trong module này dựa trên phiên bản Transact-SQL, trừ khi có chỉ dẫn khác.
+Các ví dụ code SQL trong module này dựa trên phiên bản Transact-SQL, trừ khi có chỉ dẫn khác.
 Cú pháp cho các phiên bản khác thường tương tự, nhưng có thể khác nhau ở một số chi tiết.
 ```
 
 
+
+
+
+
 <a name="M01.3.1"></a>
-### Relational databases
+### SQL statement types
+
+Các câu lệnh SQL được nhóm thành ba nhóm logic chính:
+
+- Ngôn ngữ định nghĩa dữ liệu (Data Definition Language - DDL)
+- Ngôn ngữ điều khiển dữ liệu (Data Control Language - DCL)
+- Ngôn ngữ thao tác dữ liệu (Data Manipulation Language - DML)
+
+
+
+
+
+
+
+
+
+<a name="M01.3.1.1"></a>
+#### DDL statements
 
 
 
@@ -136,8 +160,36 @@ Cú pháp cho các phiên bản khác thường tương tự, nhưng có thể k
 
 
 
-<a name="M01.3.2"></a>
-### Non-relational databases
+
+
+
+<a name="M01.3.1.2"></a>
+#### DDL statements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01.3.1.3"></a>
+#### DDL statements
+
+
+
+
 
 
 
