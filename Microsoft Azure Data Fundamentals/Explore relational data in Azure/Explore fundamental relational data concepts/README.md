@@ -240,7 +240,8 @@ Bốn lệnh DML chính là:
 
 ```
 ! Warning
-SQL không cung cấp những thông báo "bạn chắc chắn chứ?" nên hãy cẩn thận khi sử dụng DELETE hoặc UPDATE mà không có điều kiện WHERE vì bạn có thể mất hoặc thay đổi rất nhiều dữ liệu.
+SQL không cung cấp những thông báo "bạn chắc chắn chứ?" nên hãy cẩn thận khi sử dụng DELETE 
+hoặc UPDATE mà không có điều kiện WHERE vì bạn có thể mất hoặc thay đổi rất nhiều dữ liệu.
 ```
 
 Đoạn code sau là một ví dụ về câu lệnh SQL chọn tất cả các cột (được chỉ định bởi *) từ bảng Customer trong đó giá trị cột City là "Seattle":
