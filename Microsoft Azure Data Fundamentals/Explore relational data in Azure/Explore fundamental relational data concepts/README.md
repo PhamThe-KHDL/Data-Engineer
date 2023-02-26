@@ -225,9 +225,16 @@ TO user1;
 <a name="M01.3.1.3"></a>
 #### DDL statements
 
+Bạn sử dụng các lệnh DML để thao tác với các hàng trong các bảng. Những lệnh này cho phép bạn truy vấn dữ liệu, chèn các hàng mới hoặc sửa đổi các hàng đã tồn tại. Bạn cũng có thể xóa các hàng nếu bạn không còn cần chúng nữa.
 
+Bốn lệnh DML chính là:
 
-
+| Statement | Description |
+| ----- | ----- |
+| SELECT | ead rows from a table |
+| INSERT | Insert new rows into a table |
+| UPDATE | Modify data in existing rows |
+| DELETE | Delete existing rows |
 
 
 
