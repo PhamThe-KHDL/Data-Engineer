@@ -8,7 +8,10 @@
         * [DDL statements](#M01.3.1.1)
         * [DCL statements](#M01.3.1.2)
         * [DML statements](#M01.3.1.3)
-    - [Explore transactional data processing](#M01.4)
+    - [Describe database objects](#M01.4)
+      + [What is a view?](#M01.4.1)
+      + [What is a stored procedure?](#M01.4.2)
+      + [What is an index?](#M01.4.3)
     - [Explore analytical data processing](#M01.5)
     - [Knowledge check](#M01.6)
 
@@ -330,7 +333,44 @@ với SQL, hãy xem học tập bắt đầu truy vấn với Transact-SQL trên
 
 
 <a name="M01.4"></a>
-## Explore transactional data processing
+## Describe database objects
+
+
+
+
+
+
+
+
+
+<a name="M01.4.1"></a>
+### What is a view?
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01.4.2"></a>
+### What is a stored procedure?
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01.4.3"></a>
+### What is an index?
 
 
 
