@@ -335,7 +335,7 @@ với SQL, hãy xem học tập bắt đầu truy vấn với Transact-SQL trên
 <a name="M01.4"></a>
 ## Describe database objects
 
-
+Ngoài bảng, một cơ sở dữ liệu quan hệ có thể chứa các cấu trúc khác giúp tối ưu hóa tổ chức dữ liệu, đóng gói các hành động chương trình và cải thiện tốc độ truy cập. Trong unit này, bạn sẽ tìm hiểu về ba cấu trúc này một cách chi tiết hơn: views, stored procedures và indexes.
 
 
 
@@ -346,12 +346,24 @@ với SQL, hãy xem học tập bắt đầu truy vấn với Transact-SQL trên
 <a name="M01.4.1"></a>
 ### What is a view?
 
+View là một bảng ảo dựa trên kết quả của một truy vấn SELECT. Bạn có thể xem view như một cửa sổ trên các hàng được chỉ định trong một hoặc nhiều bảng cơ sở dữ liệu gốc. Ví dụ, bạn có thể tạo một view trên các bảng **Order** và **Customer** để truy xuất dữ liệu đơn hàng và khách hàng và cung cấp một đối tượng duy nhất giúp dễ dàng xác định địa chỉ giao hàng cho các đơn hàng:
 
+```SQL
+CREATE VIEW Deliveries
+AS
+SELECT o.OrderNo, o.OrderDate,
+       c.FirstName, c.LastName, c.Address, c.City
+FROM Order AS o JOIN Customer AS c
+ON o.Customer = c.ID;
+```
 
+Bạn có thể truy vấn view và lọc dữ liệu giống như trên một bảng. Truy vấn sau đây tìm chi tiết đơn hàng cho khách hàng sống tại Seattle:
 
-
-
-
+```SQL
+SELECT OrderNo, OrderDate, LastName, Address
+FROM Deliveries
+WHERE City = 'Seattle';
+```
 
 
 
