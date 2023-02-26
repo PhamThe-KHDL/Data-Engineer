@@ -314,8 +314,8 @@ VALUES (99, 'Drill', 4.99);
 ```
 !Note
 Topic này mô tả một số câu lệnh và cú pháp SQL cơ bản để giúp bạn hiểu cách SQL được sử dụng 
-để làm việc với các đối tượng trong cơ sở dữ liệu. Nếu bạn muốn tìm hiểu thêm về truy vấn dữ liệu với SQL, 
-hãy xem học tập bắt đầu truy vấn với Transact-SQL trên Microsoft Learn.
+để làm việc với các đối tượng trong cơ sở dữ liệu. Nếu bạn muốn tìm hiểu thêm về truy vấn dữ liệu 
+với SQL, hãy xem học tập bắt đầu truy vấn với Transact-SQL trên Microsoft Learn.
 ```
 
 
