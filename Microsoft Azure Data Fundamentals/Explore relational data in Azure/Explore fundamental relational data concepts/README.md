@@ -231,7 +231,7 @@ Bốn lệnh DML chính là:
 
 | Statement | Description |
 | ----- | ----- |
-| SELECT | ead rows from a table |
+| SELECT | Read rows from a table |
 | INSERT | Insert new rows into a table |
 | UPDATE | Modify data in existing rows |
 | DELETE | Delete existing rows |
@@ -240,11 +240,87 @@ Bốn lệnh DML chính là:
 
 ```
 ! Warning
-SQL không cung cấp những thông báo "bạn chắc chắn chứ?" nên hãy cẩn thận khi sử dụng DELETE 
+SQL không cung cấp những thông báo "are you sure?" nên hãy cẩn thận khi sử dụng DELETE 
 hoặc UPDATE mà không có điều kiện WHERE vì bạn có thể mất hoặc thay đổi rất nhiều dữ liệu.
 ```
 
-Đoạn code sau là một ví dụ về câu lệnh SQL chọn tất cả các cột (được chỉ định bởi *) từ bảng Customer trong đó giá trị cột City là "Seattle":
+Đoạn code sau là một ví dụ về câu lệnh SQL chọn tất cả các cột (được chỉ định bởi \*) từ bảng **Customer** trong đó giá trị cột **City** là "Seattle":
+
+```SQL
+SELECT *
+FROM Customer
+WHERE City = 'Seattle';
+```
+
+Để truy xuất chỉ một tập hợp cột cụ thể từ bảng, bạn liệt kê chúng trong mệnh đề SELECT, như sau:
+
+```SQL
+SELECT FirstName, LastName, Address, City
+FROM Customer
+WHERE City = 'Seattle';
+```
+
+Nếu một truy vấn trả về nhiều hàng, chúng không nhất thiết phải xuất hiện theo bất kỳ thứ tự cụ thể nào. Nếu bạn muốn sắp xếp dữ liệu, bạn có thể thêm một mệnh đề ORDER BY. Dữ liệu sẽ được sắp xếp theo cột được chỉ định:
+
+```SQL
+SELECT FirstName, LastName, Address, City
+FROM Customer
+WHERE City = 'Seattle'
+ORDER BY LastName;
+```
+
+Bạn cũng có thể chạy các câu lệnh SELECT để lấy dữ liệu từ nhiều bảng sử dụng mệnh đề JOIN. Các join chỉ ra cách các hàng trong một bảng liên kết với các hàng trong bảng khác để xác định dữ liệu nào sẽ được trả về. Một điều kiện JOIN điển hình sẽ phù hợp với khóa ngoại từ một bảng và khóa chính tương ứng của nó trong bảng khác.
+
+Câu truy vấn sau đây cho thấy một ví dụ về việc kết nối các bảng **Customer** và **Order**. Câu truy vấn sử dụng *aliases* để viết tắt tên bảng khi chỉ định các cột cần lấy trong mệnh đề SELECT và các cột cần phù hợp trong mệnh đề JOIN.
+
+```SQL
+SELECT o.OrderNo, o.OrderDate, c.Address, c.City
+FROM Order AS o
+JOIN Customer AS c
+ON o.Customer = c.ID
+```
+
+Ví dụ sau cho thấy cách sửa đổi một hàng hiện có bằng cách sử dụng SQL. Nó thay đổi giá trị của cột **Address** trong bảng **Customer** cho các hàng có giá trị 1 trong cột **ID**. Tất cả các hàng khác vẫn giữ nguyên:
+
+```SQL
+UPDATE Customer
+SET Address = '123 High St.'
+WHERE ID = 1;
+```
+
+```
+!Warning
+Nếu bạn bỏ qua mệnh đề WHERE, một câu lệnh UPDATE sẽ sửa đổi tất cả các hàng trong bảng.
+```
+
+Sử dụng lệnh DELETE để xóa các hàng. Bạn chỉ định bảng để xóa từ đó và một mệnh đề WHERE xác định các hàng cần được xóa:
+
+```SQL
+DELETE FROM Product
+WHERE ID = 162;
+```
+
+```
+!Warning
+Nếu bạn bỏ qua mệnh đề WHERE, một câu lệnh DELETE sẽ xóa tất cả các hàng trong bảng.
+```
+
+Câu lệnh INSERT có một định dạng khác. Bạn chỉ định một bảng và các cột trong INTO, và một danh sách các giá trị được lưu trữ trong các cột này. SQL chuẩn chỉ hỗ trợ chèn một hàng vào một thời điểm, như được thể hiện trong ví dụ sau. Một số ngôn ngữ hỗ trợ bạn chỉ định nhiều lệnh VALUES để thêm nhiều hàng cùng một lúc:
+
+```SQL
+INSERT INTO Product(ID, Name, Price)
+VALUES (99, 'Drill', 4.99);
+```
+
+```
+!Note
+Topic này mô tả một số câu lệnh và cú pháp SQL cơ bản để giúp bạn hiểu cách SQL được sử dụng để làm việc với các đối tượng trong cơ sở dữ liệu. Nếu bạn muốn tìm hiểu thêm về truy vấn dữ liệu với SQL, hãy xem học tập bắt đầu truy vấn với Transact-SQL trên Microsoft Learn.
+```
+
+
+
+
+
 
 
 
