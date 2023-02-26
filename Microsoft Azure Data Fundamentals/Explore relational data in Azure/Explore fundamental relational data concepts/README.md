@@ -150,12 +150,37 @@ Các câu lệnh SQL được nhóm thành ba nhóm logic chính:
 <a name="M01.3.1.1"></a>
 #### DDL statements
 
+Bạn sử dụng các câu lệnh DDL để create, modify, và remove tables và other objects trong cơ sở dữ liệu (table, stored procedures, views, vv.).
 
+Các câu lệnh DDL phổ biến nhất là:
 
+| Statement | Description |
+| ----- | ----- |
+| CREATE | Create a new object in the database, such as a table or a view. |
+| ALTER | Modify the structure of an object. For instance, altering a table to add a new column. |
+| DROP | Remove an object from the database. |
+| RENAME | Rename an existing object. |
 
+```
+!Warning
+The DROP statement is very powerful. When you drop a table, all the rows in that table are lost. 
+Unless you have a backup, you won't be able to retrieve this data.
+```
 
+Ví dụ sau tạo một bảng mới trong cơ sở dữ liệu. Các mục nằm giữa dấu ngoặc đơn chỉ định chi tiết của mỗi cột, bao gồm tên, kiểu dữ liệu, liệu cột có bắt buộc phải chứa giá trị không (NOT NULL), và liệu dữ liệu trong cột được sử dụng để xác định duy nhất một hàng (PRIMARY KEY). Mỗi bảng nên có một khóa chính, tuy nhiên SQL không bắt buộc việc này.
 
+Các cột được đánh dấu là NOT NULL được gọi là các cột bắt buộc. Nếu bạn bỏ qua mệnh đề NOT NULL, bạn có thể tạo các hàng không chứa giá trị trong cột. Một cột trống trong một hàng được gọi là có giá trị NULL.
 
+```SQL
+CREATE TABLE Product
+(
+    ID INT PRIMARY KEY,
+    Name VARCHAR(20) NOT NULL,
+    Price DECIMAL NULL
+);
+```
+
+Định dạng dữ liệu có sẵn cho các cột trong một bảng sẽ khác nhau giữa các hệ thống quản lý cơ sở dữ liệu. Tuy nhiên, hầu hết các hệ thống quản lý cơ sở dữ liệu hỗ trợ các loại dữ liệu số như INT (số nguyên) , DECIMAL (số thập phân), và các loại chuỗi như VARCHAR (VARCHAR là viết tắt của dữ liệu ký tự có độ dài thay đổi). Để biết thêm thông tin, hãy xem tài liệu cho hệ thống quản lý cơ sở dữ liệu được chọn của bạn.
 
 
 
