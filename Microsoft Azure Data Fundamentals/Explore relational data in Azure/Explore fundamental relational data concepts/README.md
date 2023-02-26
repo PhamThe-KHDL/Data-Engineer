@@ -195,14 +195,23 @@ CREATE TABLE Product
 <a name="M01.3.1.2"></a>
 #### DDL statements
 
+Các quản trị cơ sở dữ liệu thường sử dụng các câu lệnh DCL để quản lý truy cập vào các đối tượng trong cơ sở dữ liệu bằng cách cấp, từ chối hoặc thu hồi quyền truy cập cho các người dùng hoặc nhóm cụ thể.
 
+Ba câu lệnh DCL chính là:
 
+| Statement | Description |
+| ----- | ----- |
+| GRANT | Grant permission to perform specific actions |
+| DENY | Deny permission to perform specific actions |
+| REVOKE | Remove a previously granted permission |
 
+Ví dụ, câu lệnh GRANT sau cho phép người dùng có tên là user1 đọc, chèn và sửa đổi dữ liệu trong bảng Product.
 
-
-
-
-
+```SQL
+GRANT SELECT, INSERT, UPDATE
+ON Product
+TO user1;
+```
 
 
 
