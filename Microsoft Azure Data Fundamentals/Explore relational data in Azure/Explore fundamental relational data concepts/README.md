@@ -433,6 +433,7 @@ Bạn có thể tạo nhiều index trên một bảng. Vì vậy, nếu bạn c
 <a name="M01.5"></a>
 ## Knowledge check
 
+![image](https://user-images.githubusercontent.com/62134515/221415531-b22e84e0-6fb5-4d86-9234-0c323557400a.png)
 
 
 
