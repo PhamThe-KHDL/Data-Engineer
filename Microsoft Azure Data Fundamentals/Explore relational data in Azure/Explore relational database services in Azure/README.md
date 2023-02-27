@@ -2,6 +2,8 @@
 
 * [**Explore relational database services in Azure**](#M01)
     - [Describe Azure SQL services and capabilities](#M01.1)
+      + [Compare Azure SQL services](#M01.1.1)
+      + [SQL Server on Azure Virtual Machines](#M01.1.2)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -31,13 +33,44 @@
 <a name="M01.1"></a>
 ## Describe Azure SQL services and capabilities
 
-Trong cơ sở dữ liệu quan hệ, bạn mô hình các tập hợp thực thể từ thế giới thực dưới dạng bảng. Một thực thể có thể là bất cứ thứ gì mà bạn muốn ghi lại thông tin; thường là các đối tượng và sự kiện quan trọng. Ví dụ, trong một hệ thống bán lẻ, bạn có thể tạo các bảng cho khách hàng, sản phẩm, đơn hàng và các item trong đơn hàng. Một bảng chứa các hàng và mỗi hàng đại diện cho một trường hợp của một thực thể. Trong trường hợp bán lẻ, mỗi hàng trong bảng khách hàng chứa dữ liệu cho một khách hàng duy nhất, mỗi hàng trong bảng sản phẩm xác định một sản phẩm duy nhất, mỗi hàng trong bảng đơn hàng đại diện cho một đơn hàng được thực hiện bởi một khách hàng, và mỗi hàng trong bảng item đại diện cho một sản phẩm được bao gồm trong một đơn hàng.
+Azure SQL là thuật ngữ tổng quát để chỉ một họ các dịch vụ cơ sở dữ liệu dựa trên Microsoft SQL Server trong Azure. Các dịch vụ cụ thể của Azure SQL bao gồm:
 
-![image](https://user-images.githubusercontent.com/62134515/221326906-ab147d53-eba6-445a-a87c-185c17fcb155.png)
+- **SQL Server on Azure Virtual Machines (VMs)** - Một máy ảo chạy trên Azure với một bản cài đặt SQL Server. Việc sử dụng máy ảo làm cho lựa chọn này trở thành một giải pháp cơ sở hạ tầng dưới dạng dịch vụ (infrastructure-as-a-service - IaaS) ảo hóa cơ sở hạ tầng phần cứng cho tính toán, lưu trữ và mạng trong Azure; là một lựa chọn tuyệt vời cho việc di chuyển "lift and shift" các cài đặt SQL Server đang tồn tại trên nền tảng địa phương lên đám mây.
+- **Azure SQL Managed Instance** - Một lựa chọn dưới dạng nền tảng dịch vụ (platform-as-a-service - PaaS) cung cấp khả năng tương thích gần như 100% với các phiên bản SQL Server đang tồn tại trên nền tảng địa phương trong khi trừu tượng hóa phần cứng và hệ điều hành bên dưới. Dịch vụ này bao gồm quản lý cập nhật phần mềm tự động, sao lưu và các tác vụ bảo trì khác, giảm bớt gánh nặng quản trị hỗ trợ một phiên bản máy chủ cơ sở dữ liệu.
+- **Azure SQL Database** - Một dịch vụ cơ sở dữ liệu PaaS được quản lý hoàn toàn, có khả năng mở rộng cao, được thiết kế cho đám mây. Dịch vụ này bao gồm các khả năng cơ bản của cấp độ cơ sở dữ liệu của SQL Server trên nền tảng địa phương và là một lựa chọn tốt khi bạn cần tạo một ứng dụng mới trên đám mây.
+- **Azure SQL Edge** - Một công cụ SQL được tối ưu hóa cho các kịch bản Internet-of-things (IoT) cần làm việc với streaming time-series data.
 
-Các bảng quan hệ là một định dạng cho dữ liệu có cấu trúc, và mỗi hàng trong bảng có các cột giống nhau; tuy nhiên, trong một số trường hợp, không phải tất cả các cột đều cần có giá trị - ví dụ, một bảng khách hàng có thể bao gồm một cột MiddleName; mà có thể trống (hoặc NULL) cho các hàng đại diện cho khách hàng không có tên đệm hoặc tên đệm không biết.
+```
+!Note
+Azure SQL Edge được bao gồm trong danh sách này để đầy đủ. Trong module này, chúng tôi sẽ tập trung 
+vào các tùy chọn khác cho các kịch bản cơ sở dữ liệu quan hệ tổng quát hơn.
+```
 
-Mỗi cột lưu trữ dữ liệu của một *kiểu dữ liệu (datatype)* cụ thể. Ví dụ, một cột Email trong bảng Customer có lẽ sẽ được xác định để lưu trữ dữ liệu character-based (text) (có thể có độ dài cố định hoặc biến đổi), một cột Price trong bảng Product có thể được xác định để lưu trữ dữ liệu decimal numeric, trong khi một cột Quantity trong bảng Order có thể bị giới hạn bởi giá trị số nguyên; và một cột OrderDate trong cùng bảng Order sẽ được xác định để lưu trữ các giá trị ngày/giờ. Các loại dữ liệu có sẵn mà bạn có thể sử dụng khi xác định một bảng phụ thuộc vào hệ thống cơ sở dữ liệu mà bạn đang sử dụng; tuy nhiên, có các loại dữ liệu tiêu chuẩn được xác định bởi Viện Tiêu chuẩn Quốc gia Hoa Kỳ (American National Standards Institute - ANSI) được hỗ trợ bởi hầu hết các hệ thống cơ sở dữ liệu.
+
+
+
+
+
+
+<a name="M01.1.1"></a>
+### Compare Azure SQL services
+
+![image](https://user-images.githubusercontent.com/62134515/221515155-7db5bea8-f2a3-46f0-b5f9-b4f72ec6c9e0.png)
+
+
+
+
+
+
+
+<a name="M01.1.2"></a>
+### SQL Server on Azure Virtual Machines
+
+SQL Server on Virtual Machines cho phép bạn sử dụng các phiên bản đầy đủ của SQL Server trên đám mây mà không cần quản lý bất kỳ phần cứng trên nền tảng local nào. Đây là một ví dụ về phương pháp IaaS.
+
+SQL Server chạy trên một máy ảo Azure hiệu quả giống như cơ sở dữ liệu chạy trên phần cứng thực đang tồn tại trên nền tảng local. Di chuyển từ hệ thống chạy trên nền tảng local sang một máy ảo Azure không khác gì việc di chuyển các cơ sở dữ liệu từ một máy chủ on-premises sang một máy chủ khác on-premises.
+
+Phương pháp này phù hợp cho các ứng dụng yêu cầu truy cập các tính năng của hệ điều hành có thể không được hỗ trợ ở mức độ PaaS. SQL virtual machine đã sẵn sàng cho các ứng dụng hiện có đòi hỏi di chuyển nhanh chóng lên đám mây với sự thay đổi tối thiểu. Bạn cũng có thể sử dụng SQL Server trên các máy ảo Azure để mở rộng các ứng dụng on-premises hiện có lên đám mây trong các triển khai kết hợp.
 
 
 
