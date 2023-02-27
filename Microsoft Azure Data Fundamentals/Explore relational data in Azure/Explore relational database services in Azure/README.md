@@ -4,6 +4,7 @@
     - [Describe Azure SQL services and capabilities](#M01.1)
       + [Compare Azure SQL services](#M01.1.1)
       + [SQL Server on Azure Virtual Machines](#M01.1.2)
+        * [Business benefits](#M01.1.2.1)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -66,14 +67,38 @@ vào các tùy chọn khác cho các kịch bản cơ sở dữ liệu quan hệ
 <a name="M01.1.2"></a>
 ### SQL Server on Azure Virtual Machines
 
-SQL Server on Virtual Machines cho phép bạn sử dụng các phiên bản đầy đủ của SQL Server trên đám mây mà không cần quản lý bất kỳ phần cứng trên nền tảng local nào. Đây là một ví dụ về phương pháp IaaS.
+SQL Server on Virtual Machines cho phép bạn sử dụng các phiên bản đầy đủ của SQL Server trên Cloud mà không cần quản lý bất kỳ on-premises hardware nào. Đây là một ví dụ về phương pháp IaaS.
 
-SQL Server chạy trên một máy ảo Azure hiệu quả giống như cơ sở dữ liệu chạy trên phần cứng thực đang tồn tại trên nền tảng local. Di chuyển từ hệ thống chạy trên nền tảng local sang một máy ảo Azure không khác gì việc di chuyển các cơ sở dữ liệu từ một máy chủ on-premises sang một máy chủ khác on-premises.
+SQL Server chạy trên một máy ảo Azure hiệu quả giống như cơ sở dữ liệu chạy trên on-premises hardware thực. Di chuyển từ hệ thống on-premises sang một máy ảo Azure không khác gì việc di chuyển các cơ sở dữ liệu từ một máy chủ on-premises sang một máy chủ on-premises khác.
 
-Phương pháp này phù hợp cho các ứng dụng yêu cầu truy cập các tính năng của hệ điều hành có thể không được hỗ trợ ở mức độ PaaS. SQL virtual machine đã sẵn sàng cho các ứng dụng hiện có đòi hỏi di chuyển nhanh chóng lên đám mây với sự thay đổi tối thiểu. Bạn cũng có thể sử dụng SQL Server trên các máy ảo Azure để mở rộng các ứng dụng on-premises hiện có lên đám mây trong các triển khai kết hợp.
+Phương pháp này phù hợp cho các ứng dụng yêu cầu truy cập các tính năng của hệ điều hành có thể không được hỗ trợ ở mức độ PaaS. SQL virtual machine đã sẵn sàng cho các ứng dụng hiện có đòi hỏi di chuyển nhanh chóng lên Cloud với sự thay đổi tối thiểu. Bạn cũng có thể sử dụng SQL Server trên các máy ảo Azure để mở rộng các ứng dụng on-premises hiện có lên Cloud trong các triển khai kết hợp.
+
+```
+!Note
+Một triển khai kết hợp là một hệ thống trong đó một phần hoạt động được thực hiện on-premises (tại chỗ), 
+và một phần khác được thực hiện trên cloud. Cơ sở dữ liệu của bạn có thể là một phần của một hệ thống 
+lớn hơn chạy on-premises, tuy nhiên các phần tử cơ sở dữ liệu có thể được lưu trữ trên đám mây.
+```
+
+Bạn có thể sử dụng SQL Server trên máy ảo để phát triển và kiểm thử các ứng dụng SQL Server truyền thống. Với một máy ảo, bạn có đầy đủ quyền quản trị đối với DBMS và hệ điều hành. Đây là lựa chọn hoàn hảo khi một tổ chức đã có tài nguyên IT sẵn có để duy trì các máy ảo.
+
+Những khả năng này cho phép bạn:
+
+- Tạo các kịch bản phát triển và kiểm thử nhanh chóng khi bạn không muốn mua phần cứng SQL Server không sản xuất on-premises.
+- Trở thành lift-and-shift sẵn sàng cho các ứng dụng hiện có yêu cầu di chuyển nhanh chóng đến cloud với sự thay đổi tối thiểu hoặc không có thay đổi.
+- Mở rộng nền tảng trên đó SQL Server đang chạy, bằng cách phân bổ nhiều bộ nhớ, sức mạnh CPU và không gian đĩa cho máy ảo. Bạn có thể nhanh chóng thay đổi kích thước máy ảo Azure mà không cần phải cài đặt lại phần mềm đang chạy trên đó.
 
 
 
+
+
+
+
+
+
+
+<a name="M01.1.2.1"></a>
+#### Business benefits
 
 
 
