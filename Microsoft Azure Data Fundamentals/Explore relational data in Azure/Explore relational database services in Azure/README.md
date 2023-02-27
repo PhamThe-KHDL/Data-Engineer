@@ -1,7 +1,7 @@
 # Mục Lục
 
-* [**Explore fundamental relational data concepts**](#M01)
-    - [Understand relational data](#M01.1)
+* [**Explore relational database services in Azure**](#M01)
+    - [Describe Azure SQL services and capabilities](#M01.1)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -24,12 +24,12 @@
 
 
 <a name="M01"></a>
-# [Explore fundamental relational data concepts](https://learn.microsoft.com/en-us/training/modules/explore-relational-data-offerings/)
+# [Explore relational database services in Azure](https://learn.microsoft.com/en-us/training/modules/explore-provision-deploy-relational-database-offerings-azure/)
 
 
 
 <a name="M01.1"></a>
-## Understand relational data 
+## Describe Azure SQL services and capabilities
 
 Trong cơ sở dữ liệu quan hệ, bạn mô hình các tập hợp thực thể từ thế giới thực dưới dạng bảng. Một thực thể có thể là bất cứ thứ gì mà bạn muốn ghi lại thông tin; thường là các đối tượng và sự kiện quan trọng. Ví dụ, trong một hệ thống bán lẻ, bạn có thể tạo các bảng cho khách hàng, sản phẩm, đơn hàng và các item trong đơn hàng. Một bảng chứa các hàng và mỗi hàng đại diện cho một trường hợp của một thực thể. Trong trường hợp bán lẻ, mỗi hàng trong bảng khách hàng chứa dữ liệu cho một khách hàng duy nhất, mỗi hàng trong bảng sản phẩm xác định một sản phẩm duy nhất, mỗi hàng trong bảng đơn hàng đại diện cho một đơn hàng được thực hiện bởi một khách hàng, và mỗi hàng trong bảng item đại diện cho một sản phẩm được bao gồm trong một đơn hàng.
 
