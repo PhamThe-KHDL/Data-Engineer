@@ -100,7 +100,9 @@ Những khả năng này cho phép bạn:
 <a name="M01.1.2.1"></a>
 #### Business benefits
 
+Chạy SQL Server trên các máy ảo cho phép bạn đáp ứng các nhu cầu kinh doanh đa dạng và độc đáo thông qua việc kết hợp triển khai on-premises và cloud-hosted, trong khi sử dụng cùng một bộ sản phẩm máy chủ, công cụ phát triển và chuyên môn qua các môi trường này.
 
+Việc chuyển DBMS của doanh nghiệp sang một dịch vụ được quản lý hoàn toàn không phải lúc nào cũng đơn giản. Có thể có các yêu cầu cụ thể phải được đáp ứng để di chuyển sang một dịch vụ được quản lý, điều này đòi hỏi phải thay đổi cơ sở dữ liệu và các ứng dụng sử dụng nó. Vì lý do này, sử dụng các máy ảo có thể cung cấp một giải pháp, nhưng việc sử dụng chúng không loại bỏ nhu cầu quản trị DBMS của bạn một cách cẩn thận như khi triển khai trên nơi đặt.
 
 
 
