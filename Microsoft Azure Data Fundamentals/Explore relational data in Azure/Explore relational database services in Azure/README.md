@@ -14,6 +14,10 @@
         * [Use cases](#M01.1.4.3)
         * [Business benefits](#M01.1.4.4)
     - [Describe Azure services for open-source databases](#M01.2)
+      + [What are MySQL, MariaDB, and PostgreSQL?](#M01.2.1)
+      + [Azure Database for MySQL](#M01.2.2)
+      + [Azure Database for MariaDB](#M01.2.3)
+      + [Azure Database for PostgreSQL](#M01.2.4)
     - [Knowledge check](#M01.5)
 
 
@@ -244,6 +248,7 @@ SQL Database giúp bảo vệ dữ liệu của bạn bằng cách cung cấp m�
 <a name="M01.2"></a>
 ## Describe Azure services for open-source databases
 
+Ngoài các dịch vụ Azure SQL, các dịch vụ dữ liệu Azure cũng có sẵn cho các hệ thống cơ sở dữ liệu quan hệ phổ biến khác, bao gồm MySQL, MariaDB và PostgreSQL. Lý do chính cho các dịch vụ này là để cho phép các tổ chức sử dụng chúng trong các ứng dụng trên nền tảng đang sử dụng chuyển sang Azure nhanh chóng, mà không cần thực hiện những thay đổi đáng kể cho ứng dụng của họ.
 
 
 
@@ -251,18 +256,18 @@ SQL Database giúp bảo vệ dữ liệu của bạn bằng cách cung cấp m�
 
 
 
+<a name="M01.2.1"></a>
+### What are MySQL, MariaDB, and PostgreSQL?
 
+MySQL, MariaDB và PostgreSQL là các hệ thống quản lý cơ sở dữ liệu quan hệ được thiết kế để phục vụ các chuyên ngành khác nhau.
 
+MySQL bắt đầu ra đời như một hệ thống quản lý cơ sở dữ liệu mã nguồn mở dễ sử dụng. Đây là hệ thống quản lý cơ sở dữ liệu quan hệ mã nguồn mở hàng đầu dành cho các ứng dụng Linux, Apache, MySQL và PHP (LAMP). MySQL có nhiều phiên bản, bao gồm phiên bản Cộng đồng, Tiêu chuẩn và Doanh nghiệp. Phiên bản Cộng đồng có sẵn miễn phí và đã từng được ưa chuộng như một hệ thống quản lý cơ sở dữ liệu cho các ứng dụng web chạy trên nền Linux. Các phiên bản cũng có sẵn cho Windows. Phiên bản Tiêu chuẩn cung cấp hiệu suất cao hơn và sử dụng công nghệ lưu trữ dữ liệu khác. Phiên bản Doanh nghiệp cung cấp một bộ công cụ và tính năng toàn diện, bao gồm tính bảo mật, khả năng sẵn có và khả năng mở rộng tốt hơn. Phiên bản Tiêu chuẩn và Doanh nghiệp là những phiên bản được sử dụng phổ biến nhất bởi các tổ chức thương mại, tuy nhiên, các phiên bản này không miễn phí.
 
+MariaDB là một hệ thống quản lý cơ sở dữ liệu mới hơn, được tạo ra bởi các nhà phát triển ban đầu của MySQL. Sau đó, động cơ cơ sở dữ liệu đã được viết lại và tối ưu hóa để cải thiện hiệu suất. MariaDB cung cấp tính tương thích với Oracle Database (một hệ thống quản lý cơ sở dữ liệu thương mại phổ biến khác). Một tính năng đáng chú ý của MariaDB là khả năng hỗ trợ dữ liệu thời gian tích hợp sẵn. Một bảng có thể chứa nhiều phiên bản dữ liệu, cho phép ứng dụng truy vấn dữ liệu khi nó xuất hiện ở một thời điểm nào đó trong quá khứ.
 
+PostgreSQL là một hệ thống quản lý cơ sở dữ liệu đối tượng-quan hệ kết hợp. Bạn có thể lưu trữ dữ liệu trong các bảng quan hệ, nhưng cơ sở dữ liệu PostgreSQL cũng cho phép bạn lưu trữ các loại dữ liệu tùy chỉnh, với các thuộc tính không quan hệ riêng của chúng. Hệ thống quản lý cơ sở dữ liệu này có tính mở rộng; bạn có thể thêm các module mã vào cơ sở dữ liệu, các module này có thể chạy bởi các truy vấn. Một tính năng chính khác là khả năng lưu trữ và xử lý dữ liệu hình học, chẳng hạn như đường thẳng, vòng tròn và đa giác.
 
-
-
-
-
-
-
-
+PostgreSQL có ngôn ngữ truy vấn riêng gọi là pgsql. Ngôn ngữ này là một biến thể của ngôn ngữ truy vấn quan hệ chuẩn, SQL, với các tính năng cho phép bạn viết các thủ tục lưu trữ chạy bên trong cơ sở dữ liệu.
 
 
 
