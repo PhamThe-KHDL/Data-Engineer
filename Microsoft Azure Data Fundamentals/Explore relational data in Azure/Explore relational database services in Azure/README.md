@@ -5,6 +5,9 @@
       + [Compare Azure SQL services](#M01.1.1)
       + [SQL Server on Azure Virtual Machines](#M01.1.2)
         * [Business benefits](#M01.1.2.1)
+      + [Azure SQL Database Managed Instance](#M01.1.3)
+        * [Use cases](#M01.1.3.1)
+        * [Business benefits](#M01.1.3.2)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -102,7 +105,7 @@ Những khả năng này cho phép bạn:
 
 Chạy SQL Server trên các máy ảo cho phép bạn đáp ứng các nhu cầu kinh doanh đa dạng và độc đáo thông qua việc kết hợp triển khai on-premises và cloud-hosted, trong khi sử dụng cùng một bộ sản phẩm máy chủ, công cụ phát triển và chuyên môn qua các môi trường này.
 
-Việc chuyển DBMS của doanh nghiệp sang một dịch vụ được quản lý hoàn toàn không phải lúc nào cũng đơn giản. Có thể có các yêu cầu cụ thể phải được đáp ứng để di chuyển sang một dịch vụ được quản lý, điều này đòi hỏi phải thay đổi cơ sở dữ liệu và các ứng dụng sử dụng nó. Vì lý do này, sử dụng các máy ảo có thể cung cấp một giải pháp, nhưng việc sử dụng chúng không loại bỏ nhu cầu quản trị DBMS của bạn một cách cẩn thận như khi triển khai trên nơi đặt.
+Việc chuyển DBMS của doanh nghiệp sang một dịch vụ được quản lý hoàn toàn không phải lúc nào cũng đơn giản. Có thể có các yêu cầu cụ thể phải được đáp ứng để di chuyển sang một dịch vụ được quản lý, điều này đòi hỏi phải thay đổi cơ sở dữ liệu và các ứng dụng sử dụng nó. Vì lý do này, sử dụng các máy ảo có thể cung cấp một giải pháp, nhưng việc sử dụng chúng không loại bỏ nhu cầu quản trị DBMS của bạn một cách cẩn thận như khi triển khai on-premises.
 
 
 
@@ -110,39 +113,43 @@ Việc chuyển DBMS của doanh nghiệp sang một dịch vụ được quản
 
 
 
-<a name="M01.2"></a>
-## Understand normalization
+<a name="M01.1.3"></a>
+## Azure SQL Database Managed Instance
 
-Normalization là thuật ngữ được sử dụng bởi các chuyên gia cơ sở dữ liệu để thiết kế schema (cấu trúc) giảm thiểu sự trùng lặp dữ liệu và bảo vệ tính toàn vẹn dữ liệu.
+Azure SQL Managed Instance là một phiên bản SQL Server đầy đủ được điều khiển trong cloud. Bạn có thể cài đặt nhiều cơ sở dữ liệu trên cùng một phiên bản. Bạn hoàn toàn kiểm soát phiên bản này giống như bạn làm với một máy chủ on-premises. SQL Managed Instance tự động hóa sao lưu, cập nhật phần mềm, giám sát cơ sở dữ liệu và các tác vụ chung khác, nhưng bạn hoàn toàn kiểm soát bảo mật và phân bổ tài nguyên cho cơ sở dữ liệu của mình. Bạn có thể tìm thông tin chi tiết tại đây: "[What is Azure SQL Managed Instance?](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview?view=azuresql)".
 
-Mặc dù có nhiều quy tắc phức tạp xác định quá trình tái cấu trúc dữ liệu thành các cấp độ khác nhau của normalization, định nghĩa đơn giản cho mục đích thực tế như sau:
+Các phiên bản được quản lý phụ thuộc vào các dịch vụ Azure khác như Azure Storage for backups, Azure Event Hubs for telemetry, Azure Active Directory for authentication, Azure Key Vault for Transparent Data Encryption (TDE) và một số dịch vụ nền tảng Azure cung cấp các tính năng bảo mật và hỗ trợ. Các phiên bản quản lý kết nối với các dịch vụ này.
 
-1. Tách mỗi thực thể thành một bảng riêng.
-2. Tách từng thuộc tính riêng lẻ thành một cột riêng.
-3. Xác định mỗi thể hiện thực thể (hàng) một cách độc nhất bằng cách sử dụng khóa chính (primary key).
-4. Sử dụng cột khóa ngoại (foreign key) để liên kết các thực thể liên quan.
-
-Để hiểu các nguyên tắc cốt lõi của normalization, giả sử bảng sau đây đại diện cho một bảng tính mà một công ty sử dụng để theo dõi doanh số bán hàng.
+Tất cả các thông tin truyền tải đều được mã hóa và ký bằng chứng chỉ. Để kiểm tra tính đáng tin cậy của các bên liên lạc, phiên bản quản lý liên tục xác minh các chứng chỉ này thông qua danh sách thu hồi chứng chỉ. Nếu các chứng chỉ bị thu hồi, phiên bản quản lý sẽ đóng kết nối để bảo vệ dữ liệu.
 
 
-![image](https://user-images.githubusercontent.com/62134515/221387496-d61d6d16-9c0a-4537-af92-aa58ce9b33e2.png)
 
-Lưu ý rằng thông tin chi tiết của khách hàng và sản phẩm bị nhân bản cho mỗi mặt hàng được bán; và tên khách hàng và địa chỉ bưu điện cùng với tên sản phẩm và giá cả được kết hợp trong cùng một ô trong bảng tính.
 
-Bây giờ hãy xem cách normalization thay đổi dữ liệu được lưu trữ.
 
-![image](https://user-images.githubusercontent.com/62134515/221387502-c0ba63aa-1bf5-42ce-9548-c65632e96b8a.png)
 
-Mỗi thực thể được đại diện trong dữ liệu (khách hàng, sản phẩm, đơn hàng bán hàng và item) được lưu trữ trong bảng riêng của nó, và mỗi thuộc tính riêng lẻ của các thực thể đó được lưu trữ trong cột riêng của nó.
 
-Việc ghi lại mỗi trường hợp của một thực thể như một hàng trong bảng riêng của thực thể đó loại bỏ sự trùng lặp dữ liệu. Ví dụ, để thay đổi địa chỉ của một khách hàng, bạn chỉ cần sửa đổi giá trị trong một hàng đơn.
 
-Việc phân rã các thuộc tính thành các cột riêng biệt đảm bảo rằng mỗi giá trị được giới hạn trong một loại dữ liệu phù hợp - ví dụ, giá sản phẩm phải là giá trị thập phân, trong khi số lượng item phải là số nguyên. Ngoài ra, việc tạo ra các cột riêng biệt cung cấp một cấp độ chi tiết hữu ích trong dữ liệu để truy vấn - ví dụ, bạn có thể dễ dàng lọc khách hàng để tìm những người sống ở một thành phố cụ thể.
 
-Các trường hợp của mỗi thực thể được định danh duy nhất bằng một ID hoặc giá trị khóa khác, được gọi là khóa chính (primary key); và khi một thực thể liên quan đến thực thể khác (ví dụ: một đơn hàng có khách hàng liên quan), khóa chính của thực thể liên quan được lưu trữ dưới dạng khóa ngoại (foreign key). Bạn có thể tra cứu địa chỉ của khách hàng (chỉ được lưu trữ một lần) cho mỗi bản ghi trong bảng Order bằng cách tham chiếu đến bản ghi tương ứng trong bảng Customer. Thông thường, một hệ quản trị cơ sở dữ liệu quan hệ (relational database management system - RDBMS) có thể áp dụng tính nguyên tắc của toàn vẹn tham chiếu để đảm bảo rằng giá trị nhập vào trường khóa ngoại phải có khóa chính tương ứng đã tồn tại trong bảng liên quan - ví dụ: ngăn không cho phép tạo đơn hàng cho khách hàng không tồn tại.
 
-Trong một số trường hợp, một khóa (khóa chính hoặc khóa ngoại) có thể được định nghĩa là một khóa tổ hợp dựa trên sự kết hợp duy nhất của nhiều cột. Ví dụ: bảng LineItem trong ví dụ ở trên sử dụng một kết hợp độc nhất của OrderNo và ItemNo để xác định một mặt hàng trong một đơn hàng cụ thể.
+<a name="M01.1.3.1"></a>
+### Use cases
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01.1.3.2"></a>
+### Business benefits
 
 
 
