@@ -16,8 +16,12 @@
     - [Describe Azure services for open-source databases](#M01.2)
       + [What are MySQL, MariaDB, and PostgreSQL?](#M01.2.1)
       + [Azure Database for MySQL](#M01.2.2)
+        * [Benefits of Azure Database for MySQL](#M01.2.2.1)
       + [Azure Database for MariaDB](#M01.2.3)
+        * [Benefits of Azure Database for MariaDB](#M01.2.3.1)
       + [Azure Database for PostgreSQL](#M01.2.4)
+        * [Azure Database for PostgreSQL Flexible Server](#M01.2.4.1)
+        * [Benefits of Azure Database for PostgreSQL](#M01.2.4.2)
     - [Knowledge check](#M01.5)
 
 
