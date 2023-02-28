@@ -22,6 +22,7 @@
       + [Azure Database for PostgreSQL](#M01.2.4)
         * [Azure Database for PostgreSQL Flexible Server](#M01.2.4.1)
         * [Benefits of Azure Database for PostgreSQL](#M01.2.4.2)
+    - [Exercise: Explore Azure relational database services](#M01.3)
     - [Knowledge check](#M01.5)
 
 
@@ -311,7 +312,7 @@ Bạn sẽ nhận được các tính năng sau khi sử dụng Azure Database f
 - Các tính năng high availability được tích hợp sẵn.
 - Hiệu suất dự đoán được.
 - Dễ dàng mở rộng và đáp ứng nhanh các yêu cầu về nhu cầu.
-- Dữ liệu an toàn, ở cả trạng thái nghỉ và khi di chuyển.
+- Dữ liệu an toàn, ở cả trạng thái lưu trữ và khi truyền tải.
 - Các bản sao lưu tự động và khôi phục theo thời gian cho 35 ngày gần đây nhất.
 - Bảo mật và tuân thủ quy định cấp doanh nghiệp về an ninh.
 
@@ -331,12 +332,29 @@ Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát đ�
 
 ![image](https://user-images.githubusercontent.com/62134515/221767925-03be905e-0211-4d95-8975-3d0643472020.png)
 
+Azure Database for MariaDB là một phiên bản của hệ quản trị cơ sở dữ liệu MariaDB được tích hợp để chạy trên nền tảng Azure. Nó dựa trên phiên bản MariaDB Community.
+
+Cơ sở dữ liệu được quản lý và điều khiển hoàn toàn bởi Azure. Sau khi bạn cung cấp dịch vụ và chuyển dữ liệu của bạn, hệ thống chỉ cần rất ít công việc quản trị bổ sung.
+
+
+
 
 
 
 
 <a name="M01.2.3.1"></a>
 #### Benefits of Azure Database for MariaDB
+
+Azure Database for MariaDB cung cấp:
+
+- Có sẵn tính năng high availability mà không phát sinh chi phí bổ sung.
+- Hiệu suất đáng tin cậy, với giá cả tính theo hình thức thanh toán dựa trên sử dụng.
+- Có thể mở rộng theo nhu cầu trong vài giây.
+- Bảo vệ an toàn dữ liệu nhạy cảm trong quá trình lưu trữ và truyền tải.
+- Tự động sao lưu và khôi phục điểm thời gian trong vòng tối đa 35 ngày.
+- Bảo mật và tuân thủ tiêu chuẩn an ninh doanh nghiệp.
+
+
 
 
 
@@ -347,7 +365,9 @@ Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát đ�
 
 ![image](https://user-images.githubusercontent.com/62134515/221767967-d1b0927f-87ac-4586-8144-9539c3c5e62a.png)
 
+Nếu bạn thích PostgreSQL, bạn có thể chọn Azure Database for PostgreSQL để chạy một phiên bản PaaS của PostgreSQL trong Azure Cloud. Dịch vụ này cung cấp các lợi ích về availability, performance, scaling, security, và administrative tương tự như dịch vụ MySQL.
 
+Một số tính năng của on-premises PostgreSQL databases không có sẵn trong Azure Database for PostgreSQL. Những tính năng này chủ yếu liên quan đến các tiện ích mà người dùng có thể thêm vào cơ sở dữ liệu để thực hiện các tác vụ chuyên biệt, chẳng hạn như viết các thủ tục lưu trữ bằng các ngôn ngữ lập trình khác (ngoài pgsql, được cung cấp), và tương tác trực tiếp với hệ điều hành. Một tập hợp cốt lõi của các tiện ích được sử dụng thường xuyên nhất được hỗ trợ, và danh sách các tiện ích có sẵn được liên tục xem xét.
 
 
 
@@ -356,7 +376,7 @@ Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát đ�
 <a name="M01.2.4.1"></a>
 #### Azure Database for PostgreSQL Flexible Server
 
-
+Tùy chọn triển khai flexible-server cho PostgreSQL là một dịch vụ cơ sở dữ liệu được quản lý hoàn toàn. Nó cung cấp mức độ kiểm soát cao và tùy chỉnh cấu hình máy chủ và cung cấp các điều khiển tối ưu hóa chi phí.
 
 
 
@@ -365,6 +385,11 @@ Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát đ�
 <a name="M01.2.4.2"></a>
 #### Benefits of Azure Database for PostgreSQL
 
+Azure Database for PostgreSQL là một dịch vụ highly available. Nó được tích hợp các cơ chế phát hiện lỗi và cơ chế chuyển đổi dự phòng.
+
+Người dùng PostgreSQL sẽ quen thuộc với công cụ **pgAdmin**, mà bạn có thể sử dụng để quản lý và giám sát cơ sở dữ liệu PostgreSQL. Bạn có thể tiếp tục sử dụng công cụ này để kết nối với Azure Database for PostgreSQL. Tuy nhiên, một số chức năng tập trung vào máy chủ, chẳng hạn như thực hiện sao lưu và khôi phục máy chủ, không có sẵn vì máy chủ được quản lý và bảo trì bởi Microsoft.
+
+Azure Database for PostgreSQL ghi lại thông tin về các truy vấn chạy trên cơ sở dữ liệu trên máy chủ và lưu chúng trong cơ sở dữ liệu có tên azure_sys. Bạn truy vấn view query_store.qs_view để xem thông tin này và sử dụng nó để giám sát các truy vấn mà người dùng đang chạy. Thông tin này có thể rất hữu ích nếu bạn cần điều chỉnh tinh chỉnh các truy vấn được thực hiện bởi ứng dụng của mình.
 
 
 
@@ -372,19 +397,19 @@ Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát đ�
 
 
 
+<a name="M01.3"></a>
+## Exercise: Explore Azure relational database services
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
 
 
 
 
 
 
-
-
-
-<a name="M01.5"></a>
+<a name="M01.4"></a>
 ## Knowledge check
 
-![image](https://user-images.githubusercontent.com/62134515/221415531-b22e84e0-6fb5-4d86-9234-0c323557400a.png)
+![image](https://user-images.githubusercontent.com/62134515/221832102-0b9f9d0d-6fae-4b4d-86f0-d38f65a9f942.png)
 
 
 
