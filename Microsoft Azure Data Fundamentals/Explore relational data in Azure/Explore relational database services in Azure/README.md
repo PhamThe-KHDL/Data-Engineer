@@ -8,6 +8,7 @@
       + [Azure SQL Database Managed Instance](#M01.1.3)
         * [Use cases](#M01.1.3.1)
         * [Business benefits](#M01.1.3.2)
+      + [Azure SQL Database](#M01.1.4)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -134,10 +135,9 @@ Tất cả các thông tin truyền tải đều được mã hóa và ký bằn
 <a name="M01.1.3.1"></a>
 ### Use cases
 
+Hãy xem xét Azure SQL Managed Instance nếu bạn muốn lift-and-shift một SQL Server instance trên nền tảng on-premises và tất cả các cơ sở dữ liệu của nó lên cloud, mà không phải chịu chi phí quản lý khi chạy SQL Server trên máy ảo.
 
-
-
-
+Azure SQL Managed Instance cung cấp các tính năng không có sẵn trong Azure SQL Database (được thảo luận dưới đây). Nếu hệ thống của bạn sử dụng các tính năng như linked servers, Service Broker (hệ thống xử lý tin nhắn có thể được sử dụng để phân phối công việc trên các máy chủ) hoặc Database Mail (cho phép cơ sở dữ liệu của bạn gửi tin nhắn email cho người dùng), thì bạn nên sử dụng managed instance. Để kiểm tra tính tương thích với hệ thống on-premises hiện có, bạn có thể cài đặt [Data Migration Assistant (DMA)](https://www.microsoft.com/en-us/download/details.aspx?id=53595). Công cụ này phân tích cơ sở dữ liệu của bạn trên SQL Server và báo cáo bất kỳ vấn đề nào có thể chặn quá trình di chuyển sang managed instance.
 
 
 
@@ -151,6 +151,11 @@ Tất cả các thông tin truyền tải đều được mã hóa và ký bằn
 <a name="M01.1.3.2"></a>
 ### Business benefits
 
+Azure SQL Managed Instance cho phép quản trị viên hệ thống tiết kiệm thời gian hơn cho các nhiệm vụ quản trị do dịch vụ thực hiện hoặc đơn giản hóa các tác vụ đó. Các tác vụ tự động bao gồm cài đặt và vá phần mềm hệ thống và hệ thống quản trị cơ sở dữ liệu, thay đổi và cấu hình động của các trường hợp, sao lưu, sao chép cơ sở dữ liệu (bao gồm các cơ sở dữ liệu hệ thống), cấu hình tính sẵn cao và cấu hình các luồng dữ liệu giám sát sức khỏe và hiệu suất.
+
+Azure SQL Managed Instance có khả năng tương thích gần như 100% với SQL Server Enterprise Edition, chạy trên nền tảng on-premises.
+
+Azure SQL Managed Instance hỗ trợ công cụ đăng nhập cơ sở dữ liệu SQL Server và đăng nhập tích hợp với Azure Active Directory (AD). Công cụ đăng nhập cơ sở dữ liệu SQL Server bao gồm tên người dùng và mật khẩu. Bạn phải nhập thông tin đăng nhập mỗi khi kết nối với máy chủ. Đăng nhập Azure AD sử dụng các thông tin đăng nhập liên quan đến đăng nhập máy tính hiện tại của bạn và bạn không cần cung cấp chúng mỗi khi kết nối với máy chủ.
 
 
 
@@ -162,36 +167,53 @@ Tất cả các thông tin truyền tải đều được mã hóa và ký bằn
 
 
 
+<a name="M01.1.4"></a>
+## Azure SQL Database
 
-<a name="M01.3"></a>
-## Explore SQL
-
-SQL là viết tắt của Structured Query Language, được sử dụng để giao tiếp với cơ sở dữ liệu quan hệ. Đây là ngôn ngữ tiêu chuẩn cho các hệ thống quản lý cơ sở dữ liệu quan hệ. Các câu lệnh SQL được sử dụng để thực hiện các tác vụ như cập nhật dữ liệu trong cơ sở dữ liệu hoặc truy xuất dữ liệu từ cơ sở dữ liệu. Một số hệ thống quản lý cơ sở dữ liệu quan hệ thông dụng sử dụng SQL bao gồm Microsoft SQL Server, MySQL, PostgreSQL, MariaDB và Oracle.
-
-```
-!Note
-SQL ban đầu được chuẩn hóa bởi American National Standards Institute (ANSI) vào năm 1986 và bởi International 
-Organization for Standardization (ISO) vào năm 1987. Kể từ đó, tiêu chuẩn đã được mở rộng nhiều lần khi 
-các nhà cung cấp cơ sở dữ liệu quan hệ đã thêm tính năng mới vào hệ thống của họ. Ngoài ra, hầu hết 
-các nhà cung cấp cơ sở dữ liệu đều bao gồm các phần mở rộng độc quyền của riêng họ không phải là một phần 
-của tiêu chuẩn, điều này đã dẫn đến một loạt các phiên bản SQL.
-```
-
-Bạn có thể sử dụng các câu lệnh SQL như SELECT, INSERT, UPDATE, DELETE, CREATE và DROP để thực hiện hầu hết mọi thứ bạn cần với cơ sở dữ liệu. Mặc dù các câu lệnh SQL này là một phần của tiêu chuẩn SQL, nhiều hệ thống quản lý cơ sở dữ liệu cũng có các phần mở rộng độc quyền của riêng họ để xử lý các chi tiết cụ thể của hệ thống quản lý cơ sở dữ liệu đó. Các phần mở rộng này cung cấp chức năng không được bao gồm trong tiêu chuẩn SQL, và bao gồm các lĩnh vực như quản lý bảo mật và lập trình. Ví dụ, Microsoft SQL Server và các dịch vụ cơ sở dữ liệu Azure dựa trên động cơ cơ sở dữ liệu SQL Server sử dụng Transact-SQL. Bản triển khai này bao gồm các phần mở rộng độc quyền để viết các procedures và triggers (mã ứng dụng có thể được lưu trữ trong cơ sở dữ liệu) và quản lý tài khoản người dùng. PostgreSQL và MySQL cũng có các phiên bản riêng của các tính năng này.
-
-Một số phiên bản SQL phổ biến bao gồm:
-
-- *Transact-SQL (T-SQL)*. Phiên bản SQL này được sử dụng bởi Microsoft SQL Server và các dịch vụ Azure SQL.
-- *pgSQL*. Đây là phiên bản có các phần mở rộng được thực hiện trong PostgreSQL.
-- *PL/SQL*. Đây là phiên bản được sử dụng bởi Oracle. PL/SQL viết tắt của Procedural Language/SQL.
-
-Người dùng có kế hoạch làm việc với một hệ thống cơ sở dữ liệu cụ thể nên học các chi tiết về phiên bản SQL và nền tảng SQL ưa thích của họ.
+Azure SQL Database là một dịch vụ PaaS từ Microsoft. Bạn tạo một máy chủ cơ sở dữ liệu quản lý trên cloud, sau đó triển khai các cơ sở dữ liệu của bạn trên máy chủ này.
 
 ```
 !Note
-Các ví dụ code SQL trong module này dựa trên phiên bản Transact-SQL, trừ khi có chỉ dẫn khác.
-Cú pháp cho các phiên bản khác thường tương tự, nhưng có thể khác nhau ở một số chi tiết.
+Một SQL Database server là một cấu trúc logic hoạt động như một điểm quản trị trung tâm 
+cho nhiều cơ sở dữ liệu đơn lẻ hoặc gộp, các đăng nhập, các quy tắc tường lửa, 
+các quy tắc kiểm tra đăng nhập, và các nhóm chuyển đổi dự phòng.
 ```
+
+Azure SQL Database có sẵn dưới dạng Single Database hoặc Elastic Pool.
+
+
+
+
+
+<a name="M01.1.4.1"></a>
+### Single Database
+
+
+
+
+
+
+<a name="M01.1.4.2"></a>
+### Elastic Pool
+
+
+
+
+
+
+<a name="M01.1.4.3"></a>
+### Use cases
+
+
+
+
+
+
+<a name="M01.1.4.4"></a>
+### Business benefits
+
+
+
 
 
 
