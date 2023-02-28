@@ -288,11 +288,11 @@ PostgreSQL có ngôn ngữ truy vấn riêng gọi là pgsql. Ngôn ngữ này l
 
 ![image](https://user-images.githubusercontent.com/62134515/221767897-b85b3370-7f81-43c7-8d20-b9afe7f8c40c.png)
 
-Azure Database for MySQL là một triển khai PaaS của MySQL trên đám mây Azure, dựa trên phiên bản MySQL Community Edition.
+Azure Database for MySQL là một triển khai PaaS của MySQL trên Azure cloud, dựa trên phiên bản MySQL Community Edition.
 
 Dịch vụ Azure Database for MySQL bao gồm tính sẵn sàng cao mà không cần phải trả thêm chi phí, và khả năng mở rộng theo nhu cầu. Bạn chỉ trả tiền cho những gì bạn sử dụng. Các bản sao lưu tự động được cung cấp, với khả năng phục hồi theo thời gian.
 
-Máy chủ cung cấp bảo mật kết nối để thực thi các quy tắc tường lửa và, tùy chọn, yêu cầu các kết nối SSL. Nhiều tham số máy chủ cho phép bạn cấu hình các thiết lập máy chủ như chế độ khóa, số kết nối tối đa và thời gian chờ.
+Máy chủ cung cấp bảo mật kết nối để thực thi các quy tắc tường lửa và tùy chọn yêu cầu các kết nối SSL. Nhiều tham số máy chủ cho phép bạn cấu hình các thiết lập máy chủ như chế độ khóa, số kết nối tối đa và thời gian chờ.
 
 Azure Database for MySQL cung cấp một hệ thống cơ sở dữ liệu toàn cầu có thể mở rộng đến các cơ sở dữ liệu lớn mà không cần quản lý phần cứng, các thành phần mạng, máy chủ ảo, các bản vá phần mềm và các thành phần cơ bản khác.
 
@@ -305,6 +305,19 @@ Một số thao tác không khả dụng với Azure Database for MySQL. Những
 
 <a name="M01.2.2.1"></a>
 #### Benefits of Azure Database for MySQL
+
+Bạn sẽ nhận được các tính năng sau khi sử dụng Azure Database for MySQL:
+
+- Các tính năng high availability được tích hợp sẵn.
+- Hiệu suất dự đoán được.
+- Dễ dàng mở rộng và đáp ứng nhanh các yêu cầu về nhu cầu.
+- Dữ liệu an toàn, ở cả trạng thái nghỉ và khi di chuyển.
+- Các bản sao lưu tự động và khôi phục theo thời gian cho 35 ngày gần đây nhất.
+- Bảo mật và tuân thủ quy định cấp doanh nghiệp về an ninh.
+
+Hệ thống sử dụng cơ chế tính phí theo hình thức trả tiền dựa trên sử dụng, do đó bạn chỉ trả tiền cho những gì bạn sử dụng.
+
+Các máy chủ Azure Database for MySQL cung cấp chức năng giám sát để thêm cảnh báo và xem các số liệu và nhật ký.
 
 
 
