@@ -283,6 +283,83 @@ PostgreSQL có ngôn ngữ truy vấn riêng gọi là pgsql. Ngôn ngữ này l
 
 
 
+<a name="M01.2.2"></a>
+### Azure Database for MySQL
+
+![image](https://user-images.githubusercontent.com/62134515/221767897-b85b3370-7f81-43c7-8d20-b9afe7f8c40c.png)
+
+
+
+
+
+
+
+
+<a name="M01.2.2.1"></a>
+#### Benefits of Azure Database for MySQL
+
+
+
+
+
+
+
+
+<a name="M01.2.3"></a>
+### Azure Database for MariaDB
+
+![image](https://user-images.githubusercontent.com/62134515/221767925-03be905e-0211-4d95-8975-3d0643472020.png)
+
+
+
+
+
+<a name="M01.2.3.1"></a>
+#### Benefits of Azure Database for MariaDB
+
+
+
+
+
+<a name="M01.2.4"></a>
+### Azure Database for PostgreSQL
+
+![image](https://user-images.githubusercontent.com/62134515/221767967-d1b0927f-87ac-4586-8144-9539c3c5e62a.png)
+
+
+
+
+
+
+
+<a name="M01.2.4.1"></a>
+#### Azure Database for PostgreSQL Flexible Server
+
+
+
+
+
+
+
+<a name="M01.2.4.2"></a>
+#### Benefits of Azure Database for PostgreSQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <a name="M01.5"></a>
 ## Knowledge check
 
