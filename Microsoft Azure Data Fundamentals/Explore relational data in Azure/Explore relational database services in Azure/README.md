@@ -9,6 +9,10 @@
         * [Use cases](#M01.1.3.1)
         * [Business benefits](#M01.1.3.2)
       + [Azure SQL Database](#M01.1.4)
+        * [Single Database](#M01.1.4.1)
+        * [Elastic Pool](#M01.1.4.2)
+        * [Use cases](#M01.1.4.3)
+        * [Business benefits](#M01.1.4.4)
     - [Understand normalization](#M01.2)
     - [Explore SQL](#M01.3)
       + [SQL statement types](#M01.3.1)
@@ -188,7 +192,7 @@ Azure SQL Database có sẵn dưới dạng Single Database hoặc Elastic Pool.
 <a name="M01.1.4.1"></a>
 ### Single Database
 
-
+Tùy chọn này cho phép bạn nhanh chóng thiết lập và chạy một single SQL Server database. Bạn tạo và chạy một máy chủ cơ sở dữ liệu trong cloud và truy cập cơ sở dữ liệu của mình thông qua máy chủ này. Microsoft quản lý máy chủ, vì vậy tất cả những gì bạn cần làm là cấu hình cơ sở dữ liệu, tạo bảng của bạn và điền dữ liệu vào chúng. Bạn có thể mở rộng cơ sở dữ liệu nếu bạn cần thêm không gian lưu trữ, bộ nhớ hoặc sức mạnh xử lý. Theo mặc định, tài nguyên được cấp phát trước và bạn được tính phí theo giờ cho các tài nguyên mà bạn đã yêu cầu. Bạn cũng có thể chỉ định một cấu hình serverless. Trong cấu hình này, Microsoft tạo ra máy chủ của riêng mình, có thể được chia sẻ bởi các cơ sở dữ liệu thuộc về các đăng ký Azure khác nhau. Microsoft đảm bảo tính riêng tư của cơ sở dữ liệu của bạn. Cơ sở dữ liệu của bạn tự động mở rộng và tài nguyên được cấp hoặc giải phóng theo yêu cầu.
 
 
 
@@ -196,13 +200,30 @@ Azure SQL Database có sẵn dưới dạng Single Database hoặc Elastic Pool.
 <a name="M01.1.4.2"></a>
 ### Elastic Pool
 
-
+Tùy chọn này tương tự như Single Database, ngoại trừ việc mặc định nhiều cơ sở dữ liệu có thể chia sẻ các tài nguyên như bộ nhớ, không gian lưu trữ dữ liệu và sức mạnh xử lý thông qua multiple-tenancy. Các tài nguyên được gọi là một pool. Bạn tạo ra pool và chỉ các cơ sở dữ liệu của bạn có thể sử dụng pool. Mô hình này hữu ích nếu bạn có các cơ sở dữ liệu có yêu cầu tài nguyên thay đổi theo thời gian và giúp bạn giảm chi phí. Ví dụ, cơ sở dữ liệu lương của bạn có thể yêu cầu nhiều sức mạnh CPU vào cuối mỗi tháng khi bạn xử lý việc xử lý lương, nhưng vào những thời điểm khác, cơ sở dữ liệu có thể ít hoạt động hơn nhiều. Bạn có thể có một cơ sở dữ liệu khác được sử dụng để chạy các báo cáo. Cơ sở dữ liệu này có thể hoạt động trong vài ngày giữa tháng khi báo cáo quản lý được tạo ra, nhưng với load nhẹ hơn trong những lần khác. Elastic Pool cho phép bạn sử dụng các tài nguyên có sẵn trong pool và sau đó giải phóng các tài nguyên sau khi xử lý hoàn thành.
 
 
 
 
 <a name="M01.1.4.3"></a>
 ### Use cases
+
+Azure SQL Database cung cấp cho bạn tùy chọn tốt nhất với chi phí thấp và yêu cầu quản trị tối thiểu. Tuy nhiên, nó không hoàn toàn tương thích với các cài đặt SQL Server trên nền tảng on-premises. Nó thường được sử dụng trong các dự án cloud mới trong đó thiết kế ứng dụng có thể đáp ứng bất kỳ thay đổi nào cần thiết đối với ứng dụng của bạn.
+
+```
+!Note
+Bạn có thể sử dụng Data Migration Assistant để phát hiện các vấn đề tương thích với cơ sở dữ liệu của bạn có thể ảnh hưởng đến chức năng cơ sở dữ liệu trong Azure SQL Database. 
+```
+
+For more information, see [Overview of Data Migration Assistant](https://learn.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver16).
+
+Azure SQL Database thường được sử dụng cho:
+
+- Các ứng dụng cloud hiện đại cần sử dụng các tính năng SQL Server ổn định nhất.
+- Các ứng dụng yêu cầu khả năng sẵn sàng cao.
+- Các hệ thống có variable load cần máy chủ cơ sở dữ liệu có thể tự động mở rộng và thu hẹp nhanh chóng.
+
+
 
 
 
@@ -212,8 +233,17 @@ Azure SQL Database có sẵn dưới dạng Single Database hoặc Elastic Pool.
 <a name="M01.1.4.4"></a>
 ### Business benefits
 
+Azure SQL Database tự động cập nhật và vá phần mềm SQL Server để đảm bảo rằng bạn luôn chạy phiên bản mới nhất và an toàn nhất của dịch vụ.
 
+Các tính năng mở rộng của Azure SQL Database đảm bảo rằng bạn có thể tăng tài nguyên để lưu trữ và xử lý dữ liệu mà không cần phải thực hiện một bản nâng cấp thủ công đắt tiền.
 
+Dịch vụ này đảm bảo tính khả dụng cao, để đảm bảo rằng cơ sở dữ liệu của bạn luôn sẵn sàng ít nhất 99,995%. Azure SQL Database hỗ trợ khôi phục point-in-time, cho phép bạn phục hồi cơ sở dữ liệu về trạng thái nó đang ở bất kỳ điểm nào trong quá khứ. Các cơ sở dữ liệu có thể được sao chép sang các khu vực khác để cung cấp độ bền cao hơn và khả năng phục hồi sau sự cố.
+
+Advanced threat protection (ATP) cung cấp khả năng bảo mật nâng cao, bao gồm các tính năng đánh giá lỗ hổng để giúp phát hiện và khắc phục các vấn đề bảo mật tiềm ẩn trong cơ sở dữ liệu của bạn. ATP cũng phát hiện các hoạt động bất thường cho thấy các nỗ lực không bình thường và có thể gây hại để truy cập hoặc khai thác cơ sở dữ liệu của bạn. Nó liên tục giám sát cơ sở dữ liệu của bạn để phát hiện các hoạt động đáng ngờ và cung cấp cảnh báo bảo mật ngay lập tức về các lỗ hổng tiềm ẩn, các cuộc tấn công SQL injection và các mô hình truy cập cơ sở dữ liệu bất thường. Các cảnh báo phát hiện các hoạt động đáng ngờ cung cấp chi tiết về các hoạt động đáng ngờ và đề xuất các hành động để điều tra và giảm thiểu rủi ro.
+
+Auditing trong Azure SQL Database theo dõi các sự kiện của cơ sở dữ liệu và ghi chúng vào một nhật ký kiểm tra trong tài khoản lưu trữ Azure của bạn. Kiểm tra có thể giúp bạn duy trì tuân thủ quy định, hiểu hoạt động của cơ sở dữ liệu và có cái nhìn về những sự khác biệt và sự bất thường có thể cho thấy các vấn đề kinh doanh hoặc vi phạm an ninh nghi ngờ.
+
+SQL Database giúp bảo vệ dữ liệu của bạn bằng cách cung cấp mã hóa bảo vệ dữ liệu được lưu trữ trong cơ sở dữ liệu (at rest) và khi nó được truyền qua mạng (in motion).
 
 
 
