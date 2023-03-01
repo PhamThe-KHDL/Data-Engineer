@@ -212,7 +212,8 @@ Azure SQL Database cung cấp cho bạn tùy chọn tốt nhất với chi phí 
 
 ```
 !Note
-Bạn có thể sử dụng Data Migration Assistant để phát hiện các vấn đề tương thích với cơ sở dữ liệu của bạn có thể ảnh hưởng đến chức năng cơ sở dữ liệu trong Azure SQL Database. 
+Bạn có thể sử dụng Data Migration Assistant để phát hiện các vấn đề tương thích với cơ sở dữ liệu 
+của bạn có thể ảnh hưởng đến chức năng cơ sở dữ liệu trong Azure SQL Database. 
 ```
 
 For more information, see [Overview of Data Migration Assistant](https://learn.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver16).
