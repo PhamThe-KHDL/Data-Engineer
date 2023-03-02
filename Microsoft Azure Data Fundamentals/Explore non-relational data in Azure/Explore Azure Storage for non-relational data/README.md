@@ -80,7 +80,25 @@ Các hệ thống như Hadoop trong Azure HDInsight, Azure Databricks và Azure 
 
 <a name="M01.3"></a>
 ## Explore Azure Files
-[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
+
+Nhiều hệ thống trên nền tảng địa phương bao gồm một mạng lưới các máy tính trong nhà sử dụng chia sẻ tệp. Chia sẻ tệp cho phép bạn lưu trữ một tệp trên một máy tính và cấp quyền truy cập vào tệp đó cho người dùng và ứng dụng chạy trên các máy tính khác. Chiến lược này có thể hoạt động tốt cho các máy tính trong cùng mạng nội bộ, nhưng không mở rộng tốt khi số lượng người dùng tăng lên hoặc nếu người dùng được đặt tại các địa điểm khác nhau.
+
+Azure Files thực chất là một cách để tạo chia sẻ mạng dựa trên đám mây, giống như bạn thường thấy trong các tổ chức trên nền tảng địa phương để làm cho tài liệu và các tệp khác có sẵn cho nhiều người dùng. Bằng cách lưu trữ chia sẻ tệp trên Azure, các tổ chức có thể loại bỏ chi phí phần cứng và chi phí bảo trì, và tận dụng được tính khả dụng cao và lưu trữ đám mây có khả năng mở rộng cho các tệp.
+
+![image](https://user-images.githubusercontent.com/62134515/222397747-d1ea6507-0e77-4fa5-a948-c479bc452b65.png)
+
+Bạn có thể tạo lưu trữ Azure File trong một tài khoản lưu trữ. Azure Files cho phép bạn chia sẻ tối đa 100 TB dữ liệu trong một tài khoản lưu trữ. Dữ liệu này có thể phân phối trên bất kỳ số lượng chia sẻ tệp nào trong tài khoản. Kích thước tối đa của một tệp đơn lẻ là 1 TB, nhưng bạn có thể thiết lập các hạn ngạch để giới hạn kích thước của mỗi chia sẻ dưới con số này. Hiện tại, Azure File Storage hỗ trợ đến 2000 kết nối đồng thời cho mỗi tệp được chia sẻ.
+
+Sau khi bạn đã tạo tài khoản lưu trữ, bạn có thể tải lên các tệp vào Azure File Storage bằng cách sử dụng cổng thông tin Azure hoặc các công cụ như tiện ích AzCopy. Bạn cũng có thể sử dụng dịch vụ đồng bộ hóa Azure File Sync để đồng bộ hóa các bản sao được lưu trữ cục bộ của các tệp được chia sẻ với dữ liệu trong Azure File Storage.
+
+Azure File Storage cung cấp hai cấp độ hiệu suất. Cấp độ Standard sử dụng phần cứng được dựa trên ổ cứng trong một trung tâm dữ liệu, và cấp độ Premium sử dụng đĩa rắn. Cấp độ Premium cung cấp khả năng thông lượng lớn hơn, nhưng được tính phí với mức giá cao hơn.
+
+Azure Files hỗ trợ hai giao thức chia sẻ tệp mạng phổ biến:
+
+- Chia sẻ tệp Server Message Block (SMB) được sử dụng phổ biến trên nhiều hệ điều hành (Windows, Linux, macOS).
+- Chia sẻ tệp Network File System (NFS) được sử dụng bởi một số phiên bản Linux và macOS. Để tạo một chia sẻ NFS, bạn phải sử dụng một tài khoản lưu trữ loại premium và tạo và cấu hình một mạng ảo để kiểm soát truy cập vào chia sẻ được.
+
+
 
 
 
