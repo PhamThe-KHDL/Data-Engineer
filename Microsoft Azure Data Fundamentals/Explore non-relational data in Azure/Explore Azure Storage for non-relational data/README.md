@@ -4,7 +4,7 @@
     - [Explore Azure blob storage](#M01.1)
     - [Explore Azure DataLake Storage Gen2](#M01.2)
     - [Explore Azure Files](#M01.3)
-    - [Knowledge check](#M01.5)
+    - [Knowledge check](#M01.6)
 
 
 
@@ -105,10 +105,9 @@ Azure Files hỗ trợ hai giao thức chia sẻ tệp mạng phổ biến:
 
 
 
-<a name="M01.4"></a>
+<a name="M01.6"></a>
 ## Knowledge check
 
-![image](https://user-images.githubusercontent.com/62134515/221832102-0b9f9d0d-6fae-4b4d-86f0-d38f65a9f942.png)
 
 
 
