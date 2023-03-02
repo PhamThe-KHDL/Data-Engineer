@@ -23,7 +23,7 @@
         * [Azure Database for PostgreSQL Flexible Server](#M01.2.4.1)
         * [Benefits of Azure Database for PostgreSQL](#M01.2.4.2)
     - [Exercise: Explore Azure relational database services](#M01.3)
-    - [Knowledge check](#M01.5)
+    - [Knowledge check](#M01.4)
 
 
 
