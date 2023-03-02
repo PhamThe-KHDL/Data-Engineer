@@ -3,7 +3,7 @@
 * [**Explore Azure Storage for non-relational data**](#M01)
     - [Explore Azure blob storage](#M01.1)
     - [Explore Azure DataLake Storage Gen2](#M01.2)
-    - [Exercise: Explore Azure relational database services](#M01.3)
+    - [Explore Azure Files](#M01.3)
     - [Knowledge check](#M01.5)
 
 
@@ -79,7 +79,7 @@ Các hệ thống như Hadoop trong Azure HDInsight, Azure Databricks và Azure 
 
 
 <a name="M01.3"></a>
-## Exercise: Explore Azure relational database services
+## Explore Azure Files
 [Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
 
 
