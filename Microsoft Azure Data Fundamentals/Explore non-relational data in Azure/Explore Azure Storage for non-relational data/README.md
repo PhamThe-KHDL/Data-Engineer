@@ -5,6 +5,7 @@
     - [Explore Azure DataLake Storage Gen2](#M01.2)
     - [Explore Azure Files](#M01.3)
     - [Explore Azure Tables](#M01.4)
+    - [Exercise: Explore Azure Storage](#M01.5)
     - [Knowledge check](#M01.6)
 
 
@@ -135,6 +136,13 @@ Khóa trong một bảng Azure Table Storage bao gồm hai phần; *khóa phân 
 
 
 
+<a name="M01.4"></a>
+## Explore Azure Tables
+
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
+
+
+
 
 
 
@@ -143,6 +151,7 @@ Khóa trong một bảng Azure Table Storage bao gồm hai phần; *khóa phân 
 <a name="M01.6"></a>
 ## Knowledge check
 
+![image](https://user-images.githubusercontent.com/62134515/222419553-3df76bbd-01ee-4fb2-91b6-391c59cebf97.png)
 
 
 
