@@ -41,9 +41,9 @@ Trong một container, bạn có thể tổ chức các blobs theo một cấu t
 
 Azure Blob Storage hỗ trợ ba loại blob khác nhau:
 
-- Block blobs: Là một tập hợp các block, mỗi block có thể có kích thước khác nhau, tối đa là 100 MB. Một block blob có thể chứa tối đa 50.000 block, cho phép dung lượng tối đa lên đến hơn 4,7 TB. Block là lượng dữ liệu nhỏ nhất có thể được đọc hoặc ghi dưới dạng một đơn vị riêng lẻ. Block blobs được sử dụng tốt nhất để lưu trữ các đối tượng nhị phân lớn rời rạc mà thay đổi ít.
-- Page blobs: Là một tập hợp các trang có kích thước cố định là 512 byte. Page blob được tối ưu hóa để hỗ trợ các hoạt động đọc và ghi ngẫu nhiên; bạn có thể lấy và lưu trữ dữ liệu cho một trang nếu cần thiết. Một page blob có thể chứa lên đến 8 TB dữ liệu. Azure sử dụng page blobs để triển khai lưu trữ đĩa ảo cho các máy ảo.
-- Append blobs: Là một block blob tối ưu hóa để hỗ trợ các hoạt động ghi thêm. Bạn chỉ có thể thêm block vào cuối của append blob; không hỗ trợ cập nhật hoặc xóa các block đã có sẵn. Mỗi block có thể có kích thước khác nhau, tối đa là 4 MB. Dung lượng tối đa của một append blob là hơn 195 GB.
+- **Block blobs**: Là một tập hợp các block, mỗi block có thể có kích thước khác nhau, tối đa là 100 MB. Một block blob có thể chứa tối đa 50.000 block, cho phép dung lượng tối đa lên đến hơn 4,7 TB. Block là lượng dữ liệu nhỏ nhất có thể được đọc hoặc ghi dưới dạng một đơn vị riêng lẻ. Block blobs được sử dụng tốt nhất để lưu trữ các đối tượng nhị phân lớn rời rạc mà thay đổi ít.
+- **Page blobs**: Là một tập hợp các trang có kích thước cố định là 512 byte. Page blob được tối ưu hóa để hỗ trợ các hoạt động đọc và ghi ngẫu nhiên; bạn có thể lấy và lưu trữ dữ liệu cho một trang nếu cần thiết. Một page blob có thể chứa lên đến 8 TB dữ liệu. Azure sử dụng page blobs để triển khai lưu trữ đĩa ảo cho các máy ảo.
+- **Append blobs**: Là một block blob tối ưu hóa để hỗ trợ các hoạt động ghi thêm. Bạn chỉ có thể thêm block vào cuối của append blob; không hỗ trợ cập nhật hoặc xóa các block đã có sẵn. Mỗi block có thể có kích thước khác nhau, tối đa là 4 MB. Dung lượng tối đa của một append blob là hơn 195 GB.
 
 Blob storage cung cấp ba cấp độ truy cập khác nhau, giúp cân bằng độ trễ truy cập và chi phí lưu trữ:
 
