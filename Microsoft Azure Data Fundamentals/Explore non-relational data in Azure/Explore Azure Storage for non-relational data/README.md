@@ -4,6 +4,7 @@
     - [Explore Azure blob storage](#M01.1)
     - [Explore Azure DataLake Storage Gen2](#M01.2)
     - [Explore Azure Files](#M01.3)
+    - [Explore Azure Tables](#M01.4)
     - [Knowledge check](#M01.6)
 
 
@@ -97,6 +98,40 @@ Azure Files hỗ trợ hai giao thức chia sẻ tệp mạng phổ biến:
 
 - Chia sẻ tệp Server Message Block (SMB) được sử dụng phổ biến trên nhiều hệ điều hành (Windows, Linux, macOS).
 - Chia sẻ tệp Network File System (NFS) được sử dụng bởi một số phiên bản Linux và macOS. Để tạo một chia sẻ NFS, bạn phải sử dụng một tài khoản lưu trữ loại premium và tạo và cấu hình một mạng ảo để kiểm soát truy cập vào chia sẻ được.
+
+
+
+
+
+
+
+
+
+
+
+<a name="M01.4"></a>
+## Explore Azure Tables
+
+Azure Table Storage là một giải pháp lưu trữ NoSQL sử dụng các bảng chứa các mục dữ liệu key/value. Mỗi mục được đại diện bởi một hàng chứa các cột cho các trường dữ liệu cần được lưu trữ.
+
+![image](https://user-images.githubusercontent.com/62134515/222404588-f1d8709e-2009-41f1-9966-2bff7f5bbdc3.png)
+
+Tuy nhiên, đừng bị lừa khi nghĩ rằng một bảng Azure Table Storage giống như một bảng trong cơ sở dữ liệu quan hệ. Azure Table cho phép bạn lưu trữ dữ liệu bán cấu trúc. Tất cả các hàng trong một bảng phải có một khóa duy nhất (bao gồm khóa phân vùng và khóa hàng), và khi bạn sửa đổi dữ liệu trong một bảng, một cột timestamp ghi lại ngày và giờ mà sửa đổi được thực hiện; nhưng ngoài ra, các cột trong mỗi hàng có thể khác nhau. Bảng Azure Table Storage không có khái niệm về khóa ngoại, mối quan hệ, thủ tục lưu trữ, xem hoặc các đối tượng khác mà bạn có thể tìm thấy trong cơ sở dữ liệu quan hệ. Dữ liệu trong bộ lưu trữ Azure Table thường được phi chuẩn hóa, với mỗi hàng chứa toàn bộ dữ liệu cho một thực thể logic. Ví dụ, một bảng chứa thông tin khách hàng có thể lưu trữ tên, họ, một hoặc nhiều số điện thoại và một hoặc nhiều địa chỉ cho mỗi khách hàng. Số lượng trường trong mỗi hàng có thể khác nhau, tùy thuộc vào số lượng số điện thoại và địa chỉ cho mỗi khách hàng và các chi tiết được ghi lại cho mỗi địa chỉ. Trong cơ sở dữ liệu quan hệ, thông tin này sẽ được chia thành nhiều hàng trong nhiều bảng.
+
+
+Để đảm bảo truy cập nhanh, Azure Table Storage chia một bảng thành các phân vùng. Phân vùng là cơ chế để nhóm các hàng liên quan vào một thuộc tính chung hoặc khóa phân vùng. Các hàng chia sẻ cùng khóa phân vùng sẽ được lưu trữ cùng nhau. Phân vùng không chỉ giúp tổ chức dữ liệu mà còn có thể cải thiện khả năng mở rộng và hiệu suất theo các cách sau:
+
+- Các phân vùng độc lập với nhau và có thể tăng hoặc giảm khi các hàng được thêm vào hoặc xóa khỏi phân vùng. Một bảng có thể chứa bất kỳ số lượng phân vùng nào.
+
+- Khi bạn tìm kiếm dữ liệu, bạn có thể bao gồm khóa phân vùng trong tiêu chí tìm kiếm. Điều này giúp thu hẹp phạm vi dữ liệu cần xem xét và cải thiện hiệu suất bằng cách giảm lượng I/O (các hoạt động nhập và xuất hoặc đọc và ghi) cần thiết để định vị dữ liệu.
+
+Khóa trong một bảng Azure Table Storage bao gồm hai phần; khóa phân vùng xác định phân vùng chứa hàng và một khóa hàng duy nhất cho mỗi hàng trong cùng phân vùng. Các mục trong cùng một phân vùng được lưu trữ theo thứ tự khóa hàng. Nếu một ứng dụng thêm một hàng mới vào một bảng, Azure đảm bảo rằng hàng được đặt ở vị trí chính xác trong bảng. Hệ thống này cho phép ứng dụng nhanh chóng thực hiện các truy vấn điểm xác định một hàng duy nhất và các truy vấn phạm vi để truy xuất một khối hàng liên tiếp trong một phân vùng.
+
+
+
+
+
+
 
 
 
