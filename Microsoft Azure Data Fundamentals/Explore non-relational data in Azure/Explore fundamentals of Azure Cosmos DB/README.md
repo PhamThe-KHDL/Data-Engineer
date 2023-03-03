@@ -28,7 +28,7 @@
 
 ![image](https://user-images.githubusercontent.com/62134515/222652171-7bb15027-99e7-49e3-88b8-22fbd093c735.png)
 
-Azure Cosmos DB hỗ trợ nhiều giao diện lập trình ứng dụng (API) khác nhau cho phép nhà phát triển sử dụng cú pháp lập trình của nhiều loại cơ sở dữ liệu phổ biến để làm việc với dữ liệu trong cơ sở dữ liệu Cosmos DB. Cấu trúc dữ liệu bên trong được trừu tượng hóa, cho phép các nhà phát triển sử dụng Cosmos DB để lưu trữ và truy vấn dữ liệu bằng các API mà họ đã quen thuộc.
+Azure Cosmos DB hỗ trợ nhiều giao diện lập trình ứng dụng (application programming interfaces - API) khác nhau cho phép nhà phát triển sử dụng cú pháp lập trình của nhiều loại cơ sở dữ liệu phổ biến để làm việc với dữ liệu trong cơ sở dữ liệu Cosmos DB. Cấu trúc dữ liệu bên trong được trừu tượng hóa, cho phép các nhà phát triển sử dụng Cosmos DB để lưu trữ và truy vấn dữ liệu bằng các API mà họ đã quen thuộc.
 
 ```
 !Note
@@ -38,7 +38,7 @@ có thể sử dụng để viết các chương trình cần truy cập dữ li
 cho các hệ thống quản lý cơ sở dữ liệu khác nhau.
 ```
 
-Cosmos DB sử dụng các chỉ mục và phân vùng để cung cấp hiệu suất đọc và ghi nhanh và có thể mở rộng lên đến quy mô khổng lồ dữ liệu. Bạn có thể bật tính năng ghi đa khu vực (multi-region writes), thêm các khu vực Azure mà bạn muốn vào tài khoản Cosmos DB của mình để người dùng phân tán trên toàn cầu có thể làm việc với dữ liệu trong bản sao địa phương của họ.
+Cosmos DB sử dụng indexes và partitioning để cung cấp hiệu suất đọc và ghi nhanh và có thể mở rộng lên đến quy mô khổng lồ dữ liệu. Bạn có thể bật tính năng ghi đa khu vực (multi-region writes), thêm các khu vực Azure mà bạn muốn vào tài khoản Cosmos DB của mình để người dùng phân tán trên toàn cầu có thể làm việc với dữ liệu trong bản sao địa phương của họ.
 
 
 
@@ -49,7 +49,7 @@ Cosmos DB sử dụng các chỉ mục và phân vùng để cung cấp hiệu s
 
 Cosmos DB là một hệ thống quản lý cơ sở dữ liệu có khả năng mở rộng cao. Cosmos DB tự động phân bổ không gian trong một container cho các phân vùng của bạn, và mỗi phân vùng có thể tăng lên đến kích thước 10 GB. Chỉ một ít chi phí quản trị hành chính được yêu cầu, vì các chỉ mục được tạo ra và duy trì tự động.
 
-Cosmos DB là một dịch vụ nền tảng trong Azure. Cosmos DB đã được sử dụng bởi nhiều sản phẩm của Microsoft cho các ứng dụng quan trọng toàn cầu, bao gồm Skype, Xbox, Microsoft 365, Azure và nhiều sản phẩm khác. Cosmos DB rất phù hợp cho các kịch bản sau:
+Cosmos DB là một dịch vụ nền tảng trong Azure. Cosmos DB đã được sử dụng bởi nhiều sản phẩm của Microsoft cho các ứng dụng quan trọng toàn cầu, bao gồm Skype, Xbox, Microsoft 365, Azure và nhiều sản phẩm khác. Cosmos DB rất phù hợp cho các trường hợp sau:
 
 - IoT and telematics. Những hệ thống này thường tiếp nhận lượng lớn dữ liệu trong các đợt hoạt động thường xuyên. Cosmos DB có thể chấp nhận và lưu trữ thông tin này nhanh chóng. Dữ liệu sau đó có thể được sử dụng bởi các dịch vụ phân tích, chẳng hạn như Azure Machine Learning, Azure HDInsight và Power BI. Ngoài ra, bạn có thể xử lý dữ liệu theo thời gian thực bằng cách sử dụng Azure Functions được kích hoạt khi dữ liệu được ghi vào cơ sở dữ liệu.
 - Retail and marketing. Microsoft sử dụng Cosmos DB cho các nền tảng thương mại điện tử của riêng mình chạy trên Windows Store và Xbox Live. Nó cũng được sử dụng trong ngành bán lẻ để lưu trữ dữ liệu danh mục và cho event sourcing trong các đường ống xử lý đơn hàng.
