@@ -38,7 +38,7 @@ có thể sử dụng để viết các chương trình cần truy cập dữ li
 cho các hệ thống quản lý cơ sở dữ liệu khác nhau.
 ```
 
-
+Cosmos DB sử dụng các chỉ mục và phân vùng để cung cấp hiệu suất đọc và ghi nhanh và có thể mở rộng lên đến quy mô khổng lồ dữ liệu. Bạn có thể bật tính năng ghi đa khu vực (multi-region writes), thêm các khu vực Azure mà bạn muốn vào tài khoản Cosmos DB của mình để người dùng phân tán trên toàn cầu có thể làm việc với dữ liệu trong bản sao địa phương của họ.
 
 
 
@@ -47,9 +47,16 @@ cho các hệ thống quản lý cơ sở dữ liệu khác nhau.
 <a name="M01.1.1"></a>
 ### When to use Cosmos DB
 
+Cosmos DB là một hệ thống quản lý cơ sở dữ liệu có khả năng mở rộng cao. Cosmos DB tự động phân bổ không gian trong một container cho các phân vùng của bạn, và mỗi phân vùng có thể tăng lên đến kích thước 10 GB. Chỉ một ít chi phí quản trị hành chính được yêu cầu, vì các chỉ mục được tạo ra và duy trì tự động.
 
+Cosmos DB là một dịch vụ nền tảng trong Azure. Cosmos DB đã được sử dụng bởi nhiều sản phẩm của Microsoft cho các ứng dụng quan trọng toàn cầu, bao gồm Skype, Xbox, Microsoft 365, Azure và nhiều sản phẩm khác. Cosmos DB rất phù hợp cho các kịch bản sau:
 
+- IoT and telematics. Những hệ thống này thường tiếp nhận lượng lớn dữ liệu trong các đợt hoạt động thường xuyên. Cosmos DB có thể chấp nhận và lưu trữ thông tin này nhanh chóng. Dữ liệu sau đó có thể được sử dụng bởi các dịch vụ phân tích, chẳng hạn như Azure Machine Learning, Azure HDInsight và Power BI. Ngoài ra, bạn có thể xử lý dữ liệu theo thời gian thực bằng cách sử dụng Azure Functions được kích hoạt khi dữ liệu được ghi vào cơ sở dữ liệu.
+- Retail and marketing. Microsoft sử dụng Cosmos DB cho các nền tảng thương mại điện tử của riêng mình chạy trên Windows Store và Xbox Live. Nó cũng được sử dụng trong ngành bán lẻ để lưu trữ dữ liệu danh mục và cho event sourcing trong các đường ống xử lý đơn hàng.
+- Gaming. Lớp cơ sở dữ liệu là một thành phần quan trọng của các ứng dụng trò chơi. Các trò chơi hiện đại thực hiện xử lý đồ họa trên các máy khách di động/máy console, nhưng phụ thuộc vào đám mây để cung cấp nội dung được tùy chỉnh và cá nhân hóa như thống kê trong trò chơi, tích hợp mạng xã hội và bảng xếp hạng điểm cao. Trò chơi thường đòi hỏi độ trễ đọc và ghi một mili giây duy nhất để cung cấp trải nghiệm chơi game hấp dẫn. Cơ sở dữ liệu trò chơi cần phải nhanh và có thể xử lý đợt yêu cầu đột ngột trong suốt giai đoạn ra mắt trò chơi mới và các tính năng cập nhật.
+- Web and mobile applications. Azure Cosmos DB thường được sử dụng trong các ứng dụng web và di động và rất phù hợp để mô hình hóa tương tác xã hội, tích hợp với các dịch vụ bên thứ ba và xây dựng trải nghiệm cá nhân phong phú. Các SDK Cosmos DB có thể được sử dụng để xây dựng các ứng dụng iOS và Android phong phú bằng framework Xamarin phổ biến.
 
+For additional information about uses for Cosmos DB, read [Common Azure Cosmos DB use cases](https://learn.microsoft.com/en-us/azure/cosmos-db/use-cases).
 
 
 
