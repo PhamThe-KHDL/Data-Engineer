@@ -3,7 +3,13 @@
 * [**Explore fundamentals of Azure Cosmos DB**](#M01)
     - [Describe Azure Cosmos DB](#M01.1)
       + [When to use Cosmos DB](#M01.1.1)
-    - [Explore Azure DataLake Storage Gen2](#M01.2)
+    - [Identify Azure Cosmos DB APIs](#M01.2)
+      + [Azure Cosmos DB for NoSQL](#M01.2.1)
+      + [Azure Cosmos DB for MongoDB](#M01.2.2)
+      + [Azure Cosmos DB for PostgreSQL](#M01.2.3)
+      + [Azure Cosmos DB for Table](#M01.2.4)
+      + [Azure Cosmos DB for Apache Cassandra](#M01.2.5)
+      + [Azure Cosmos DB for Apache Gremlin](#M01.2.6)
     - [Explore Azure Files](#M01.3)
     - [Explore Azure Tables](#M01.4)
     - [Exercise: Explore Azure Storage](#M01.5)
@@ -65,15 +71,119 @@ For additional information about uses for Cosmos DB, read [Common Azure Cosmos D
 
 
 <a name="M01.2"></a>
-## Explore Azure DataLake Storage Gen2
+## Identify Azure Cosmos DB APIs
 
-Azure Data Lake Store (Gen1) là một dịch vụ riêng biệt của Microsoft Azure được thiết kế để lưu trữ dữ liệu theo hệ thống phân cấp cho các hồ dữ liệu phân tích. Nó thường được sử dụng trong các giải pháp phân tích dữ liệu lớn (big data) và làm việc với các dữ liệu có cấu trúc, bán cấu trúc và không cấu trúc được lưu trữ trong các tệp tin. Azure Data Lake Storage Gen2 là phiên bản mới hơn của dịch vụ này, được tích hợp vào Azure Storage, cho phép bạn tận dụng tính mở rộng của lưu trữ blob và kiểm soát chi phí của các lớp lưu trữ, kết hợp với khả năng hệ thống tệp tin phân cấp và khả năng tương thích với các hệ thống phân tích chính của Azure Data Lake Store.
+Azure Cosmos DB là cơ sở dữ liệu phân tán được quản lý hoàn toàn và không có máy chủ của Microsoft cho các ứng dụng bất kỳ kích thước hoặc quy mô nào, hỗ trợ cả công việc có quan hệ và không có quan hệ. Nhà phát triển có thể xây dựng và di chuyển các ứng dụng nhanh chóng bằng cách sử dụng các động cơ cơ sở dữ liệu nguồn mở ưa thích của họ, bao gồm PostgreSQL, MongoDB và Apache Cassandra. Khi bạn cung cấp một phiên bản Cosmos DB mới, bạn chọn động cơ cơ sở dữ liệu mà bạn muốn sử dụng. Lựa chọn động cơ phụ thuộc vào nhiều yếu tố bao gồm loại dữ liệu cần được lưu trữ, nhu cầu hỗ trợ các ứng dụng hiện có và kỹ năng của nhà phát triển làm việc với kho dữ liệu.
 
-![image](https://user-images.githubusercontent.com/62134515/222390315-26a738b7-1941-4043-a95f-53983123afa5.png)
 
-Các hệ thống như Hadoop trong Azure HDInsight, Azure Databricks và Azure Synapse Analytics có thể gắn kết một hệ thống tệp phân tán được lưu trữ trong Azure Data Lake Store Gen2 và sử dụng nó để xử lý các khối lượng dữ liệu lớn.
 
-Để tạo một hệ thống tệp tin Azure Data Lake Store Gen2, bạn phải bật tùy chọn **Hierarchical Namespace** của một tài khoản Azure Storage. Bạn có thể làm điều này khi tạo tài khoản lưu trữ ban đầu, hoặc bạn có thể nâng cấp một tài khoản lưu trữ Azure hiện có để hỗ trợ Data Lake Gen2. Tuy nhiên, hãy lưu ý rằng việc nâng cấp là một quá trình một chiều - sau khi nâng cấp một tài khoản lưu trữ để hỗ trợ hierarchical namespacecho lưu trữ blob, bạn không thể hoàn nguyên nó về flat namespace.
+
+
+
+
+
+<a name="M01.2.1"></a>
+### Azure Cosmos DB for NoSQL
+
+Azure Cosmos DB cho NoSQL là dịch vụ phi quan hệ gốc của Microsoft để làm việc với mô hình dữ liệu tài liệu. Nó quản lý dữ liệu trong định dạng tài liệu JSON và mặc dù là một giải pháp lưu trữ dữ liệu NoSQL, nhưng sử dụng cú pháp SQL để làm việc với dữ liệu.
+
+Một truy vấn SQL cho một cơ sở dữ liệu Azure Cosmos DB chứa dữ liệu khách hàng có thể trông giống như thế này:
+
+```SQL
+SELECT *
+FROM customers c
+WHERE c.id = "joe@litware.com"
+```
+
+Kết quả của truy vấn này bao gồm một hoặc nhiều tài liệu JSON, như được hiển thị ở đây:
+
+```JSON
+{
+   "id": "joe@litware.com",
+   "name": "Joe Jones",
+   "address": {
+        "street": "1 Main St.",
+        "city": "Seattle"
+    }
+}
+```
+
+
+
+
+
+
+<a name="M01.2.2"></a>
+### Azure Cosmos DB for MongoDB
+
+MongoDB là một cơ sở dữ liệu nguồn mở phổ biến, trong đó dữ liệu được lưu trữ dưới định dạng Binary JSON (BSON). Azure Cosmos DB cho MongoDB cho phép nhà phát triển sử dụng thư viện và mã lệnh của MongoDB để làm việc với dữ liệu trong Azure Cosmos DB.
+
+Ngôn ngữ truy vấn MongoDB (MQL) sử dụng cú pháp hướng đối tượng gọn nhẹ, trong đó nhà phát triển sử dụng các đối tượng để gọi các phương thức. Ví dụ, truy vấn sau sử dụng phương thức **find** để truy vấn **products** collection trong đối tượng **db**:
+
+```JavaScript
+db.products.find({id: 123})
+```
+
+Kết quả của truy vấn này bao gồm các tài liệu JSON, tương tự như sau:
+
+```JSON
+{
+   "id": 123,
+   "name": "Hammer",
+   "price": 2.99
+}
+```
+
+
+
+
+
+
+
+<a name="M01.2.3"></a>
+### Azure Cosmos DB for PostgreSQL
+
+
+
+
+
+
+
+<a name="M01.2.4"></a>
+### Azure Cosmos DB for Table
+
+
+
+
+
+
+
+
+<a name="M01.2.5"></a>
+### Azure Cosmos DB for Apache Cassandra
+
+
+
+
+
+
+
+<a name="M01.2.6"></a>
+### Azure Cosmos DB for Apache Gremlin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
