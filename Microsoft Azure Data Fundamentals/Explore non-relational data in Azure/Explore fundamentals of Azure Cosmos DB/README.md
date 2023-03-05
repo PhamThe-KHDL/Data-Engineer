@@ -172,6 +172,18 @@ Kết quả của truy vấn này sẽ chứa một hàng cho sản phẩm 123, 
 <a name="M01.2.4"></a>
 ### Azure Cosmos DB for Table
 
+Azure Cosmos DB cho Table được sử dụng để làm việc với dữ liệu trong các bảng key-value, tương tự như Azure Table Storage. Nó cung cấp khả năng mở rộng và hiệu suất tốt hơn so với Azure Table Storage. Ví dụ, bạn có thể định nghĩa một bảng có tên là Khách hàng như sau:
+
+| PartitionKey | RowKey | Name | Email |
+| ----- | ----- | ----- | ----- |
+| 1 | 123 | Joe Jones | joe@litware.com |
+| 1 | 124 | Samir Nadoy | samir@northwind.com |
+
+Sau đó, bạn có thể sử dụng Table API thông qua một trong các SDK cụ thể cho ngôn ngữ để gọi đến điểm cuối dịch vụ của mình để lấy dữ liệu từ bảng. Ví dụ, yêu cầu sau đây trả về hàng chứa bản ghi cho Samir Nadoy trong bảng trên:
+
+```text
+https://endpoint/Customers(PartitionKey='1',RowKey='124')
+```
 
 
 
