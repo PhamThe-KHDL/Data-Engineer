@@ -143,6 +143,22 @@ Kết quả của truy vấn này bao gồm các tài liệu JSON, tương tự 
 <a name="M01.2.3"></a>
 ### Azure Cosmos DB for PostgreSQL
 
+Azure Cosmos DB cho PostgreSQL là một cơ sở dữ liệu quan hệ toàn cầu của PostgreSQL, được phân tán tự động để giúp bạn xây dựng các ứng dụng có khả năng mở rộng cao. Bạn có thể bắt đầu xây dựng các ứng dụng trên một nhóm máy chủ đơn lẻ, cùng cách với PostgreSQL ở bất kỳ đâu khác. Khi yêu cầu về tính mở rộng và hiệu suất của ứng dụng của bạn tăng lên, bạn có thể mở rộng một cách dễ dàng đến nhiều nút bằng cách phân phối các bảng của bạn một cách minh bạch. PostgreSQL là một hệ thống quản lý cơ sở dữ liệu quan hệ (RDBMS) trong đó bạn định nghĩa các bảng dữ liệu quan hệ, ví dụ như bạn có thể định nghĩa một bảng sản phẩm như sau:
+
+| ProductID | ProductName | Price |
+| ----- | ----- | -----|
+| 123 | Hammer | 2.99 |
+| 162 | Screwdriver | 3.49 |
+
+Sau đó, bạn có thể truy vấn bảng này để lấy tên và giá của một sản phẩm cụ thể bằng cách sử dụng SQL như sau:
+
+```SQL
+SELECT ProductName, Price 
+FROM Products
+WHERE ProductID = 123;
+```
+
+Kết quả của truy vấn này sẽ chứa một hàng cho sản phẩm 123, giống như sau:
 
 
 
@@ -152,7 +168,9 @@ Kết quả của truy vấn này bao gồm các tài liệu JSON, tương tự 
 <a name="M01.2.4"></a>
 ### Azure Cosmos DB for Table
 
-
+| ProductName | Price |
+| ----- | ----- |
+| Hammer | 2.99 |
 
 
 
