@@ -160,6 +160,10 @@ WHERE ProductID = 123;
 
 Kết quả của truy vấn này sẽ chứa một hàng cho sản phẩm 123, giống như sau:
 
+| ProductName | Price |
+| ----- | ----- |
+| Hammer | 2.99 |
+
 
 
 
@@ -168,9 +172,7 @@ Kết quả của truy vấn này sẽ chứa một hàng cho sản phẩm 123, 
 <a name="M01.2.4"></a>
 ### Azure Cosmos DB for Table
 
-| ProductName | Price |
-| ----- | ----- |
-| Hammer | 2.99 |
+
 
 
 
