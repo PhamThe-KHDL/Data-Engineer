@@ -136,8 +136,8 @@ Khóa trong một bảng Azure Table Storage bao gồm hai phần; *khóa phân 
 
 
 
-<a name="M01.4"></a>
-## Explore Azure Tables
+<a name="M01.5"></a>
+## Exercise: Explore Azure Storage
 
 [Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
 
