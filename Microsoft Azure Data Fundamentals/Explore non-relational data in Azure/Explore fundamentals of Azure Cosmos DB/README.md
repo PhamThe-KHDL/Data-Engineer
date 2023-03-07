@@ -255,29 +255,6 @@ g.V().hasLabel('employee').order().by('id')
 <a name="M01.3"></a>
 ## Explore Azure Files
 
-Nhiều hệ thống on-premises bao gồm một mạng lưới các máy tính trong nhà sử dụng chia sẻ tệp. Chia sẻ tệp cho phép bạn lưu trữ một tệp trên một máy tính và cấp quyền truy cập vào tệp đó cho người dùng và ứng dụng chạy trên các máy tính khác. Chiến lược này có thể hoạt động tốt cho các máy tính trong cùng mạng nội bộ, nhưng không mở rộng tốt khi số lượng người dùng tăng lên hoặc nếu người dùng được đặt tại các địa điểm khác nhau.
-
-Azure Files thực chất là một cách để tạo chia sẻ mạng dựa trên cloud, giống như bạn thường thấy trong các tổ chức on-premises để làm cho tài liệu và các tệp khác có sẵn cho nhiều người dùng. Bằng cách lưu trữ chia sẻ tệp trên Azure, các tổ chức có thể loại bỏ chi phí phần cứng và chi phí bảo trì, và tận dụng được tính khả dụng cao và lưu trữ cloud có khả năng mở rộng cho các tệp.
-
-![image](https://user-images.githubusercontent.com/62134515/222397747-d1ea6507-0e77-4fa5-a948-c479bc452b65.png)
-
-Bạn có thể tạo lưu trữ Azure File trong một tài khoản lưu trữ. Azure Files cho phép bạn chia sẻ tối đa 100 TB dữ liệu trong một tài khoản lưu trữ. Dữ liệu này có thể phân phối trên bất kỳ số lượng chia sẻ tệp nào trong tài khoản. Kích thước tối đa của một tệp đơn lẻ là 1 TB, nhưng bạn có thể thiết lập các hạn ngạch để giới hạn kích thước của mỗi chia sẻ dưới con số này. Hiện tại, Azure File Storage hỗ trợ đến 2000 kết nối đồng thời cho mỗi tệp được chia sẻ.
-
-Sau khi bạn đã tạo tài khoản lưu trữ, bạn có thể tải lên các tệp vào Azure File Storage bằng cách sử dụng cổng thông tin Azure hoặc các công cụ như tiện ích AzCopy. Bạn cũng có thể sử dụng dịch vụ đồng bộ hóa Azure File Sync để đồng bộ hóa các bản sao được lưu trữ cục bộ của các tệp được chia sẻ với dữ liệu trong Azure File Storage.
-
-Azure File Storage cung cấp hai cấp độ hiệu suất. Cấp độ Standard sử dụng disk-based hardware trong một trung tâm dữ liệu, và cấp độ Premium sử dụng solid-state disks. Cấp độ Premium cung cấp khả năng thông lượng lớn hơn, nhưng được tính phí với mức giá cao hơn.
-
-Azure Files hỗ trợ hai giao thức chia sẻ tệp mạng phổ biến:
-
-- Chia sẻ tệp Server Message Block (SMB) được sử dụng phổ biến trên nhiều hệ điều hành (Windows, Linux, macOS).
-- Chia sẻ tệp Network File System (NFS) được sử dụng bởi một số phiên bản Linux và macOS. Để tạo một chia sẻ NFS, bạn phải sử dụng một tài khoản lưu trữ loại premium và tạo và cấu hình một mạng ảo để kiểm soát truy cập vào chia sẻ được.
-
-
-
-
-
-
-
 
 
 
@@ -285,20 +262,6 @@ Azure Files hỗ trợ hai giao thức chia sẻ tệp mạng phổ biến:
 <a name="M01.4"></a>
 ## Explore Azure Tables
 
-Azure Table Storage là một giải pháp lưu trữ NoSQL sử dụng các bảng chứa các mục dữ liệu key/value. Mỗi mục được đại diện bởi một hàng chứa các cột cho các trường dữ liệu cần được lưu trữ.
-
-![image](https://user-images.githubusercontent.com/62134515/222404588-f1d8709e-2009-41f1-9966-2bff7f5bbdc3.png)
-
-Tuy nhiên, đừng bị lừa khi nghĩ rằng một bảng Azure Table Storage giống như một bảng trong cơ sở dữ liệu quan hệ. Azure Table cho phép bạn lưu trữ dữ liệu bán cấu trúc. Tất cả các hàng trong một bảng phải có một khóa duy nhất (bao gồm khóa phân vùng và khóa hàng), và khi bạn sửa đổi dữ liệu trong một bảng, một cột timestamp ghi lại ngày và giờ mà sửa đổi được thực hiện; nhưng ngoài ra, các cột trong mỗi hàng có thể khác nhau. Bảng Azure Table Storage không có khái niệm về oreign keys, relationships, stored procedures, views, hoặc các đối tượng khác mà bạn có thể tìm thấy trong cơ sở dữ liệu quan hệ. Dữ liệu trong bộ lưu trữ Azure Table thường được denormalized, với mỗi hàng chứa toàn bộ dữ liệu cho một thực thể logic. Ví dụ, một bảng chứa thông tin khách hàng có thể lưu trữ tên, họ, một hoặc nhiều số điện thoại và một hoặc nhiều địa chỉ cho mỗi khách hàng. Số lượng trường trong mỗi hàng có thể khác nhau, tùy thuộc vào số lượng số điện thoại và địa chỉ cho mỗi khách hàng và các chi tiết được ghi lại cho mỗi địa chỉ. Trong cơ sở dữ liệu quan hệ, thông tin này sẽ được chia thành nhiều hàng trong nhiều bảng.
-
-
-Để đảm bảo truy cập nhanh, Azure Table Storage chia một bảng thành các phân vùng. Phân vùng là cơ chế để nhóm các hàng liên quan vào một thuộc tính chung hoặc khóa phân vùng. Các hàng chia sẻ cùng khóa phân vùng sẽ được lưu trữ cùng nhau. Phân vùng không chỉ giúp tổ chức dữ liệu mà còn có thể cải thiện khả năng mở rộng và hiệu suất theo các cách sau:
-
-- Các phân vùng độc lập với nhau và có thể tăng hoặc giảm khi các hàng được thêm vào hoặc xóa khỏi phân vùng. Một bảng có thể chứa bất kỳ số lượng phân vùng nào.
-
-- Khi bạn tìm kiếm dữ liệu, bạn có thể bao gồm khóa phân vùng trong tiêu chí tìm kiếm. Điều này giúp thu hẹp phạm vi dữ liệu cần xem xét và cải thiện hiệu suất bằng cách giảm lượng I/O (các hoạt động nhập và xuất hoặc đọc và ghi) cần thiết để định vị dữ liệu.
-
-Khóa trong một bảng Azure Table Storage bao gồm hai phần; *khóa phân vùng (partition key)* xác định phân vùng chứa hàng và một *khóa hàng (row key)* duy nhất cho mỗi hàng trong cùng phân vùng. Các mục trong cùng một phân vùng được lưu trữ theo thứ tự khóa hàng. Nếu một ứng dụng thêm một hàng mới vào một bảng, Azure đảm bảo rằng hàng được đặt ở vị trí chính xác trong bảng. Hệ thống này cho phép ứng dụng nhanh chóng thực hiện các truy vấn điểm xác định một hàng duy nhất và các truy vấn phạm vi để truy xuất một khối hàng liên tiếp trong một phân vùng.
 
 
 
@@ -323,7 +286,7 @@ Khóa trong một bảng Azure Table Storage bao gồm hai phần; *khóa phân 
 <a name="M01.6"></a>
 ## Knowledge check
 
-![image](https://user-images.githubusercontent.com/62134515/222419553-3df76bbd-01ee-4fb2-91b6-391c59cebf97.png)
+
 
 
 
