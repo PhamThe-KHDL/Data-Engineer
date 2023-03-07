@@ -194,7 +194,20 @@ https://endpoint/Customers(PartitionKey='1',RowKey='124')
 <a name="M01.2.5"></a>
 ### Azure Cosmos DB for Apache Cassandra
 
+Azure Cosmos DB cho Apache Cassandra tương thích với Apache Cassandra, là một cơ sở dữ liệu mã nguồn mở phổ biến sử dụng cấu trúc lưu trữ cột gia đình. Các gia đình cột là các bảng, tương tự như trong cơ sở dữ liệu quan hệ, với sự khác biệt là không bắt buộc mỗi hàng phải có cùng các cột.
 
+Ví dụ, bạn có thể tạo một bảng **Employees** như sau:
+
+| ID | Name | Manager |
+| -----| ----- | ----- |
+| 1 | Sue Smith |   |
+| 2 | Ben Chan | Sue Smith |
+
+Cassandra hỗ trợ cú pháp dựa trên SQL, vì vậy một ứng dụng khách có thể lấy bản ghi cho Ben Chan như sau:
+
+```SQL
+SELECT * FROM Employees WHERE ID = 2
+```
 
 
 
@@ -203,12 +216,24 @@ https://endpoint/Customers(PartitionKey='1',RowKey='124')
 <a name="M01.2.6"></a>
 ### Azure Cosmos DB for Apache Gremlin
 
+Azure Cosmos DB cho Apache Gremlin được sử dụng với dữ liệu trong cấu trúc đồ thị; trong đó các thực thể được xác định là các đỉnh tạo thành các nút trong đồ thị liên kết. Các nút được kết nối bằng các cạnh thể hiện mối quan hệ, như sau:
 
+![image](https://user-images.githubusercontent.com/62134515/223378792-62618121-2e57-41f4-9b23-3fe1be4e047f.png)
 
+Ví dụ trong hình minh họa hai loại đỉnh (nhân viên và phòng ban) và các cạnh kết nối chúng (nhân viên "Ben" báo cáo cho nhân viên "Sue" và cả hai nhân viên đều làm việc ở phòng ban "Hardware").
 
+Cú pháp Gremlin bao gồm các hàm để thao tác trên các đỉnh và cạnh, cho phép bạn chèn, cập nhật, xóa và truy vấn dữ liệu trong đồ thị. Ví dụ, bạn có thể sử dụng mã sau để thêm một nhân viên mới có tên là Alice và báo cáo cho nhân viên có ID 1 (Sue):
 
+```
+g.addV('employee').property('id', '3').property('firstName', 'Alice')
+g.V('3').addE('reports to').to(g.V('1'))
+```
 
+Câu truy vấn sau trả về tất cả các đỉnh nhân viên, theo thứ tự ID.
 
+```
+g.V().hasLabel('employee').order().by('id')
+```
 
 
 
