@@ -116,7 +116,7 @@ Kết quả của truy vấn này bao gồm một hoặc nhiều JSON documents,
 <a name="M01.2.2"></a>
 ### Azure Cosmos DB for MongoDB
 
-MongoDB là một cơ sở dữ liệu nguồn mở phổ biến, trong đó dữ liệu được lưu trữ dưới định dạng Binary JSON (BSON). Azure Cosmos DB cho MongoDB cho phép nhà phát triển sử dụng thư viện và mã lệnh của MongoDB để làm việc với dữ liệu trong Azure Cosmos DB.
+MongoDB là một cơ sở dữ liệu mã nguồn mở phổ biến, trong đó dữ liệu được lưu trữ dưới định dạng Binary JSON (BSON). Azure Cosmos DB for MongoDB cho phép nhà phát triển sử dụng thư viện và mã lệnh của MongoDB để làm việc với dữ liệu trong Azure Cosmos DB.
 
 Ngôn ngữ truy vấn MongoDB (MQL) sử dụng cú pháp hướng đối tượng gọn nhẹ, trong đó nhà phát triển sử dụng các đối tượng để gọi các phương thức. Ví dụ, truy vấn sau sử dụng phương thức **find** để truy vấn **products** collection trong đối tượng **db**:
 
@@ -143,7 +143,7 @@ Kết quả của truy vấn này bao gồm các tài liệu JSON, tương tự 
 <a name="M01.2.3"></a>
 ### Azure Cosmos DB for PostgreSQL
 
-Azure Cosmos DB cho PostgreSQL là một cơ sở dữ liệu quan hệ toàn cầu của PostgreSQL, được phân tán tự động để giúp bạn xây dựng các ứng dụng có khả năng mở rộng cao. Bạn có thể bắt đầu xây dựng các ứng dụng trên một nhóm máy chủ đơn lẻ, cùng cách với PostgreSQL ở bất kỳ đâu khác. Khi yêu cầu về tính mở rộng và hiệu suất của ứng dụng của bạn tăng lên, bạn có thể mở rộng một cách dễ dàng đến nhiều nút bằng cách phân phối các bảng của bạn một cách minh bạch. PostgreSQL là một hệ thống quản lý cơ sở dữ liệu quan hệ (RDBMS) trong đó bạn định nghĩa các bảng dữ liệu quan hệ, ví dụ như bạn có thể định nghĩa một bảng sản phẩm như sau:
+Azure Cosmos DB for PostgreSQL là một cơ sở dữ liệu quan hệ toàn cầu của PostgreSQL, được phân tán tự động để giúp bạn xây dựng các ứng dụng có khả năng mở rộng cao. Bạn có thể bắt đầu xây dựng các ứng dụng trên một nhóm máy chủ đơn lẻ, cùng cách với PostgreSQL ở bất kỳ đâu khác. Khi yêu cầu về tính mở rộng và hiệu suất của ứng dụng của bạn tăng lên, bạn có thể mở rộng một cách dễ dàng đến nhiều nút bằng cách phân phối các bảng của bạn một cách minh bạch. PostgreSQL là một hệ quảntrị cơ sở dữ liệu quan hệ (RDBMS) trong đó bạn định nghĩa các bảng dữ liệu quan hệ, ví dụ như bạn có thể định nghĩa một bảng sản phẩm như sau:
 
 | ProductID | ProductName | Price |
 | ----- | ----- | -----|
@@ -172,7 +172,7 @@ Kết quả của truy vấn này sẽ chứa một hàng cho sản phẩm 123, 
 <a name="M01.2.4"></a>
 ### Azure Cosmos DB for Table
 
-Azure Cosmos DB cho Table được sử dụng để làm việc với dữ liệu trong các bảng key-value, tương tự như Azure Table Storage. Nó cung cấp khả năng mở rộng và hiệu suất tốt hơn so với Azure Table Storage. Ví dụ, bạn có thể định nghĩa một bảng có tên là Khách hàng như sau:
+Azure Cosmos DB for Table được sử dụng để làm việc với dữ liệu trong các bảng key-value, tương tự như Azure Table Storage. Nó cung cấp khả năng mở rộng và hiệu suất tốt hơn so với Azure Table Storage. Ví dụ, bạn có thể định nghĩa một bảng có tên là Customers như sau:
 
 | PartitionKey | RowKey | Name | Email |
 | ----- | ----- | ----- | ----- |
@@ -194,7 +194,7 @@ https://endpoint/Customers(PartitionKey='1',RowKey='124')
 <a name="M01.2.5"></a>
 ### Azure Cosmos DB for Apache Cassandra
 
-Azure Cosmos DB cho Apache Cassandra tương thích với Apache Cassandra, là một cơ sở dữ liệu mã nguồn mở phổ biến sử dụng cấu trúc lưu trữ cột gia đình. Các gia đình cột là các bảng, tương tự như trong cơ sở dữ liệu quan hệ, với sự khác biệt là không bắt buộc mỗi hàng phải có cùng các cột.
+Azure Cosmos DB for Apache Cassandra tương thích với Apache Cassandra, là một cơ sở dữ liệu mã nguồn mở phổ biến sử dụng cấu trúc lưu trữ column-family. Column-families là các bảng, tương tự như trong cơ sở dữ liệu quan hệ, với sự khác biệt là không bắt buộc mỗi hàng phải có cùng các cột.
 
 Ví dụ, bạn có thể tạo một bảng **Employees** như sau:
 
@@ -203,7 +203,7 @@ Ví dụ, bạn có thể tạo một bảng **Employees** như sau:
 | 1 | Sue Smith |   |
 | 2 | Ben Chan | Sue Smith |
 
-Cassandra hỗ trợ cú pháp dựa trên SQL, vì vậy một ứng dụng khách có thể lấy bản ghi cho Ben Chan như sau:
+Cassandra hỗ trợ cú pháp dựa trên SQL, vì vậy một client application có thể lấy bản ghi cho Ben Chan như sau:
 
 ```SQL
 SELECT * FROM Employees WHERE ID = 2
@@ -216,13 +216,13 @@ SELECT * FROM Employees WHERE ID = 2
 <a name="M01.2.6"></a>
 ### Azure Cosmos DB for Apache Gremlin
 
-Azure Cosmos DB cho Apache Gremlin được sử dụng với dữ liệu trong cấu trúc đồ thị; trong đó các thực thể được xác định là các đỉnh tạo thành các nút trong đồ thị liên kết. Các nút được kết nối bằng các cạnh thể hiện mối quan hệ, như sau:
+Azure Cosmos DB for Apache Gremlin được sử dụng với dữ liệu trong *cấu trúc đồ thị (graph structure)*; trong đó các thực thể được xác định là các đỉnh tạo thành các nút trong đồ thị liên kết. Các nút được kết nối bằng các cạnh thể hiện mối quan hệ, như sau:
 
 ![image](https://user-images.githubusercontent.com/62134515/223378792-62618121-2e57-41f4-9b23-3fe1be4e047f.png)
 
 Ví dụ trong hình minh họa hai loại đỉnh (nhân viên và phòng ban) và các cạnh kết nối chúng (nhân viên "Ben" báo cáo cho nhân viên "Sue" và cả hai nhân viên đều làm việc ở phòng ban "Hardware").
 
-Cú pháp Gremlin bao gồm các hàm để thao tác trên các đỉnh và cạnh, cho phép bạn chèn, cập nhật, xóa và truy vấn dữ liệu trong đồ thị. Ví dụ, bạn có thể sử dụng mã sau để thêm một nhân viên mới có tên là Alice và báo cáo cho nhân viên có ID 1 (Sue):
+Cú pháp Gremlin bao gồm các hàm để thao tác trên các đỉnh và cạnh, cho phép bạn chèn, cập nhật, xóa và truy vấn dữ liệu trong đồ thị. Ví dụ, bạn có thể sử dụng code sau để thêm một nhân viên mới có tên là Alice và báo cáo cho nhân viên có ID 1 (Sue):
 
 ```
 g.addV('employee').property('id', '3').property('firstName', 'Alice')
