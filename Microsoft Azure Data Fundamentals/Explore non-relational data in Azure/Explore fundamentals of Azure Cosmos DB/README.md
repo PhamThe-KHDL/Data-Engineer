@@ -10,10 +10,8 @@
       + [Azure Cosmos DB for Table](#M01.2.4)
       + [Azure Cosmos DB for Apache Cassandra](#M01.2.5)
       + [Azure Cosmos DB for Apache Gremlin](#M01.2.6)
-    - [Explore Azure Files](#M01.3)
-    - [Explore Azure Tables](#M01.4)
-    - [Exercise: Explore Azure Storage](#M01.5)
-    - [Knowledge check](#M01.6)
+    - [Exercise: Explore Azure Cosmos DB](#M01.3)
+    - [Knowledge check](#M01.4)
 
 
 
@@ -251,18 +249,10 @@ g.V().hasLabel('employee').order().by('id')
 
 
 
-
 <a name="M01.3"></a>
-## Explore Azure Files
+## Exercise: Explore Azure Cosmos DB
 
-
-
-
-
-<a name="M01.4"></a>
-## Explore Azure Tables
-
-
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-03-cosmos-lab.html)
 
 
 
@@ -272,20 +262,9 @@ g.V().hasLabel('employee').order().by('id')
 
 
 <a name="M01.4"></a>
-## Explore Azure Tables
-
-[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
-
-
-
-
-
-
-
-
-<a name="M01.6"></a>
 ## Knowledge check
 
+![image](https://user-images.githubusercontent.com/62134515/223606284-865ba019-611e-4dfc-8029-b85f192675dc.png)
 
 
 
