@@ -73,7 +73,7 @@ For additional information about uses for Cosmos DB, read [Common Azure Cosmos D
 <a name="M01.2"></a>
 ## Identify Azure Cosmos DB APIs
 
-Azure Cosmos DB là cơ sở dữ liệu phân tán được quản lý hoàn toàn và không có máy chủ của Microsoft cho các ứng dụng bất kỳ kích thước hoặc quy mô nào, hỗ trợ cả công việc có quan hệ và không có quan hệ. Nhà phát triển có thể xây dựng và di chuyển các ứng dụng nhanh chóng bằng cách sử dụng các động cơ cơ sở dữ liệu nguồn mở ưa thích của họ, bao gồm PostgreSQL, MongoDB và Apache Cassandra. Khi bạn cung cấp một phiên bản Cosmos DB mới, bạn chọn động cơ cơ sở dữ liệu mà bạn muốn sử dụng. Lựa chọn động cơ phụ thuộc vào nhiều yếu tố bao gồm loại dữ liệu cần được lưu trữ, nhu cầu hỗ trợ các ứng dụng hiện có và kỹ năng của nhà phát triển làm việc với kho dữ liệu.
+Azure Cosmos DB là cơ sở dữ liệu phân tán được quản lý hoàn toàn và không có máy chủ của Microsoft cho các ứng dụng bất kỳ kích thước hoặc quy mô nào, hỗ trợ cả relational và non-relational workloads. Nhà phát triển có thể xây dựng và di chuyển các ứng dụng nhanh chóng bằng cách sử dụng các công cụ cơ sở dữ liệu mã nguồn mở ưa thích của họ, bao gồm PostgreSQL, MongoDB và Apache Cassandra. Khi bạn cung cấp một phiên bản Cosmos DB mới, bạn chọn công cụ cơ sở dữ liệu mà bạn muốn sử dụng. Lựa chọn công cụ phụ thuộc vào nhiều yếu tố bao gồm loại dữ liệu cần được lưu trữ, nhu cầu hỗ trợ các ứng dụng hiện có và kỹ năng của nhà phát triển làm việc với kho dữ liệu.
 
 
 
@@ -85,7 +85,7 @@ Azure Cosmos DB là cơ sở dữ liệu phân tán được quản lý hoàn to
 <a name="M01.2.1"></a>
 ### Azure Cosmos DB for NoSQL
 
-Azure Cosmos DB cho NoSQL là dịch vụ phi quan hệ gốc của Microsoft để làm việc với mô hình dữ liệu tài liệu. Nó quản lý dữ liệu trong định dạng tài liệu JSON và mặc dù là một giải pháp lưu trữ dữ liệu NoSQL, nhưng sử dụng cú pháp SQL để làm việc với dữ liệu.
+Azure Cosmos DB for NoSQL là dịch vụ non-relational của Microsoft để làm việc với mô hình dữ liệu document. Nó quản lý dữ liệu trong định dạng JSON document và mặc dù là một giải pháp lưu trữ dữ liệu NoSQL, nhưng sử dụng cú pháp SQL để làm việc với dữ liệu.
 
 Một truy vấn SQL cho một cơ sở dữ liệu Azure Cosmos DB chứa dữ liệu khách hàng có thể trông giống như thế này:
 
@@ -95,7 +95,7 @@ FROM customers c
 WHERE c.id = "joe@litware.com"
 ```
 
-Kết quả của truy vấn này bao gồm một hoặc nhiều tài liệu JSON, như được hiển thị ở đây:
+Kết quả của truy vấn này bao gồm một hoặc nhiều JSON documents, như được hiển thị ở đây:
 
 ```JSON
 {
